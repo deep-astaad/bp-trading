@@ -1172,6 +1172,55 @@ address {
     }
 }
 
+/* --- Copy Button Style --- */
+.copy-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 4px 8px;
+  margin-left: 8px;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  vertical-align: middle;
+}
+
+.copy-btn:hover {
+  background: #fff;
+  color: var(--primary-dark);
+  transform: scale(1.1);
+}
+
+/* --- Mail Us Button Style --- */
+.email-big {
+    background: #ffffff;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    padding: 18px 40px;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 50px; /* Rounded pill shape to match WhatsApp button */
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.email-big:hover {
+    background: #e2e8f0;
+    color: var(--primary-dark);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Mobile Responsiveness for Buttons */
+@media (max-width: 768px) {
+    .whatsapp-big, .email-big {
+        width: 100%;
+        justify-content: center;
+        margin: 5px 0;
+    }
+}
+
 /* --- Footer --- */
 .footer {
   background: #020617;

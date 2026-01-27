@@ -218,7 +218,13 @@
       </div>
       <div class="contact-item">
         <span class="icon">✉️</span>
-        <p><strong>Email:</strong><br> bptrading202510@gmail.com</p>
+        <p>
+          <strong>Email:</strong><br> 
+          <span id="email-text">bptrading202510@gmail.com</span>
+          <button class="copy-btn" onclick="copyEmail()" title="Copy Email">
+            📋
+          </button>
+        </p>
       </div>
     </div>
     
@@ -228,7 +234,7 @@
       <span class="jp">WhatsAppでチャット</span>
     </a>
 
-    <br class="mobile-break"> 
+    <div style="height: 15px;"></div>
 
     <a href="mailto:bptrading202510@gmail.com" class="btn email-big">
       <span style="margin-right: 10px;">✉️</span> 
@@ -260,6 +266,16 @@
       btn.innerText = "🇯🇵 日本語";
     }
   }
+</script>
+<script>
+function copyEmail() {
+  const emailText = document.getElementById("email-text").innerText;
+  navigator.clipboard.writeText(emailText).then(() => {
+    alert("Email copied to clipboard!");
+  }).catch(err => {
+    console.error("Failed to copy: ", err);
+  });
+}
 </script>
 
 </body>
