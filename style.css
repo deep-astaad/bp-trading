@@ -1146,6 +1146,31 @@ address {
     box-shadow: 0 0 20px rgba(22, 163, 74, 0.5);
 }
 
+/* --- Email Button Style --- */
+.email-big {
+    background: #ffffff;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    padding: 18px 40px;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.email-big:hover {
+    background: #e2e8f0;
+    color: var(--primary-dark);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+
+@media (max-width: 768px) {
+    .whatsapp-big, .email-big {
+        width: 100%;
+        justify-content: center;
+        margin: 10px 0;
+    }
+}
 
 /* --- Footer --- */
 .footer {
