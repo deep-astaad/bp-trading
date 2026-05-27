@@ -269,15 +269,13 @@ h1, h2, h3 {
 
 
 /* --- Brand Logos --- */
-.logo-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-  gap: 40px;
+.brands-swiper .swiper-slide {
+  display: flex;
   align-items: center;
-  justify-items: center;
+  justify-content: center;
 }
 
-.logo-grid img {
+.brands-swiper img {
   max-width: 100px;
   height: auto;
   filter: grayscale(100%);
@@ -285,30 +283,32 @@ h1, h2, h3 {
   transition: all 0.3s;
 }
 
-.logo-grid img:hover {
+.brands-swiper img:hover {
   filter: grayscale(0%);
   opacity: 1;
   transform: scale(1.1);
 }
 
 /* --- Flags --- */
-.flag-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 30px;
+.flags-swiper .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
-.flag-grid img {
+.flags-swiper img {
   width: 64px;
   height: 64px; 
   object-fit: contain;
   margin-bottom: 15px;
 }
 
-.flag-grid p {
+.flags-swiper p {
     font-weight: 600;
     font-size: 0.9rem;
+    margin: 0;
 }
 
 
