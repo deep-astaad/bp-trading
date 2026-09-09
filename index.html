@@ -5,56 +5,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="OaAutCWjm0_EndOxhq3U1lWIgVWbkQNVkM3wy21FwkQ" />
   <title>B&P Trading (Bajaj & Pawar Trading) | Japan Used Car Export</title>
-  <meta name="description" content="B&P Trading (Bajaj & Pawar Trading) - Buy, sell and export used cars from Japan. All brands available with complete Japan export documentation." />
+  <meta name="description" content="B&P Trading (Bajaj & Pawar Trading) - Buy, sell and export used cars from Japan. All brands available with complete Japan export documentation and worldwide RoRo/Container shipping." />
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
-  <!-- Swiper CSS for Hero Carousel -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <!-- Preload hero background image for instant LCP -->
+  <link rel="preload" as="image" href="assets/photos/hero.jpg" fetchpriority="high">
+  
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<!-- Backdrop Overlay for Mobile Drawer (at root) -->
-<div class="nav-backdrop" id="nav-backdrop" onclick="toggleNav()"></div>
+<!-- Backdrop Overlay for Mobile Drawer -->
+<div class="nav-backdrop" id="nav-backdrop" onclick="toggleNav()" aria-hidden="true"></div>
 
-<!-- Mobile Navigation Drawer (Independent from header stacking context) -->
-<aside class="nav-drawer" id="nav-drawer">
+<!-- Mobile Navigation Drawer -->
+<aside class="nav-drawer" id="nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu">
   <div class="nav-drawer-top">
     <div class="nav-drawer-header">
       <div class="brand-link">
         <span class="logo-main">B&P Trading</span>
         <span class="logo-sub">Bajaj & Pawar Trading</span>
       </div>
-      <button class="drawer-close-btn" onclick="toggleNav()" aria-label="Close menu">✕</button>
+      <button class="drawer-close-btn" id="drawer-close-btn" onclick="toggleNav()" aria-label="Close menu">✕</button>
     </div>
-    <ul>
-      <li>
+    <ul class="drawer-menu">
+      <li style="--i: 1;">
         <a href="#home" onclick="closeNav()">
           <span class="en">Home</span>
           <span class="jp">ホーム</span>
         </a>
       </li>
-      <li>
+      <li style="--i: 2;">
         <a href="#services" onclick="closeNav()">
           <span class="en">Services</span>
           <span class="jp">サービス</span>
         </a>
       </li>
-      <li>
+      <li style="--i: 3;">
+        <a href="#process" onclick="closeNav()">
+          <span class="en">Export Process</span>
+          <span class="jp">輸出の流れ</span>
+        </a>
+      </li>
+      <li style="--i: 4;">
         <a href="#brands" onclick="closeNav()">
           <span class="en">Brands</span>
           <span class="jp">メーカー</span>
         </a>
       </li>
-      <li>
+      <li style="--i: 5;">
+        <a href="#destinations" onclick="closeNav()">
+          <span class="en">Destinations</span>
+          <span class="jp">主要輸出先</span>
+        </a>
+      </li>
+      <li style="--i: 6;">
         <a href="#offices" onclick="closeNav()">
           <span class="en">Offices</span>
           <span class="jp">事業所</span>
         </a>
       </li>
-      <li>
+      <li style="--i: 7;">
         <a href="#contact" onclick="closeNav()">
           <span class="en">Contact</span>
           <span class="jp">お問い合わせ</span>
@@ -64,6 +78,10 @@
   </div>
 
   <div class="nav-drawer-footer">
+    <button class="btn btn-quote-action" onclick="openQuoteModal(); closeNav();" style="width: 100%;">
+      <span class="en">📋 Request A Quote</span>
+      <span class="jp">📋 お見積もり依頼</span>
+    </button>
     <a href="https://wa.me/817090551302" class="btn btn-contact-wa" target="_blank" rel="noopener" style="width: 100%;">
       💬 WhatsApp (Gagandeep)
     </a>
@@ -77,20 +95,26 @@
 <header class="header">
   <div class="container nav-container">
     <!-- Brand Logo with Bajaj & Pawar Trading Subtitle -->
-    <a href="#home" class="brand-link">
+    <a href="#home" class="brand-link" aria-label="B&P Trading Home">
       <span class="logo-main">B&P Trading</span>
       <span class="logo-sub">Bajaj & Pawar Trading</span>
     </a>
 
     <!-- Header Actions -->
     <div class="header-actions">
-      <!-- Quick Language Switcher Button (Always accessible) -->
+      <!-- Quick Language Switcher Button -->
       <button class="btn-lang" onclick="toggleLanguage()" aria-label="Toggle language">
         <span class="lang-text">🇯🇵 日本語</span>
       </button>
 
+      <!-- Desktop Request Quote Action -->
+      <button class="btn-quote-header" onclick="openQuoteModal()">
+        <span class="en">Request Quote</span>
+        <span class="jp">お見積もり</span>
+      </button>
+
       <!-- Mobile Hamburger Button -->
-      <button class="nav-toggle" id="nav-toggle" onclick="toggleNav()" aria-label="Open Navigation Menu" aria-expanded="false">
+      <button class="nav-toggle" id="nav-toggle" onclick="toggleNav()" aria-label="Open Navigation Menu" aria-expanded="false" aria-controls="nav-drawer">
         <span></span>
         <span></span>
         <span></span>
@@ -98,7 +122,7 @@
     </div>
 
     <!-- Desktop Navigation -->
-    <nav class="desktop-nav">
+    <nav class="desktop-nav" aria-label="Primary Navigation">
       <ul>
         <li>
           <a href="#home">
@@ -113,9 +137,21 @@
           </a>
         </li>
         <li>
+          <a href="#process">
+            <span class="en">Process</span>
+            <span class="jp">輸出の流れ</span>
+          </a>
+        </li>
+        <li>
           <a href="#brands">
             <span class="en">Brands</span>
             <span class="jp">メーカー</span>
+          </a>
+        </li>
+        <li>
+          <a href="#destinations">
+            <span class="en">Destinations</span>
+            <span class="jp">主要輸出先</span>
           </a>
         </li>
         <li>
@@ -135,99 +171,144 @@
   </div>
 </header>
 
-<!-- Hero Section with Swiper Slider -->
-<section id="home" class="hero">
-  <div class="swiper hero-swiper">
-    <div class="swiper-wrapper">
-      <!-- Slide 1 -->
-      <div class="swiper-slide hero-photo" style="background-image: url('assets/photos/hero.jpg');">
-        <div class="overlay">
-          <div class="container hero-content">
-            <div class="hero-badge">
-              <span class="en">🇯🇵 Registered Japan Vehicle Exporter</span>
-              <span class="jp">🇯🇵 日本公式登録中古車輸出事業者</span>
-            </div>
-            <h2 class="en">Trusted Japan Used Car Exporters</h2>
-            <h2 class="jp">信頼できる日本中古車輸出パートナー</h2>
-
-            <p class="hero-sub en">Buy • Sell • Worldwide Shipping • Complete Paperwork</p>
-            <p class="hero-sub jp">買取 • 販売 • 世界中へ輸送 • 書類作成代行</p>
-
-            <div class="hero-btns">
-              <a href="#contact" class="btn btn-primary">
-                <span class="en">Get A Quote</span>
-                <span class="jp">お見積もり</span>
-              </a>
-              <a href="#services" class="btn btn-outline">
-                <span class="en">Our Services</span>
-                <span class="jp">サービス一覧</span>
-              </a>
-            </div>
+<!-- Hero Section with Zero-Dependency Carousel -->
+<section id="home" class="hero" aria-label="Introduction Carousel">
+  <div class="hero-carousel" id="hero-carousel" role="region" aria-roledescription="carousel">
+    <!-- Slide 1 -->
+    <div class="hero-slide active" role="group" aria-roledescription="slide" aria-label="1 of 3" style="background-image: url('assets/photos/hero.jpg');">
+      <div class="overlay">
+        <div class="container hero-content">
+          <div class="hero-badge">
+            <span class="en">🇯🇵 Registered Japan Vehicle Exporter</span>
+            <span class="jp">🇯🇵 日本公式登録中古車輸出事業者</span>
           </div>
-        </div>
-      </div>
-      
-      <!-- Slide 2 -->
-      <div class="swiper-slide hero-photo" style="background-image: url('assets/photos/port.jpg');">
-        <div class="overlay">
-          <div class="container hero-content">
-            <div class="hero-badge">
-              <span class="en">🚢 Global Port Shipping Network</span>
-              <span class="jp">🚢 主要港湾輸出ネットワーク</span>
-            </div>
-            <h2 class="en">Global Car Export Network</h2>
-            <h2 class="jp">グローバルな中古車輸出ネットワーク</h2>
+          <h1 class="en">Trusted Japan Used Car Exporters</h1>
+          <h1 class="jp">信頼できる日本中古車輸出パートナー</h1>
 
-            <p class="hero-sub en">Seamless RoRo and Container Shipping Worldwide</p>
-            <p class="hero-sub jp">世界中へのシームレスなRoRo船およびコンテナ輸送</p>
+          <p class="hero-sub en">Buy • Sell • Worldwide Shipping • Complete Paperwork</p>
+          <p class="hero-sub jp">買取 • 販売 • 世界中へ輸送 • 書類作成代行</p>
 
-            <div class="hero-btns">
-              <a href="#contact" class="btn btn-primary">
-                <span class="en">Get A Quote</span>
-                <span class="jp">お見積もり</span>
-              </a>
-              <a href="#services" class="btn btn-outline">
-                <span class="en">Our Services</span>
-                <span class="jp">サービス一覧</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Slide 3 -->
-      <div class="swiper-slide hero-photo" style="background-image: url('assets/photos/cars.jpg');">
-        <div class="overlay">
-          <div class="container hero-content">
-            <div class="hero-badge">
-              <span class="en">⭐ Premium Hand-Inspected Quality</span>
-              <span class="jp">⭐ 厳選された高品質な日本車</span>
-            </div>
-            <h2 class="en">High Quality Japanese Cars</h2>
-            <h2 class="jp">高品質な日本の中古車</h2>
-
-            <p class="hero-sub en">Direct Access to Major Auto Auctions & Dealerships</p>
-            <p class="hero-sub jp">主要なオートオークションとディーラーへの直接アクセス</p>
-
-            <div class="hero-btns">
-              <a href="#contact" class="btn btn-primary">
-                <span class="en">Get A Quote</span>
-                <span class="jp">お見積もり</span>
-              </a>
-              <a href="#services" class="btn btn-outline">
-                <span class="en">Our Services</span>
-                <span class="jp">サービス一覧</span>
-              </a>
-            </div>
+          <div class="hero-btns">
+            <button class="btn btn-primary" onclick="openQuoteModal()">
+              <span class="en">Get A Quote</span>
+              <span class="jp">お見積もり</span>
+            </button>
+            <a href="#services" class="btn btn-outline">
+              <span class="en">Our Services</span>
+              <span class="jp">サービス一覧</span>
+            </a>
           </div>
         </div>
       </div>
     </div>
     
-    <!-- Swiper Controls -->
-    <div class="swiper-pagination"></div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
+    <!-- Slide 2 -->
+    <div class="hero-slide" role="group" aria-roledescription="slide" aria-label="2 of 3" style="background-image: url('assets/photos/port.jpg');">
+      <div class="overlay">
+        <div class="container hero-content">
+          <div class="hero-badge">
+            <span class="en">🚢 Global Port Shipping Network</span>
+            <span class="jp">🚢 主要港湾輸出ネットワーク</span>
+          </div>
+          <h2 class="en">Global Car Export Network</h2>
+          <h2 class="jp">グローバルな中古車輸出ネットワーク</h2>
+
+          <p class="hero-sub en">Seamless RoRo and Container Shipping Worldwide</p>
+          <p class="hero-sub jp">世界中へのシームレスなRoRo船およびコンテナ輸送</p>
+
+          <div class="hero-btns">
+            <button class="btn btn-primary" onclick="openQuoteModal()">
+              <span class="en">Request A Quote</span>
+              <span class="jp">お見積もり</span>
+            </button>
+            <a href="#destinations" class="btn btn-outline">
+              <span class="en">View Shipping Ports</span>
+              <span class="jp">主要港一覧</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Slide 3 -->
+    <div class="hero-slide" role="group" aria-roledescription="slide" aria-label="3 of 3" style="background-image: url('assets/photos/cars.jpg');">
+      <div class="overlay">
+        <div class="container hero-content">
+          <div class="hero-badge">
+            <span class="en">⭐ Premium Hand-Inspected Quality</span>
+            <span class="jp">⭐ 厳選された高品質な日本車</span>
+          </div>
+          <h2 class="en">High Quality Japanese Cars</h2>
+          <h2 class="jp">高品質な日本の中古車</h2>
+
+          <p class="hero-sub en">Direct Access to 100,000+ Vehicles at Auto Auctions Weekly</p>
+          <p class="hero-sub jp">毎週10万台以上のオートオークションへ直接アクセス可能</p>
+
+          <div class="hero-btns">
+            <button class="btn btn-primary" onclick="openQuoteModal()">
+              <span class="en">Source Your Car</span>
+              <span class="jp">車両を探す</span>
+            </button>
+            <a href="#brands" class="btn btn-outline">
+              <span class="en">Explore Brands</span>
+              <span class="jp">取り扱いメーカー</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carousel Controls -->
+    <button class="carousel-control prev" onclick="prevHeroSlide()" aria-label="Previous Slide">‹</button>
+    <button class="carousel-control next" onclick="nextHeroSlide()" aria-label="Next Slide">›</button>
+
+    <div class="carousel-dots" role="tablist" aria-label="Slide indicators">
+      <button class="carousel-dot active" onclick="gotoHeroSlide(0)" role="tab" aria-selected="true" aria-label="Slide 1"></button>
+      <button class="carousel-dot" onclick="gotoHeroSlide(1)" role="tab" aria-selected="false" aria-label="Slide 2"></button>
+      <button class="carousel-dot" onclick="gotoHeroSlide(2)" role="tab" aria-selected="false" aria-label="Slide 3"></button>
+    </div>
+  </div>
+</section>
+
+<!-- Trust & Verification Bar -->
+<section class="trust-bar" aria-label="Trust and Certification">
+  <div class="container trust-container">
+    <div class="trust-item">
+      <span class="trust-icon">🛡️</span>
+      <div class="trust-text">
+        <strong class="en">JUMVEA Standards</strong>
+        <strong class="jp">JUMVEA 輸出基準</strong>
+        <span class="en">Official Japan Export Compliant</span>
+        <span class="jp">公式認定輸出プロセス遵守</span>
+      </div>
+    </div>
+    <div class="trust-item">
+      <span class="trust-icon">🔍</span>
+      <div class="trust-text">
+        <strong class="en">JEVIC / EAA Inspected</strong>
+        <strong class="jp">公認事前検査対応</strong>
+        <span class="en">Pre-Shipment Quality Verified</span>
+        <span class="jp">積載前の厳格な品質検査</span>
+      </div>
+    </div>
+    <div class="trust-item">
+      <span class="trust-icon">☢️</span>
+      <div class="trust-text">
+        <strong class="en">100% Radiation Tested</strong>
+        <strong class="jp">全車放射線量検査済</strong>
+        <span class="en">Certified Clear for Export</span>
+        <span class="jp">安全基準クリア証明付帯</span>
+      </div>
+    </div>
+    <div class="trust-item">
+      <span class="trust-icon">⚡</span>
+      <div class="trust-text">
+        <strong class="en">Express B/L Dispatch</strong>
+        <strong class="jp">船荷証券迅速発送</strong>
+        <span class="en">Original Documents via DHL/FedEx</span>
+        <span class="jp">原本書類の迅速国際配送</span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -237,113 +318,234 @@
     <h2 class="section-title en">Our Core Services</h2>
     <h2 class="section-title jp">主なサービス内容</h2>
 
-    <p class="section-subtitle en">Professional automotive solutions tailored for global clients and dealerships.</p>
-    <p class="section-subtitle jp">世界中のお客様へ向けたプロフェッショナルな自動車ソリューション。</p>
+    <p class="section-subtitle en">Professional automotive solutions tailored for global dealerships, importers, and private buyers.</p>
+    <p class="section-subtitle jp">世界中のお客様へ向けたプロフェッショナルな自動車調達・輸出ソリューション。</p>
     
     <div class="services-grid">
       <div class="card service-card">
         <div class="card-image">
-          <img src="assets/photos/auction.jpg" alt="Japan Car Auction">
+          <img src="assets/photos/auction.jpg" alt="Japan Car Auction" width="400" height="220" loading="lazy" decoding="async">
         </div>
         <div class="card-content">
           <h3 class="en">Buy & Sell (Japan)</h3>
           <h3 class="jp">中古車買取・販売 (日本)</h3>
           
-          <p class="en">We source high-quality vehicles directly from Japanese auctions and dealers at competitive local prices.</p>
-          <p class="jp">日本のオークションやディーラーから高品質な車両を競争力のある価格で調達します。</p>
+          <p class="en">We source high-quality vehicles directly from Japanese auctions and licensed dealers at competitive local wholesale prices.</p>
+          <p class="jp">日本の主要オートオークションや正規ディーラーから高品質な車両を競争力のある卸売価格で直接買付いたします。</p>
         </div>
       </div>
 
       <div class="card service-card">
         <div class="card-image">
-          <img src="assets/photos/export.jpg" alt="Car Export Shipping">
+          <img src="assets/photos/export.jpg" alt="Car Export Shipping" width="400" height="220" loading="lazy" decoding="async">
         </div>
         <div class="card-content">
-          <h3 class="en">Car Export</h3>
-          <h3 class="jp">中古車輸出</h3>
+          <h3 class="en">Worldwide Car Export</h3>
+          <h3 class="jp">世界向け中古車輸出</h3>
           
-          <p class="en">Reliable, secure RoRo and Container shipping services from major Japanese ports to destinations worldwide.</p>
-          <p class="jp">主要な日本の港から世界各地へ、信頼性が高く安全なRoRo船およびコンテナ輸送サービスを提供します。</p>
+          <p class="en">Reliable, secure RoRo and Container shipping services from major Japanese ports (Yokohama, Kobe, Nagoya, Osaka) to worldwide destinations.</p>
+          <p class="jp">主要港（横浜、神戸、名古屋、大阪）から世界各地へ、確実・安全なRoRo船およびコンテナ輸送を手配します。</p>
         </div>
       </div>
 
       <div class="card service-card">
         <div class="card-image">
-          <img src="assets/photos/documentation.png" alt="Japan Export Documentation">
+          <img src="assets/photos/documentation.png" alt="Japan Export Documentation" width="400" height="220" loading="lazy" decoding="async">
         </div>
         <div class="card-content">
-          <h3 class="en">Japan Documentation</h3>
-          <h3 class="jp">書類作成・手続き代行</h3>
+          <h3 class="en">Japan Export Documentation</h3>
+          <h3 class="jp">書類作成・通関手続き代行</h3>
           
-          <p class="en">We handle deregistrations, export certificates, and custom clearance paperwork professionally.</p>
-          <p class="jp">抹消登録、輸出抹消仮登録証明書、通関書類の手続きを専門的に行います。</p>
+          <p class="en">We handle deregistrations, official Japan Export Certificates, police verifications, and customs clearance paperwork with complete precision.</p>
+          <p class="jp">抹消登録、輸出抹消仮登録証明書、盗難確認照会、通関手続きなど、必要書類を迅速・確実に代行作成します。</p>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4-Step Export Process Section -->
+<section id="process" class="section light">
+  <div class="container">
+    <h2 class="section-title en">Our 4-Step Export Process</h2>
+    <h2 class="section-title jp">日本車輸出の流れ (4つのステップ)</h2>
+    <p class="section-subtitle en">From auction bidding in Japan to direct delivery at your destination port.</p>
+    <p class="section-subtitle jp">オークション落札から現地港への到着まで、透明性の高い確実なステップ。</p>
+
+    <div class="process-grid">
+      <!-- Step 1 -->
+      <div class="process-card">
+        <div class="process-number">01</div>
+        <div class="process-icon">🎯</div>
+        <h3 class="en">Vehicle Sourcing & Bidding</h3>
+        <h3 class="jp">車両選定・オークション落札</h3>
+        <p class="en">Direct live bidding across 100+ Japanese auctions (USS, TAA, CAA, JU) inspecting over 100,000 vehicles weekly based on your exact budget and specifications.</p>
+        <p class="jp">USS・TAA・CAAなど日本全国100以上のオークション会場から、ご希望の条件・ご予算に合わせて厳選落札いたします。</p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="process-card">
+        <div class="process-number">02</div>
+        <div class="process-icon">🔍</div>
+        <h3 class="en">Inspection & Verification</h3>
+        <h3 class="jp">車両検査・コンディション確認</h3>
+        <p class="en">Comprehensive mechanical checks, auction sheet translation, body verification, and pre-shipment radiation screening to guarantee vehicle integrity.</p>
+        <p class="jp">詳細なコンディション確認、査定票の正確な翻訳、必要に応じた公認事前検査（JEVIC/EAA）および放射線検査を実施します。</p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="process-card">
+        <div class="process-number">03</div>
+        <div class="process-icon">📄</div>
+        <h3 class="en">Deregistration & Customs</h3>
+        <h3 class="jp">抹消登録・通関手続き</h3>
+        <p class="en">In-house processing of official Japan Export Certificates, police clearance, road transport Bureau paperwork, and customs export declaration.</p>
+        <p class="jp">陸運局での輸出抹消仮登録、警察照会、税関への輸出申告など、煩雑な法的書類手続きをすべて自社で完結します。</p>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="process-card">
+        <div class="process-number">04</div>
+        <div class="process-icon">🚢</div>
+        <h3 class="en">Ocean Shipping & B/L Delivery</h3>
+        <h3 class="jp">海上輸送・船荷証券交付</h3>
+        <p class="en">Securing priority vessel space on trusted RoRo or container carriers, followed by fast express courier delivery (DHL/FedEx) of your original Bill of Lading.</p>
+        <p class="jp">最適なRoRo船・コンテナ船のスペースを確保し、船積完了後に原本の船荷証券（B/L）をDHL等で迅速にお届けします。</p>
+      </div>
+    </div>
+
+    <!-- Quick CTA banner inside Process -->
+    <div class="process-cta">
+      <div class="process-cta-text">
+        <h4 class="en">Ready to import your desired vehicle?</h4>
+        <h4 class="jp">ご希望の車両をお探しですか？</h4>
+        <p class="en">Get an instant CIF estimate tailored to your port and budget.</p>
+        <p class="jp">仕向け港とご予算に応じたお見積もりを即時作成いたします。</p>
+      </div>
+      <button class="btn btn-primary" onclick="openQuoteModal()">
+        <span class="en">Request A Quote Now</span>
+        <span class="jp">お見積もりを依頼する</span>
+      </button>
     </div>
   </div>
 </section>
 
 <!-- Car Brands -->
-<section id="brands" class="section light">
+<section id="brands" class="section">
   <div class="container">
     <h2 class="section-title en">Car Brands We Deal In</h2>
     <h2 class="section-title jp">取り扱いメーカー一覧</h2>
-    <p class="section-subtitle en">All major Japanese and international automakers sourced on request.</p>
-    <p class="section-subtitle jp">日本の主要メーカーおよび海外ブランド各種を取り扱っております。</p>
+    <p class="section-subtitle en">All major Japanese automakers and premier international brands sourced on request.</p>
+    <p class="section-subtitle jp">日本の主要国産メーカーおよび海外プレミアムブランド各種を取り扱っております。</p>
     
     <div class="brand-grid">
-      <div class="brand-tile"><img src="assets/brands/toyota.png" alt="Toyota"></div>
-      <div class="brand-tile"><img src="assets/brands/honda.png" alt="Honda"></div>
-      <div class="brand-tile"><img src="assets/brands/nissan.png" alt="Nissan"></div>
-      <div class="brand-tile"><img src="assets/brands/bmw.png" alt="BMW"></div>
-      <div class="brand-tile"><img src="assets/brands/mercedes.png" alt="Mercedes-Benz"></div>
-      <div class="brand-tile"><img src="assets/brands/mazda.png" alt="Mazda"></div>
-      <div class="brand-tile"><img src="assets/brands/subaru.png" alt="Subaru"></div>
-      <div class="brand-tile"><img src="assets/brands/mitsubishi.png" alt="Mitsubishi"></div>
-      <div class="brand-tile"><img src="assets/brands/mg.png" alt="MG"></div>
-      <div class="brand-tile"><img src="assets/brands/jaguar.png" alt="Jaguar"></div>
-      <div class="brand-tile"><img src="assets/brands/audi.png" alt="Audi"></div>
-      <div class="brand-tile"><img src="assets/brands/tesla.png" alt="Tesla"></div>
-      <div class="brand-tile"><img src="assets/brands/chevrolet.png" alt="Chevrolet"></div>
-      <div class="brand-tile"><img src="assets/brands/maserati.png" alt="Maserati"></div>
-      <div class="brand-tile"><img src="assets/brands/ford.png" alt="Ford"></div>
-      <div class="brand-tile"><img src="assets/brands/lexus.png" alt="Lexus"></div>
-      <div class="brand-tile"><img src="assets/brands/suzuki.png" alt="Suzuki"></div>
-      <div class="brand-tile"><img src="assets/brands/kia.png" alt="Kia"></div>
-      <div class="brand-tile"><img src="assets/brands/hyundai.png" alt="Hyundai"></div>
-      <div class="brand-tile"><img src="assets/brands/volkswagen.png" alt="Volkswagen"></div>
-      <div class="brand-tile"><img src="assets/brands/volvo.png" alt="Volvo"></div>
+      <div class="brand-tile"><img src="assets/brands/toyota.png" alt="Toyota" width="80" height="44" loading="lazy" decoding="async"></div>
+      <div class="brand-tile"><img src="assets/brands/honda.png" alt="Honda" width="80" height="44" loading="lazy" decoding="async"></div>
+      <div class="brand-tile"><img src="assets/brands/nissan.png" alt="Nissan" width="80" height="44" loading="lazy" decoding="async"></div>
+      <div class="brand-tile"><img src="assets/brands/lexus.png" alt="Lexus" width="80" height="44" loading="lazy" decoding="async"></div>
+      <div class="brand-tile"><img src="assets/brands/mazda.png" alt="Mazda" width="80" height="44" loading="lazy" decoding="async"></div>
+      <div class="brand-tile"><img src="assets/brands/subaru.png" alt="Subaru" width="80" height="44" loading="lazy" decoding="async"></div>
+      <div class="brand-tile"><img src="assets/brands/mitsubishi.png" alt="Mitsubishi" width="80" height="44" loading="lazy" decoding="async"></div>
+      <div class="brand-tile"><img src="assets/brands/suzuki.png" alt="Suzuki" width="80" height="44" loading="lazy" decoding="async"></div>
+      <div class="brand-tile"><img src="assets/brands/bmw.png" alt="BMW" width="80" height="44" loading="lazy" decoding="async"></div>
+      <div class="brand-tile"><img src="assets/brands/mercedes.png" alt="Mercedes-Benz" width="80" height="44" loading="lazy" decoding="async"></div>
+      <div class="brand-tile"><img src="assets/brands/audi.png" alt="Audi" width="80" height="44" loading="lazy" decoding="async"></div>
+      <div class="brand-tile"><img src="assets/brands/volkswagen.png" alt="Volkswagen" width="80" height="44" loading="lazy" decoding="async"></div>
+      <div class="brand-tile"><img src="assets/brands/volvo.png" alt="Volvo" width="80" height="44" loading="lazy" decoding="async"></div>
+      <div class="brand-tile"><img src="assets/brands/jaguar.png" alt="Jaguar" width="80" height="44" loading="lazy" decoding="async"></div>
+      <div class="brand-tile"><img src="assets/brands/maserati.png" alt="Maserati" width="80" height="44" loading="lazy" decoding="async"></div>
+      <div class="brand-tile"><img src="assets/brands/ford.png" alt="Ford" width="80" height="44" loading="lazy" decoding="async"></div>
+      <div class="brand-tile"><img src="assets/brands/chevrolet.png" alt="Chevrolet" width="80" height="44" loading="lazy" decoding="async"></div>
+      <div class="brand-tile"><img src="assets/brands/tesla.png" alt="Tesla" width="80" height="44" loading="lazy" decoding="async"></div>
+      <div class="brand-tile"><img src="assets/brands/kia.png" alt="Kia" width="80" height="44" loading="lazy" decoding="async"></div>
+      <div class="brand-tile"><img src="assets/brands/hyundai.png" alt="Hyundai" width="80" height="44" loading="lazy" decoding="async"></div>
+      <div class="brand-tile"><img src="assets/brands/mg.png" alt="MG" width="80" height="44" loading="lazy" decoding="async"></div>
     </div>
   </div>
 </section>
 
 <!-- Destination Flags Section -->
-<section class="section">
+<section id="destinations" class="section light">
   <div class="container">
-    <h2 class="section-title en">Export Available To</h2>
-    <h2 class="section-title jp">主な輸出可能国</h2>
-    <p class="section-subtitle en">Direct RoRo & Container shipping connections from Japanese ports.</p>
-    <p class="section-subtitle jp">日本の主要港から安全・確実に各国の港湾へお届けします。</p>
+    <h2 class="section-title en">Worldwide Export Destinations</h2>
+    <h2 class="section-title jp">主な輸出可能国と到着港</h2>
+    <p class="section-subtitle en">Direct RoRo & Container shipping connections with estimated maritime transit schedules.</p>
+    <p class="section-subtitle jp">日本の主要港から安全・確実に各国の拠点港湾へスケジュール運行でお届けします。</p>
     
     <div class="flag-grid">
-      <div class="flag-tile"><img src="assets/flags/australia.png" alt="Australia"><p class="en">Australia</p><p class="jp">オーストラリア</p></div>
-      <div class="flag-tile"><img src="assets/flags/new.png" alt="New Zealand"><p class="en">New Zealand</p><p class="jp">ニュージーランド</p></div>
-      <div class="flag-tile"><img src="assets/flags/canada.png" alt="Canada"><p class="en">Canada</p><p class="jp">カナダ</p></div>
-      <div class="flag-tile"><img src="assets/flags/chile.png" alt="Chile"><p class="en">Chile</p><p class="jp">チリ</p></div>
-      <div class="flag-tile"><img src="assets/flags/philippines.png" alt="Philippines"><p class="en">Philippines</p><p class="jp">フィリピン</p></div>
-      <div class="flag-tile"><img src="assets/flags/united-kingdom.png" alt="United Kingdom"><p class="en">United Kingdom</p><p class="jp">イギリス</p></div>
-      <div class="flag-tile"><img src="assets/flags/south-africa.png" alt="South Africa"><p class="en">South Africa</p><p class="jp">南アフリカ</p></div>
+      <!-- Australia -->
+      <div class="flag-tile">
+        <img src="assets/flags/australia.png" alt="Australia" width="44" height="44" loading="lazy" decoding="async">
+        <p class="flag-country en">Australia</p>
+        <p class="flag-country jp">オーストラリア</p>
+        <span class="transit-badge">⏱️ 12–16 Days</span>
+        <span class="port-tag">Brisbane • Sydney • Melbourne</span>
+      </div>
+
+      <!-- New Zealand -->
+      <div class="flag-tile">
+        <img src="assets/flags/new.png" alt="New Zealand" width="44" height="44" loading="lazy" decoding="async">
+        <p class="flag-country en">New Zealand</p>
+        <p class="flag-country jp">ニュージーランド</p>
+        <span class="transit-badge">⏱️ 14–18 Days</span>
+        <span class="port-tag">Auckland • Lyttelton</span>
+      </div>
+
+      <!-- Canada -->
+      <div class="flag-tile">
+        <img src="assets/flags/canada.png" alt="Canada" width="44" height="44" loading="lazy" decoding="async">
+        <p class="flag-country en">Canada</p>
+        <p class="flag-country jp">カナダ</p>
+        <span class="transit-badge">⏱️ 16–20 Days</span>
+        <span class="port-tag">Vancouver • Halifax</span>
+      </div>
+
+      <!-- Chile -->
+      <div class="flag-tile">
+        <img src="assets/flags/chile.png" alt="Chile" width="44" height="44" loading="lazy" decoding="async">
+        <p class="flag-country en">Chile</p>
+        <p class="flag-country jp">チリ</p>
+        <span class="transit-badge">⏱️ 28–34 Days</span>
+        <span class="port-tag">Iquique • San Antonio</span>
+      </div>
+
+      <!-- Philippines -->
+      <div class="flag-tile">
+        <img src="assets/flags/philippines.png" alt="Philippines" width="44" height="44" loading="lazy" decoding="async">
+        <p class="flag-country en">Philippines</p>
+        <p class="flag-country jp">フィリピン</p>
+        <span class="transit-badge">⏱️ 7–10 Days</span>
+        <span class="port-tag">Subic • Manila</span>
+      </div>
+
+      <!-- United Kingdom -->
+      <div class="flag-tile">
+        <img src="assets/flags/united-kingdom.png" alt="United Kingdom" width="44" height="44" loading="lazy" decoding="async">
+        <p class="flag-country en">United Kingdom</p>
+        <p class="flag-country jp">イギリス</p>
+        <span class="transit-badge">⏱️ 28–35 Days</span>
+        <span class="port-tag">Southampton • Bristol</span>
+      </div>
+
+      <!-- South Africa -->
+      <div class="flag-tile">
+        <img src="assets/flags/south-africa.png" alt="South Africa" width="44" height="44" loading="lazy" decoding="async">
+        <p class="flag-country en">South Africa</p>
+        <p class="flag-country jp">南アフリカ</p>
+        <span class="transit-badge">⏱️ 25–30 Days</span>
+        <span class="port-tag">Durban</span>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- Offices -->
-<section id="offices" class="section light">
+<section id="offices" class="section">
   <div class="container">
     <h2 class="section-title en">Our Offices</h2>
     <h2 class="section-title jp">事業所一覧</h2>
-    <p class="section-subtitle en">Operating across Japan and Australia for seamless international trade.</p>
-    <p class="section-subtitle jp">日本とオーストラリアの拠点から円滑な国際取引をサポート。</p>
+    <p class="section-subtitle en">Operating across Japan and Australia for seamless international trade and client care.</p>
+    <p class="section-subtitle jp">日本とオーストラリアの二拠点から、円滑な国際取引と迅速なお客様対応をサポートします。</p>
 
     <div class="locations-grid">
       <div class="location-card">
@@ -375,8 +577,8 @@
     <h2 class="section-title en">Contact Us</h2>
     <h2 class="section-title jp">お問い合わせ</h2>
     
-    <p class="section-subtitle en">Ready to import your next vehicle? Get in touch directly with our team.</p>
-    <p class="section-subtitle jp">お車の輸入・輸出をお考えですか？担当者までお気軽にご連絡ください。</p>
+    <p class="section-subtitle en">Ready to import your next vehicle? Get in touch directly with our leadership team.</p>
+    <p class="section-subtitle jp">お車の輸入・輸出をお考えですか？担当責任者までお気軽にご連絡ください。</p>
     
     <div class="contact-cards-grid">
       <!-- Gagandeep Singh Pawar Card (Featured) -->
@@ -452,7 +654,7 @@
         </div>
 
         <div class="contact-actions">
-          <button class="btn btn-contact-copy" onclick="copyEmail()" id="copy-email-btn">
+          <button class="btn btn-contact-copy" onclick="copyEmail()" id="copy-email-btn" aria-label="Copy email address">
             <span id="copy-btn-label">📋 Copy</span>
           </button>
           <a href="mailto:bptrading202510@gmail.com" class="btn btn-contact-email">
@@ -472,48 +674,186 @@
   </div>
 </footer>
 
-<!-- Mobile Sticky Bottom Action Bar (visible on <768px screens) -->
+<!-- Mobile Sticky Bottom Action Bar -->
 <aside class="mobile-sticky-bar" aria-label="Quick contact bar">
   <a href="https://wa.me/817090551302" class="mobile-bar-btn whatsapp" target="_blank" rel="noopener">
     <span>💬 WhatsApp</span>
   </a>
   <a href="tel:+817090551302" class="mobile-bar-btn call">
-    <span>📞 Call Now</span>
+    <span>📞 Call</span>
   </a>
+  <button class="mobile-bar-btn quote" onclick="openQuoteModal()">
+    <span>📋 Quote</span>
+  </button>
 </aside>
 
-<!-- Swiper JS for Hero Slider -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<!-- Interactive "Request a Quote" Modal -->
+<div class="quote-modal-backdrop" id="quote-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="quote-modal-title" onclick="handleModalBackdropClick(event)">
+  <div class="quote-modal-card" role="document">
+    <div class="quote-modal-header">
+      <div>
+        <h3 id="quote-modal-title" class="quote-modal-title">
+          <span class="en">Request a Vehicle Quote</span>
+          <span class="jp">お見積もり依頼 (無料)</span>
+        </h3>
+        <p class="quote-modal-subtitle">
+          <span class="en">Direct inquiry to Gagandeep Singh Pawar (Export Director)</span>
+          <span class="jp">輸出統括責任者（Gagandeep）への直通お問い合わせ</span>
+        </p>
+      </div>
+      <button class="quote-close-btn" onclick="closeQuoteModal()" aria-label="Close quote modal">✕</button>
+    </div>
+
+    <form class="quote-form" onsubmit="event.preventDefault();">
+      <div class="form-group">
+        <label for="quote-model" class="form-label">
+          <span class="en">Desired Vehicle / Model</span>
+          <span class="jp">ご希望の車種・モデル</span>
+        </label>
+        <input type="text" id="quote-model" class="form-input" placeholder="e.g. Toyota Land Cruiser Prado, HiAce, Alphard..." required />
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="quote-year" class="form-label">
+            <span class="en">Year / Budget</span>
+            <span class="jp">年式・予算目安</span>
+          </label>
+          <input type="text" id="quote-year" class="form-input" placeholder="e.g. 2018–2023 / $15,000 USD" />
+        </div>
+
+        <div class="form-group">
+          <label for="quote-destination" class="form-label">
+            <span class="en">Destination Port</span>
+            <span class="jp">到着港・国</span>
+          </label>
+          <select id="quote-destination" class="form-select">
+            <option value="Australia (Brisbane / Sydney / Melbourne)">Australia (Brisbane / Sydney / Melbourne)</option>
+            <option value="New Zealand (Auckland / Lyttelton)">New Zealand (Auckland / Lyttelton)</option>
+            <option value="South Africa (Durban)">South Africa (Durban)</option>
+            <option value="Canada (Vancouver / Halifax)">Canada (Vancouver / Halifax)</option>
+            <option value="Chile (Iquique / San Antonio)">Chile (Iquique / San Antonio)</option>
+            <option value="Philippines (Subic / Manila)">Philippines (Subic / Manila)</option>
+            <option value="United Kingdom (Southampton / Bristol)">United Kingdom (Southampton / Bristol)</option>
+            <option value="Other Destination">Other Country / Port</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="quote-shipping" class="form-label">
+          <span class="en">Preferred Shipping Method</span>
+          <span class="jp">希望輸送方法</span>
+        </label>
+        <select id="quote-shipping" class="form-select">
+          <option value="RoRo (Roll-on/Roll-off - Most Economical)">RoRo Shipping (Recommended)</option>
+          <option value="Container Shipping (Enclosed Protection)">Container Shipping</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="quote-notes" class="form-label">
+          <span class="en">Additional Requirements (Optional)</span>
+          <span class="jp">特記事項・条件 (任意)</span>
+        </label>
+        <textarea id="quote-notes" class="form-textarea" rows="2" placeholder="e.g. Grade 4+, under 80,000 km, white or black color..."></textarea>
+      </div>
+
+      <div class="quote-modal-actions">
+        <button type="button" class="btn btn-quote-wa" onclick="sendQuoteWhatsApp()">
+          <span>💬 Send via WhatsApp (Instant)</span>
+        </button>
+        <button type="button" class="btn btn-quote-mail" onclick="sendQuoteEmail()">
+          <span>✉️ Send via Email</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
 
 <!-- Scripts -->
 <script>
-  // Hero Swiper
-  const heroSwiper = new Swiper('.hero-swiper', {
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: '.hero-swiper .swiper-pagination',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.hero-swiper .swiper-button-next',
-      prevEl: '.hero-swiper .swiper-button-prev',
-    },
-    effect: 'fade',
-    fadeEffect: {
-      crossFade: true
-    },
-  });
+  // Zero-Dependency Hero Carousel Engine
+  let currentSlideIndex = 0;
+  const heroSlides = document.querySelectorAll('.hero-slide');
+  const heroDots = document.querySelectorAll('.carousel-dot');
+  let carouselTimer = null;
+
+  function showSlide(index) {
+    if (!heroSlides.length) return;
+    if (index >= heroSlides.length) currentSlideIndex = 0;
+    else if (index < 0) currentSlideIndex = heroSlides.length - 1;
+    else currentSlideIndex = index;
+
+    heroSlides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === currentSlideIndex);
+    });
+
+    heroDots.forEach((dot, i) => {
+      const isActive = i === currentSlideIndex;
+      dot.classList.toggle('active', isActive);
+      dot.setAttribute('aria-selected', isActive);
+    });
+  }
+
+  function nextHeroSlide() {
+    showSlide(currentSlideIndex + 1);
+  }
+
+  function prevHeroSlide() {
+    showSlide(currentSlideIndex - 1);
+  }
+
+  function gotoHeroSlide(index) {
+    showSlide(index);
+    resetCarouselTimer();
+  }
+
+  function startCarouselTimer() {
+    carouselTimer = setInterval(nextHeroSlide, 5000);
+  }
+
+  function resetCarouselTimer() {
+    if (carouselTimer) clearInterval(carouselTimer);
+    startCarouselTimer();
+  }
+
+  startCarouselTimer();
+
+  // Pause carousel on hover or touch
+  const heroCarouselEl = document.getElementById('hero-carousel');
+  if (heroCarouselEl) {
+    heroCarouselEl.addEventListener('mouseenter', () => clearInterval(carouselTimer));
+    heroCarouselEl.addEventListener('mouseleave', startCarouselTimer);
+
+    // Touch swipe support
+    let touchStartX = 0;
+    let touchEndX = 0;
+    heroCarouselEl.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+      clearInterval(carouselTimer);
+    }, { passive: true });
+    
+    heroCarouselEl.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      const diff = touchStartX - touchEndX;
+      if (Math.abs(diff) > 40) {
+        if (diff > 0) nextHeroSlide();
+        else prevHeroSlide();
+      }
+      startCarouselTimer();
+    }, { passive: true });
+  }
 
   // Language Switcher Logic
   function toggleLanguage() {
     const body = document.body;
+    const html = document.documentElement;
     body.classList.toggle('japanese');
     
     const isJp = body.classList.contains('japanese');
+    html.setAttribute('lang', isJp ? 'ja' : 'en');
+    
     const langBtns = document.querySelectorAll('.btn-lang .lang-text');
     langBtns.forEach(el => {
       el.textContent = isJp ? "🇺🇸 English" : "🇯🇵 日本語";
@@ -521,6 +861,8 @@
   }
 
   // Mobile Navigation Drawer Toggle
+  let lastFocusedElement = null;
+
   function toggleNav() {
     const navDrawer = document.getElementById('nav-drawer');
     const navToggle = document.getElementById('nav-toggle');
@@ -530,7 +872,16 @@
     navToggle.classList.toggle('active', isOpen);
     navBackdrop.classList.toggle('active', isOpen);
     navToggle.setAttribute('aria-expanded', isOpen);
+    navDrawer.setAttribute('aria-hidden', !isOpen);
     document.body.classList.toggle('nav-open', isOpen);
+
+    if (isOpen) {
+      lastFocusedElement = document.activeElement;
+      const closeBtn = document.getElementById('drawer-close-btn');
+      if (closeBtn) closeBtn.focus();
+    } else if (lastFocusedElement) {
+      lastFocusedElement.focus();
+    }
   }
 
   function closeNav() {
@@ -542,8 +893,88 @@
       navToggle.classList.remove('active');
       navBackdrop.classList.remove('active');
       navToggle.setAttribute('aria-expanded', 'false');
+      navDrawer.setAttribute('aria-hidden', 'true');
       document.body.classList.remove('nav-open');
+      if (lastFocusedElement) lastFocusedElement.focus();
     }
+  }
+
+  // "Request a Quote" Modal Logic
+  let modalTriggerElement = null;
+
+  function openQuoteModal() {
+    const modal = document.getElementById('quote-modal');
+    if (!modal) return;
+    modalTriggerElement = document.activeElement;
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+    
+    // Focus first input
+    const input = document.getElementById('quote-model');
+    if (input) setTimeout(() => input.focus(), 100);
+  }
+
+  function closeQuoteModal() {
+    const modal = document.getElementById('quote-modal');
+    if (!modal) return;
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+    if (modalTriggerElement) modalTriggerElement.focus();
+  }
+
+  function handleModalBackdropClick(e) {
+    if (e.target.id === 'quote-modal') {
+      closeQuoteModal();
+    }
+  }
+
+  // Escape key global listener for drawer and modal
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' || e.key === 'Esc') {
+      const modal = document.getElementById('quote-modal');
+      const drawer = document.getElementById('nav-drawer');
+      if (modal && modal.classList.contains('open')) {
+        closeQuoteModal();
+      } else if (drawer && drawer.classList.contains('open')) {
+        closeNav();
+      }
+    }
+  });
+
+  // Quote Form Submission Builders
+  function getQuoteData() {
+    const model = (document.getElementById('quote-model').value || 'Any Japanese Vehicle').trim();
+    const year = (document.getElementById('quote-year').value || 'Flexible').trim();
+    const destination = document.getElementById('quote-destination').value;
+    const shipping = document.getElementById('quote-shipping').value;
+    const notes = (document.getElementById('quote-notes').value || '').trim();
+    return { model, year, destination, shipping, notes };
+  }
+
+  function sendQuoteWhatsApp() {
+    const data = getQuoteData();
+    let text = `Hello Gagandeep (B&P Trading),\nI would like to request an export quote:\n• Vehicle: ${data.model}\n• Year/Budget: ${data.year}\n• Destination: ${data.destination}\n• Shipping: ${data.shipping}`;
+    if (data.notes) {
+      text += `\n• Notes: ${data.notes}`;
+    }
+    text += `\n\nPlease let me know availability and estimated CIF cost.`;
+
+    const encoded = encodeURIComponent(text);
+    window.open(`https://wa.me/817090551302?text=${encoded}`, '_blank', 'noopener');
+  }
+
+  function sendQuoteEmail() {
+    const data = getQuoteData();
+    const subject = encodeURIComponent(`Vehicle Quote Request: ${data.model} to ${data.destination}`);
+    let body = `Dear B&P Trading Export Team,\n\nI am requesting a quotation for importing a vehicle from Japan:\n\n- Desired Vehicle: ${data.model}\n- Target Year / Budget: ${data.year}\n- Destination Port: ${data.destination}\n- Preferred Shipping: ${data.shipping}\n`;
+    if (data.notes) {
+      body += `- Additional Specifications: ${data.notes}\n`;
+    }
+    body += `\nPlease reply with available options and CIF estimation.\n\nThank you.`;
+
+    window.location.href = `mailto:bptrading202510@gmail.com?subject=${subject}&body=${encodeURIComponent(body)}`;
   }
 
   // Copy Email with tactile feedback
