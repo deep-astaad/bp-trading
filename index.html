@@ -10,19 +10,70 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
-  <!-- Swiper CSS -->
+  <!-- Swiper CSS for Hero Carousel -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-  <!-- AOS CSS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<!-- Backdrop Overlay for Mobile Drawer -->
+<!-- Backdrop Overlay for Mobile Drawer (at root) -->
 <div class="nav-backdrop" id="nav-backdrop" onclick="toggleNav()"></div>
 
-<!-- Header -->
+<!-- Mobile Navigation Drawer (Independent from header stacking context) -->
+<aside class="nav-drawer" id="nav-drawer">
+  <div class="nav-drawer-top">
+    <div class="nav-drawer-header">
+      <div class="brand-link">
+        <span class="logo-main">B&P Trading</span>
+        <span class="logo-sub">Bajaj & Pawar Trading</span>
+      </div>
+      <button class="drawer-close-btn" onclick="toggleNav()" aria-label="Close menu">✕</button>
+    </div>
+    <ul>
+      <li>
+        <a href="#home" onclick="closeNav()">
+          <span class="en">Home</span>
+          <span class="jp">ホーム</span>
+        </a>
+      </li>
+      <li>
+        <a href="#services" onclick="closeNav()">
+          <span class="en">Services</span>
+          <span class="jp">サービス</span>
+        </a>
+      </li>
+      <li>
+        <a href="#brands" onclick="closeNav()">
+          <span class="en">Brands</span>
+          <span class="jp">メーカー</span>
+        </a>
+      </li>
+      <li>
+        <a href="#offices" onclick="closeNav()">
+          <span class="en">Offices</span>
+          <span class="jp">事業所</span>
+        </a>
+      </li>
+      <li>
+        <a href="#contact" onclick="closeNav()">
+          <span class="en">Contact</span>
+          <span class="jp">お問い合わせ</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="nav-drawer-footer">
+    <a href="https://wa.me/817090551302" class="btn btn-contact-wa" target="_blank" rel="noopener" style="width: 100%;">
+      💬 WhatsApp (Gagandeep)
+    </a>
+    <a href="tel:+817090551302" class="btn btn-primary" style="width: 100%;">
+      📞 +81 70-9055-1302
+    </a>
+  </div>
+</aside>
+
+<!-- Sticky Header -->
 <header class="header">
   <div class="container nav-container">
     <!-- Brand Logo with Bajaj & Pawar Trading Subtitle -->
@@ -46,52 +97,40 @@
       </button>
     </div>
 
-    <!-- Navigation Menu & Mobile Drawer -->
-    <nav class="nav-menu" id="nav-menu">
-      <div class="nav-drawer-top">
-        <div class="nav-drawer-header">
-          <div class="brand-link">
-            <span class="logo-main">B&P Trading</span>
-            <span class="logo-sub">Bajaj & Pawar Trading</span>
-          </div>
-          <button class="drawer-close-btn" onclick="toggleNav()" aria-label="Close menu">✕</button>
-        </div>
-        <ul>
-          <li>
-            <a href="#home" onclick="closeNav()">
-              <span class="en">Home</span>
-              <span class="jp">ホーム</span>
-            </a>
-          </li>
-          <li>
-            <a href="#services" onclick="closeNav()">
-              <span class="en">Services</span>
-              <span class="jp">サービス</span>
-            </a>
-          </li>
-          <li>
-            <a href="#brands" onclick="closeNav()">
-              <span class="en">Brands</span>
-              <span class="jp">メーカー</span>
-            </a>
-          </li>
-          <li>
-            <a href="#contact" onclick="closeNav()">
-              <span class="en">Contact</span>
-              <span class="jp">お問い合わせ</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="nav-drawer-footer">
-        <a href="https://wa.me/817090551302" class="btn btn-contact-wa" target="_blank" rel="noopener" style="width: 100%;">
-          💬 WhatsApp (Gagandeep)
-        </a>
-        <a href="tel:+817090551302" class="btn btn-primary" style="width: 100%;">
-          📞 +81 70-9055-1302
-        </a>
-      </div>
+    <!-- Desktop Navigation -->
+    <nav class="desktop-nav">
+      <ul>
+        <li>
+          <a href="#home">
+            <span class="en">Home</span>
+            <span class="jp">ホーム</span>
+          </a>
+        </li>
+        <li>
+          <a href="#services">
+            <span class="en">Services</span>
+            <span class="jp">サービス</span>
+          </a>
+        </li>
+        <li>
+          <a href="#brands">
+            <span class="en">Brands</span>
+            <span class="jp">メーカー</span>
+          </a>
+        </li>
+        <li>
+          <a href="#offices">
+            <span class="en">Offices</span>
+            <span class="jp">事業所</span>
+          </a>
+        </li>
+        <li>
+          <a href="#contact">
+            <span class="en">Contact</span>
+            <span class="jp">お問い合わせ</span>
+          </a>
+        </li>
+      </ul>
     </nav>
   </div>
 </header>
@@ -195,16 +234,16 @@
 <!-- Core Services -->
 <section id="services" class="section">
   <div class="container">
-    <h2 class="section-title en" data-aos="fade-up">Our Core Services</h2>
-    <h2 class="section-title jp" data-aos="fade-up">主なサービス内容</h2>
+    <h2 class="section-title en">Our Core Services</h2>
+    <h2 class="section-title jp">主なサービス内容</h2>
 
-    <p class="section-subtitle en" data-aos="fade-up" data-aos-delay="100">Professional automotive solutions tailored for global clients and dealerships.</p>
-    <p class="section-subtitle jp" data-aos="fade-up" data-aos-delay="100">世界中のお客様へ向けたプロフェッショナルな自動車ソリューション。</p>
+    <p class="section-subtitle en">Professional automotive solutions tailored for global clients and dealerships.</p>
+    <p class="section-subtitle jp">世界中のお客様へ向けたプロフェッショナルな自動車ソリューション。</p>
     
     <div class="services-grid">
-      <div class="card service-card" data-aos="fade-up" data-aos-delay="150">
+      <div class="card service-card">
         <div class="card-image">
-          <img src="./assets/photos/auction.jpg" alt="Japan Car Auction" loading="lazy">
+          <img src="assets/photos/auction.jpg" alt="Japan Car Auction">
         </div>
         <div class="card-content">
           <h3 class="en">Buy & Sell (Japan)</h3>
@@ -215,9 +254,9 @@
         </div>
       </div>
 
-      <div class="card service-card" data-aos="fade-up" data-aos-delay="250">
+      <div class="card service-card">
         <div class="card-image">
-          <img src="./assets/photos/export.jpg" alt="Car Export Shipping" loading="lazy">
+          <img src="assets/photos/export.jpg" alt="Car Export Shipping">
         </div>
         <div class="card-content">
           <h3 class="en">Car Export</h3>
@@ -228,9 +267,9 @@
         </div>
       </div>
 
-      <div class="card service-card" data-aos="fade-up" data-aos-delay="350">
+      <div class="card service-card">
         <div class="card-image">
-          <img src="./assets/photos/documentation.png" alt="Japan Export Documentation" loading="lazy">
+          <img src="assets/photos/documentation.png" alt="Japan Export Documentation">
         </div>
         <div class="card-content">
           <h3 class="en">Japan Documentation</h3>
@@ -244,76 +283,70 @@
   </div>
 </section>
 
-<!-- Brand Grid & Swiper -->
+<!-- Car Brands -->
 <section id="brands" class="section light">
   <div class="container">
-    <h2 class="section-title en" data-aos="fade-up">Car Brands We Deal In</h2>
-    <h2 class="section-title jp" data-aos="fade-up">取り扱いメーカー一覧</h2>
-    <p class="section-subtitle en" data-aos="fade-up" data-aos-delay="100">All major Japanese and international automakers sourced on request.</p>
-    <p class="section-subtitle jp" data-aos="fade-up" data-aos-delay="100">日本の主要メーカーおよび海外ブランド各種を取り扱っております。</p>
+    <h2 class="section-title en">Car Brands We Deal In</h2>
+    <h2 class="section-title jp">取り扱いメーカー一覧</h2>
+    <p class="section-subtitle en">All major Japanese and international automakers sourced on request.</p>
+    <p class="section-subtitle jp">日本の主要メーカーおよび海外ブランド各種を取り扱っております。</p>
     
-    <div class="swiper brands-swiper" data-aos="fade-up" data-aos-delay="200">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="assets/brands/toyota.png" alt="Toyota" loading="lazy"></div>
-        <div class="swiper-slide"><img src="assets/brands/honda.png" alt="Honda" loading="lazy"></div>
-        <div class="swiper-slide"><img src="assets/brands/nissan.png" alt="Nissan" loading="lazy"></div>
-        <div class="swiper-slide"><img src="assets/brands/bmw.png" alt="BMW" loading="lazy"></div>
-        <div class="swiper-slide"><img src="assets/brands/mercedes.png" alt="Mercedes-Benz" loading="lazy"></div>
-        <div class="swiper-slide"><img src="assets/brands/mazda.png" alt="Mazda" loading="lazy"></div>
-        <div class="swiper-slide"><img src="assets/brands/subaru.png" alt="Subaru" loading="lazy"></div>
-        <div class="swiper-slide"><img src="assets/brands/mitsubishi.png" alt="Mitsubishi" loading="lazy"></div>
-        <div class="swiper-slide"><img src="assets/brands/mg.png" alt="MG" loading="lazy"></div>
-        <div class="swiper-slide"><img src="assets/brands/jaguar.png" alt="Jaguar" loading="lazy"></div>
-        <div class="swiper-slide"><img src="assets/brands/audi.png" alt="Audi" loading="lazy"></div>
-        <div class="swiper-slide"><img src="assets/brands/tesla.png" alt="Tesla" loading="lazy"></div>
-        <div class="swiper-slide"><img src="assets/brands/chevrolet.png" alt="Chevrolet" loading="lazy"></div>
-        <div class="swiper-slide"><img src="assets/brands/maserati.png" alt="Maserati" loading="lazy"></div>
-        <div class="swiper-slide"><img src="assets/brands/ford.png" alt="Ford" loading="lazy"></div>
-        <div class="swiper-slide"><img src="assets/brands/lexus.png" alt="Lexus" loading="lazy"></div>
-        <div class="swiper-slide"><img src="assets/brands/suzuki.png" alt="Suzuki" loading="lazy"></div>
-        <div class="swiper-slide"><img src="assets/brands/kia.png" alt="Kia" loading="lazy"></div>
-        <div class="swiper-slide"><img src="assets/brands/hyundai.png" alt="Hyundai" loading="lazy"></div>
-        <div class="swiper-slide"><img src="assets/brands/volkswagen.png" alt="Volkswagen" loading="lazy"></div>
-        <div class="swiper-slide"><img src="assets/brands/volvo.png" alt="Volvo" loading="lazy"></div>
-      </div>
-      <div class="swiper-pagination brands-pagination"></div>
+    <div class="brand-grid">
+      <div class="brand-tile"><img src="assets/brands/toyota.png" alt="Toyota"></div>
+      <div class="brand-tile"><img src="assets/brands/honda.png" alt="Honda"></div>
+      <div class="brand-tile"><img src="assets/brands/nissan.png" alt="Nissan"></div>
+      <div class="brand-tile"><img src="assets/brands/bmw.png" alt="BMW"></div>
+      <div class="brand-tile"><img src="assets/brands/mercedes.png" alt="Mercedes-Benz"></div>
+      <div class="brand-tile"><img src="assets/brands/mazda.png" alt="Mazda"></div>
+      <div class="brand-tile"><img src="assets/brands/subaru.png" alt="Subaru"></div>
+      <div class="brand-tile"><img src="assets/brands/mitsubishi.png" alt="Mitsubishi"></div>
+      <div class="brand-tile"><img src="assets/brands/mg.png" alt="MG"></div>
+      <div class="brand-tile"><img src="assets/brands/jaguar.png" alt="Jaguar"></div>
+      <div class="brand-tile"><img src="assets/brands/audi.png" alt="Audi"></div>
+      <div class="brand-tile"><img src="assets/brands/tesla.png" alt="Tesla"></div>
+      <div class="brand-tile"><img src="assets/brands/chevrolet.png" alt="Chevrolet"></div>
+      <div class="brand-tile"><img src="assets/brands/maserati.png" alt="Maserati"></div>
+      <div class="brand-tile"><img src="assets/brands/ford.png" alt="Ford"></div>
+      <div class="brand-tile"><img src="assets/brands/lexus.png" alt="Lexus"></div>
+      <div class="brand-tile"><img src="assets/brands/suzuki.png" alt="Suzuki"></div>
+      <div class="brand-tile"><img src="assets/brands/kia.png" alt="Kia"></div>
+      <div class="brand-tile"><img src="assets/brands/hyundai.png" alt="Hyundai"></div>
+      <div class="brand-tile"><img src="assets/brands/volkswagen.png" alt="Volkswagen"></div>
+      <div class="brand-tile"><img src="assets/brands/volvo.png" alt="Volvo"></div>
     </div>
   </div>
 </section>
 
-<!-- Destination Flags Section & Swiper -->
+<!-- Destination Flags Section -->
 <section class="section">
   <div class="container">
-    <h2 class="section-title en" data-aos="fade-up">Export Available To</h2>
-    <h2 class="section-title jp" data-aos="fade-up">主な輸出可能国</h2>
-    <p class="section-subtitle en" data-aos="fade-up" data-aos-delay="100">Direct RoRo & Container shipping connections from Japanese ports.</p>
-    <p class="section-subtitle jp" data-aos="fade-up" data-aos-delay="100">日本の主要港から安全・確実に各国の港湾へお届けします。</p>
+    <h2 class="section-title en">Export Available To</h2>
+    <h2 class="section-title jp">主な輸出可能国</h2>
+    <p class="section-subtitle en">Direct RoRo & Container shipping connections from Japanese ports.</p>
+    <p class="section-subtitle jp">日本の主要港から安全・確実に各国の港湾へお届けします。</p>
     
-    <div class="swiper flags-swiper" data-aos="fade-up" data-aos-delay="200">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="assets/flags/australia.png" alt="Australia" loading="lazy"><p class="en">Australia</p><p class="jp">オーストラリア</p></div>
-        <div class="swiper-slide"><img src="assets/flags/new.png" alt="New Zealand" loading="lazy"><p class="en">New Zealand</p><p class="jp">ニュージーランド</p></div>
-        <div class="swiper-slide"><img src="assets/flags/canada.png" alt="Canada" loading="lazy"><p class="en">Canada</p><p class="jp">カナダ</p></div>
-        <div class="swiper-slide"><img src="assets/flags/chile.png" alt="Chile" loading="lazy"><p class="en">Chile</p><p class="jp">チリ</p></div>
-        <div class="swiper-slide"><img src="assets/flags/philippines.png" alt="Philippines" loading="lazy"><p class="en">Philippines</p><p class="jp">フィリピン</p></div>
-        <div class="swiper-slide"><img src="assets/flags/united-kingdom.png" alt="United Kingdom" loading="lazy"><p class="en">United Kingdom</p><p class="jp">イギリス</p></div>
-        <div class="swiper-slide"><img src="assets/flags/south-africa.png" alt="South Africa" loading="lazy"><p class="en">South Africa</p><p class="jp">南アフリカ</p></div>
-      </div>
-      <div class="swiper-pagination flags-pagination"></div>
+    <div class="flag-grid">
+      <div class="flag-tile"><img src="assets/flags/australia.png" alt="Australia"><p class="en">Australia</p><p class="jp">オーストラリア</p></div>
+      <div class="flag-tile"><img src="assets/flags/new.png" alt="New Zealand"><p class="en">New Zealand</p><p class="jp">ニュージーランド</p></div>
+      <div class="flag-tile"><img src="assets/flags/canada.png" alt="Canada"><p class="en">Canada</p><p class="jp">カナダ</p></div>
+      <div class="flag-tile"><img src="assets/flags/chile.png" alt="Chile"><p class="en">Chile</p><p class="jp">チリ</p></div>
+      <div class="flag-tile"><img src="assets/flags/philippines.png" alt="Philippines"><p class="en">Philippines</p><p class="jp">フィリピン</p></div>
+      <div class="flag-tile"><img src="assets/flags/united-kingdom.png" alt="United Kingdom"><p class="en">United Kingdom</p><p class="jp">イギリス</p></div>
+      <div class="flag-tile"><img src="assets/flags/south-africa.png" alt="South Africa"><p class="en">South Africa</p><p class="jp">南アフリカ</p></div>
     </div>
   </div>
 </section>
 
 <!-- Offices -->
-<section class="section light">
+<section id="offices" class="section light">
   <div class="container">
-    <h2 class="section-title en" data-aos="fade-up">Our Offices</h2>
-    <h2 class="section-title jp" data-aos="fade-up">事業所一覧</h2>
-    <p class="section-subtitle en" data-aos="fade-up" data-aos-delay="100">Operating across Japan and Australia for seamless international trade.</p>
-    <p class="section-subtitle jp" data-aos="fade-up" data-aos-delay="100">日本とオーストラリアの拠点から円滑な国際取引をサポート。</p>
+    <h2 class="section-title en">Our Offices</h2>
+    <h2 class="section-title jp">事業所一覧</h2>
+    <p class="section-subtitle en">Operating across Japan and Australia for seamless international trade.</p>
+    <p class="section-subtitle jp">日本とオーストラリアの拠点から円滑な国際取引をサポート。</p>
 
     <div class="locations-grid">
-      <div class="card location-card" data-aos="fade-up" data-aos-delay="150">
+      <div class="location-card">
         <h3 class="en">🇯🇵 Japan Head Office</h3>
         <h3 class="jp">🇯🇵 日本本社</h3>
         <address>
@@ -323,7 +356,7 @@
         </address>
       </div>
 
-      <div class="card location-card" data-aos="fade-up" data-aos-delay="250">
+      <div class="location-card">
         <h3 class="en">🇦🇺 Australia Office</h3>
         <h3 class="jp">🇦🇺 オーストラリア支店</h3>
         <address>
@@ -339,15 +372,15 @@
 <!-- Contact Section -->
 <section id="contact" class="section dark-contact">
   <div class="container">
-    <h2 class="section-title en" data-aos="fade-up">Contact Us</h2>
-    <h2 class="section-title jp" data-aos="fade-up">お問い合わせ</h2>
+    <h2 class="section-title en">Contact Us</h2>
+    <h2 class="section-title jp">お問い合わせ</h2>
     
-    <p class="section-subtitle en" data-aos="fade-up" data-aos-delay="100">Ready to import your next vehicle? Get in touch directly with our team.</p>
-    <p class="section-subtitle jp" data-aos="fade-up" data-aos-delay="100">お車の輸入・輸出をお考えですか？担当者までお気軽にご連絡ください。</p>
+    <p class="section-subtitle en">Ready to import your next vehicle? Get in touch directly with our team.</p>
+    <p class="section-subtitle jp">お車の輸入・輸出をお考えですか？担当者までお気軽にご連絡ください。</p>
     
     <div class="contact-cards-grid">
       <!-- Gagandeep Singh Pawar Card (Featured) -->
-      <div class="contact-card featured" data-aos="fade-up" data-aos-delay="150">
+      <div class="contact-card featured">
         <div>
           <div class="contact-card-header">
             <div class="contact-avatar">GP</div>
@@ -374,7 +407,7 @@
       </div>
 
       <!-- General Office / Support Card -->
-      <div class="contact-card" data-aos="fade-up" data-aos-delay="250">
+      <div class="contact-card">
         <div>
           <div class="contact-card-header">
             <div class="contact-avatar">BP</div>
@@ -401,7 +434,7 @@
       </div>
 
       <!-- Email Card -->
-      <div class="contact-card" data-aos="fade-up" data-aos-delay="350">
+      <div class="contact-card">
         <div>
           <div class="contact-card-header">
             <div class="contact-avatar">✉️</div>
@@ -442,26 +475,18 @@
 <!-- Mobile Sticky Bottom Action Bar (visible on <768px screens) -->
 <aside class="mobile-sticky-bar" aria-label="Quick contact bar">
   <a href="https://wa.me/817090551302" class="mobile-bar-btn whatsapp" target="_blank" rel="noopener">
-    <span>💬 WhatsApp (Gagandeep)</span>
+    <span>💬 WhatsApp</span>
   </a>
   <a href="tel:+817090551302" class="mobile-bar-btn call">
     <span>📞 Call Now</span>
   </a>
 </aside>
 
-<!-- Swiper JS -->
+<!-- Swiper JS for Hero Slider -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-<!-- AOS JS -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 <!-- Scripts -->
 <script>
-  // AOS Animation Init
-  AOS.init({
-    duration: 800,
-    once: true,
-  });
-
   // Hero Swiper
   const heroSwiper = new Swiper('.hero-swiper', {
     loop: true,
@@ -483,46 +508,6 @@
     },
   });
 
-  // Brands Swiper
-  const brandsSwiper = new Swiper('.brands-swiper', {
-    loop: true,
-    slidesPerView: 2,
-    spaceBetween: 14,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: '.brands-pagination',
-      clickable: true,
-    },
-    breakpoints: {
-      480: { slidesPerView: 3, spaceBetween: 16 },
-      768: { slidesPerView: 4, spaceBetween: 20 },
-      1024: { slidesPerView: 6, spaceBetween: 24 },
-    }
-  });
-
-  // Flags Swiper
-  const flagsSwiper = new Swiper('.flags-swiper', {
-    loop: true,
-    slidesPerView: 2,
-    spaceBetween: 14,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: '.flags-pagination',
-      clickable: true,
-    },
-    breakpoints: {
-      480: { slidesPerView: 3, spaceBetween: 16 },
-      768: { slidesPerView: 4, spaceBetween: 20 },
-      1024: { slidesPerView: 5, spaceBetween: 24 },
-    }
-  });
-
   // Language Switcher Logic
   function toggleLanguage() {
     const body = document.body;
@@ -537,10 +522,10 @@
 
   // Mobile Navigation Drawer Toggle
   function toggleNav() {
-    const navMenu = document.getElementById('nav-menu');
+    const navDrawer = document.getElementById('nav-drawer');
     const navToggle = document.getElementById('nav-toggle');
     const navBackdrop = document.getElementById('nav-backdrop');
-    const isOpen = navMenu.classList.toggle('open');
+    const isOpen = navDrawer.classList.toggle('open');
     
     navToggle.classList.toggle('active', isOpen);
     navBackdrop.classList.toggle('active', isOpen);
@@ -549,11 +534,11 @@
   }
 
   function closeNav() {
-    const navMenu = document.getElementById('nav-menu');
+    const navDrawer = document.getElementById('nav-drawer');
     const navToggle = document.getElementById('nav-toggle');
     const navBackdrop = document.getElementById('nav-backdrop');
-    if (navMenu.classList.contains('open')) {
-      navMenu.classList.remove('open');
+    if (navDrawer.classList.contains('open')) {
+      navDrawer.classList.remove('open');
       navToggle.classList.remove('active');
       navBackdrop.classList.remove('active');
       navToggle.setAttribute('aria-expanded', 'false');
