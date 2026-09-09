@@ -1,6 +1,6 @@
 /* ==========================================================================
    B&P Trading (Bajaj & Pawar Trading) - Mobile-First Stylesheet
-   Crafted with frontend-design & improve-animations standards
+   Modernized with Swiper, AOS, and Emil Kowalski Motion Craft
    ========================================================================== */
 
 /* --- 1. Variables & Design Tokens --- */
@@ -22,6 +22,10 @@
   --shadow-sm: 0 1px 3px rgba(11, 21, 40, 0.06), 0 1px 2px rgba(11, 21, 40, 0.04);
   --shadow-md: 0 8px 16px -2px rgba(11, 21, 40, 0.08), 0 4px 6px -2px rgba(11, 21, 40, 0.04);
   --shadow-hover: 0 16px 28px -4px rgba(11, 21, 40, 0.14);
+
+  /* Swiper Accent */
+  --swiper-theme-color: #1d4ed8;
+  --swiper-pagination-bullet-inactive-color: #94a3b8;
 
   /* Motion Tokens (Emil Kowalski Philosophy) */
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);        /* Snappy UI responses & releases */
@@ -467,9 +471,27 @@ h1, h2, h3, h4 {
   }
 }
 
-/* --- 6. Hero Section --- */
+/* --- 6. Hero Section & Swiper --- */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-swiper {
+  width: 100%;
+  min-height: 72vh;
+}
+
+@media (min-width: 768px) {
+  .hero-swiper {
+    min-height: 80vh;
+  }
+}
+
 .hero-photo {
-  background: url("assets/photos/hero.jpg") center/cover no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   min-height: 72vh;
   position: relative;
   display: flex;
@@ -562,6 +584,39 @@ h1, h2, h3, h4 {
     flex-direction: row;
     justify-content: center;
     max-width: none;
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ffffff !important;
+  background: rgba(11, 21, 40, 0.45);
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 50%;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: background var(--duration-ui) var(--ease-out),
+              transform var(--duration-press) var(--ease-out);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 1.1rem !important;
+  font-weight: 700;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .swiper-button-next:hover,
+  .swiper-button-prev:hover {
+    background: rgba(29, 78, 216, 0.85);
+  }
+}
+
+@media (max-width: 640px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important; /* Cleaner touch-friendly UX on small phones */
   }
 }
 
@@ -691,99 +746,77 @@ h1, h2, h3, h4 {
   line-height: 1.6;
 }
 
-/* --- 9. Car Brands Section (Touch-Optimized Grid) --- */
-.logo-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
+/* --- 9. Car Brands Section & Swiper --- */
+.brands-swiper {
+  padding: 20px 0 40px 0 !important;
 }
 
-@media (min-width: 560px) {
-  .logo-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-  }
-}
-
-@media (min-width: 960px) {
-  .logo-grid {
-    grid-template-columns: repeat(7, 1fr);
-    gap: 18px;
-  }
-}
-
-.brand-tile {
-  background: #ffffff;
-  border: 1px solid var(--border-color);
-  border-radius: 12px;
-  padding: 14px 10px;
+.brands-swiper .swiper-slide {
   display: flex;
   align-items: center;
   justify-content: center;
-  aspect-ratio: 16 / 10;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 16px 12px;
+  height: 90px;
   box-shadow: var(--shadow-sm);
   transition: transform var(--duration-ui) var(--ease-out),
               border-color var(--duration-ui) var(--ease-out);
 }
 
-.brand-tile img {
-  max-width: 80%;
-  max-height: 48px;
+.brands-swiper img {
+  max-width: 85%;
+  max-height: 52px;
   object-fit: contain;
   filter: grayscale(100%);
-  opacity: 0.8;
+  opacity: 0.75;
   transition: filter var(--duration-ui) var(--ease-out),
               opacity var(--duration-ui) var(--ease-out);
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .brand-tile:hover {
+  .brands-swiper .swiper-slide:hover {
     transform: translateY(-2px);
     border-color: var(--primary-color);
   }
-  .brand-tile:hover img {
+  .brands-swiper .swiper-slide:hover img {
     filter: grayscale(0%);
     opacity: 1;
   }
 }
 
-/* --- 10. Destination Flags --- */
-.flag-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  text-align: center;
+/* --- 10. Destination Flags Section & Swiper --- */
+.flags-swiper {
+  padding: 20px 0 40px 0 !important;
 }
 
-@media (min-width: 768px) {
-  .flag-grid {
-    grid-template-columns: repeat(7, 1fr);
-    gap: 20px;
-  }
-}
-
-.flag-item {
-  background: #ffffff;
-  border: 1px solid var(--border-color);
-  border-radius: 12px;
-  padding: 18px 10px;
+.flags-swiper .swiper-slide {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 18px 10px;
+  height: 125px;
+  box-shadow: var(--shadow-sm);
 }
 
-.flag-item img {
-  width: 48px;
-  height: 48px;
+.flags-swiper img {
+  width: 50px;
+  height: 50px;
   object-fit: contain;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
-.flag-item p {
+.flags-swiper p {
   font-weight: 600;
   font-size: 0.85rem;
   color: var(--text-dark);
+  margin: 0;
 }
 
 /* --- 11. Offices / Locations Section --- */
