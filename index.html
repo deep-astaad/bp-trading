@@ -4,57 +4,101 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="OaAutCWjm0_EndOxhq3U1lWIgVWbkQNVkM3wy21FwkQ" />
-  <title>B&P Trading | Japan Used Car Export</title>
-  <meta name="description" content="B&P Trading - Buy, sell and export used cars from Japan. All brands available with complete Japan export documentation." />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <title>B&P Trading (Bajaj & Pawar Trading) | Japan Used Car Export</title>
+  <meta name="description" content="B&P Trading (Bajaj & Pawar Trading) - Buy, sell and export used cars from Japan. All brands available with complete Japan export documentation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header class="header sticky">
+<!-- Backdrop Overlay for Mobile Drawer -->
+<div class="nav-backdrop" id="nav-backdrop" onclick="toggleNav()"></div>
+
+<!-- Header -->
+<header class="header">
   <div class="container nav-container">
-    <div class="logo">
-      <h1>B&P Trading</h1>
+    <!-- Brand Logo with Bajaj & Pawar Trading Subtitle -->
+    <a href="#home" class="brand-link">
+      <span class="logo-main">B&P Trading</span>
+      <span class="logo-sub">Bajaj & Pawar Trading</span>
+    </a>
+
+    <!-- Header Actions -->
+    <div class="header-actions">
+      <!-- Quick Language Switcher Button (Always accessible) -->
+      <button class="btn-lang" onclick="toggleLanguage()" aria-label="Toggle language">
+        <span class="lang-text">🇯🇵 日本語</span>
+      </button>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="nav-toggle" id="nav-toggle" onclick="toggleNav()" aria-label="Open Navigation Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
-    <nav class="nav-menu">
-      <ul>
-        <li>
-            <a href="#home">
-                <span class="en">Home</span>
-                <span class="jp">ホーム</span>
+
+    <!-- Navigation Menu & Mobile Drawer -->
+    <nav class="nav-menu" id="nav-menu">
+      <div class="nav-drawer-top">
+        <div class="nav-drawer-header">
+          <div class="brand-link">
+            <span class="logo-main">B&P Trading</span>
+            <span class="logo-sub">Bajaj & Pawar Trading</span>
+          </div>
+          <button class="drawer-close-btn" onclick="toggleNav()" aria-label="Close menu">✕</button>
+        </div>
+        <ul>
+          <li>
+            <a href="#home" onclick="closeNav()">
+              <span class="en">Home</span>
+              <span class="jp">ホーム</span>
             </a>
-        </li>
-        <li>
-            <a href="#services">
-                <span class="en">Services</span>
-                <span class="jp">サービス</span>
+          </li>
+          <li>
+            <a href="#services" onclick="closeNav()">
+              <span class="en">Services</span>
+              <span class="jp">サービス</span>
             </a>
-        </li>
-        <li>
-            <a href="#brands">
-                <span class="en">Brands</span>
-                <span class="jp">メーカー</span>
+          </li>
+          <li>
+            <a href="#brands" onclick="closeNav()">
+              <span class="en">Brands</span>
+              <span class="jp">メーカー</span>
             </a>
-        </li>
-        <li>
-            <a href="#contact">
-                <span class="en">Contact</span>
-                <span class="jp">お問い合わせ</span>
+          </li>
+          <li>
+            <a href="#contact" onclick="closeNav()">
+              <span class="en">Contact</span>
+              <span class="jp">お問い合わせ</span>
             </a>
-        </li>
-        <li>
-            <button id="lang-switch" class="btn-lang" onclick="toggleLanguage()">
-                🇯🇵 日本語
-            </button>
-        </li>
-      </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="nav-drawer-footer">
+        <a href="https://wa.me/817090551302" class="btn btn-contact-wa" target="_blank" rel="noopener" style="width: 100%;">
+          💬 WhatsApp (Gagandeep)
+        </a>
+        <a href="tel:+817090551302" class="btn btn-primary" style="width: 100%;">
+          📞 +81 70-9055-1302
+        </a>
+      </div>
     </nav>
   </div>
 </header>
 
+<!-- Hero Section -->
 <section id="home" class="hero hero-photo">
   <div class="overlay">
     <div class="container hero-content">
+      <div class="hero-badge">
+        <span class="en">🇯🇵 Registered Japan Vehicle Exporter</span>
+        <span class="jp">🇯🇵 日本公式登録中古車輸出事業者</span>
+      </div>
+
       <h2 class="en">Trusted Japan Used Car Exporters</h2>
       <h2 class="jp">信頼できる日本中古車輸出パートナー</h2>
       
@@ -63,30 +107,31 @@
       
       <div class="hero-btns">
         <a href="#contact" class="btn btn-primary">
-            <span class="en">Get A Quote</span>
-            <span class="jp">お見積もり</span>
+          <span class="en">Get A Quote</span>
+          <span class="jp">お見積もり</span>
         </a>
         <a href="#services" class="btn btn-outline">
-            <span class="en">Our Services</span>
-            <span class="jp">サービス一覧</span>
+          <span class="en">Our Services</span>
+          <span class="jp">サービス一覧</span>
         </a>
       </div>
     </div>
   </div>
 </section>
 
+<!-- Core Services -->
 <section id="services" class="section">
   <div class="container">
     <h2 class="section-title en">Our Core Services</h2>
     <h2 class="section-title jp">主なサービス内容</h2>
 
-    <p class="section-subtitle en">Professional automotive solutions tailored for global clients.</p>
+    <p class="section-subtitle en">Professional automotive solutions tailored for global clients and dealerships.</p>
     <p class="section-subtitle jp">世界中のお客様へ向けたプロフェッショナルな自動車ソリューション。</p>
     
-    <div class="grid services-grid">
+    <div class="services-grid">
       <div class="card service-card">
         <div class="card-image">
-          <img src="./assets/photos/auction.jpg" alt="Japan Car Auction">
+          <img src="./assets/photos/auction.jpg" alt="Japan Car Auction" loading="lazy">
         </div>
         <div class="card-content">
           <h3 class="en">Buy & Sell (Japan)</h3>
@@ -99,7 +144,7 @@
 
       <div class="card service-card">
         <div class="card-image">
-          <img src="./assets/photos/export.jpg" alt="Car Export Shipping">
+          <img src="./assets/photos/export.jpg" alt="Car Export Shipping" loading="lazy">
         </div>
         <div class="card-content">
           <h3 class="en">Car Export</h3>
@@ -112,7 +157,7 @@
 
       <div class="card service-card">
         <div class="card-image">
-          <img src="./assets/photos/documentation.png" alt="Japan Export Documentation">
+          <img src="./assets/photos/documentation.png" alt="Japan Export Documentation" loading="lazy">
         </div>
         <div class="card-content">
           <h3 class="en">Japan Documentation</h3>
@@ -126,76 +171,85 @@
   </div>
 </section>
 
+<!-- Brand Grid -->
 <section id="brands" class="section light">
   <div class="container">
     <h2 class="section-title en">Car Brands We Deal In</h2>
     <h2 class="section-title jp">取り扱いメーカー一覧</h2>
+    <p class="section-subtitle en">All major Japanese and international automakers sourced on request.</p>
+    <p class="section-subtitle jp">日本の主要メーカーおよび海外ブランド各種を取り扱っております。</p>
     
     <div class="logo-grid">
-      <img src="assets/brands/toyota.png" alt="Toyota">
-      <img src="assets/brands/honda.png" alt="Honda">
-      <img src="assets/brands/nissan.png" alt="Nissan">
-      <img src="assets/brands/bmw.png" alt="BMW">
-      <img src="assets/brands/mercedes.png" alt="Mercedes-Benz">
-      <img src="assets/brands/mazda.png" alt="Mazda">
-      <img src="assets/brands/subaru.png" alt="Subaru">
-      <img src="assets/brands/mitsubishi.png" alt="Mitsubishi">
-      <img src="assets/brands/mg.png" alt="MG">
-      <img src="assets/brands/jaguar.png" alt="Jaguar">
-      <img src="assets/brands/audi.png" alt="Audi">
-      <img src="assets/brands/tesla.png" alt="Tesla">
-      <img src="assets/brands/chevrolet.png" alt="Chevrolet">
-      <img src="assets/brands/maserati.png" alt="Maserati">
-      <img src="assets/brands/ford.png" alt="Ford">
-      <img src="assets/brands/lexus.png" alt="Lexus">
-      <img src="assets/brands/suzuki.png" alt="Suzuki">
-      <img src="assets/brands/kia.png" alt="Kia">
-      <img src="assets/brands/hyundai.png" alt="Hyundai">
-      <img src="assets/brands/volkswagen.png" alt="Volkswagen">
-      <img src="assets/brands/volvo.png" alt="Volvo">
+      <div class="brand-tile"><img src="assets/brands/toyota.png" alt="Toyota" loading="lazy"></div>
+      <div class="brand-tile"><img src="assets/brands/honda.png" alt="Honda" loading="lazy"></div>
+      <div class="brand-tile"><img src="assets/brands/nissan.png" alt="Nissan" loading="lazy"></div>
+      <div class="brand-tile"><img src="assets/brands/bmw.png" alt="BMW" loading="lazy"></div>
+      <div class="brand-tile"><img src="assets/brands/mercedes.png" alt="Mercedes-Benz" loading="lazy"></div>
+      <div class="brand-tile"><img src="assets/brands/mazda.png" alt="Mazda" loading="lazy"></div>
+      <div class="brand-tile"><img src="assets/brands/subaru.png" alt="Subaru" loading="lazy"></div>
+      <div class="brand-tile"><img src="assets/brands/mitsubishi.png" alt="Mitsubishi" loading="lazy"></div>
+      <div class="brand-tile"><img src="assets/brands/mg.png" alt="MG" loading="lazy"></div>
+      <div class="brand-tile"><img src="assets/brands/jaguar.png" alt="Jaguar" loading="lazy"></div>
+      <div class="brand-tile"><img src="assets/brands/audi.png" alt="Audi" loading="lazy"></div>
+      <div class="brand-tile"><img src="assets/brands/tesla.png" alt="Tesla" loading="lazy"></div>
+      <div class="brand-tile"><img src="assets/brands/chevrolet.png" alt="Chevrolet" loading="lazy"></div>
+      <div class="brand-tile"><img src="assets/brands/maserati.png" alt="Maserati" loading="lazy"></div>
+      <div class="brand-tile"><img src="assets/brands/ford.png" alt="Ford" loading="lazy"></div>
+      <div class="brand-tile"><img src="assets/brands/lexus.png" alt="Lexus" loading="lazy"></div>
+      <div class="brand-tile"><img src="assets/brands/suzuki.png" alt="Suzuki" loading="lazy"></div>
+      <div class="brand-tile"><img src="assets/brands/kia.png" alt="Kia" loading="lazy"></div>
+      <div class="brand-tile"><img src="assets/brands/hyundai.png" alt="Hyundai" loading="lazy"></div>
+      <div class="brand-tile"><img src="assets/brands/volkswagen.png" alt="Volkswagen" loading="lazy"></div>
+      <div class="brand-tile"><img src="assets/brands/volvo.png" alt="Volvo" loading="lazy"></div>
     </div>
   </div>
 </section>
 
+<!-- Destination Flags -->
 <section class="section">
   <div class="container">
     <h2 class="section-title en">Export Available To</h2>
     <h2 class="section-title jp">主な輸出可能国</h2>
+    <p class="section-subtitle en">Direct RoRo & Container shipping connections from Japanese ports.</p>
+    <p class="section-subtitle jp">日本の主要港から安全・確実に各国の港湾へお届けします。</p>
     
     <div class="flag-grid">
-      <div><img src="assets/flags/australia.png"><p class="en">Australia</p><p class="jp">オーストラリア</p></div>
-      <div><img src="assets/flags/new.png"><p class="en">New Zealand</p><p class="jp">ニュージーランド</p></div>
-      <div><img src="assets/flags/canada.png"><p class="en">Canada</p><p class="jp">カナダ</p></div>
-      <div><img src="assets/flags/chile.png"><p class="en">Chile</p><p class="jp">チリ</p></div>
-      <div><img src="assets/flags/philippines.png"><p class="en">Philippines</p><p class="jp">フィリピン</p></div>
-      <div><img src="assets/flags/united-kingdom.png"><p class="en">United Kingdom</p><p class="jp">イギリス</p></div>
-      <div><img src="assets/flags/south-africa.png"><p class="en">South Africa</p><p class="jp">南アフリカ</p></div>
+      <div class="flag-item"><img src="assets/flags/australia.png" alt="Australia" loading="lazy"><p class="en">Australia</p><p class="jp">オーストラリア</p></div>
+      <div class="flag-item"><img src="assets/flags/new.png" alt="New Zealand" loading="lazy"><p class="en">New Zealand</p><p class="jp">ニュージーランド</p></div>
+      <div class="flag-item"><img src="assets/flags/canada.png" alt="Canada" loading="lazy"><p class="en">Canada</p><p class="jp">カナダ</p></div>
+      <div class="flag-item"><img src="assets/flags/chile.png" alt="Chile" loading="lazy"><p class="en">Chile</p><p class="jp">チリ</p></div>
+      <div class="flag-item"><img src="assets/flags/philippines.png" alt="Philippines" loading="lazy"><p class="en">Philippines</p><p class="jp">フィリピン</p></div>
+      <div class="flag-item"><img src="assets/flags/united-kingdom.png" alt="United Kingdom" loading="lazy"><p class="en">United Kingdom</p><p class="jp">イギリス</p></div>
+      <div class="flag-item"><img src="assets/flags/south-africa.png" alt="South Africa" loading="lazy"><p class="en">South Africa</p><p class="jp">南アフリカ</p></div>
     </div>
   </div>
 </section>
 
+<!-- Offices -->
 <section class="section light">
   <div class="container">
     <h2 class="section-title en">Our Offices</h2>
     <h2 class="section-title jp">事業所一覧</h2>
+    <p class="section-subtitle en">Operating across Japan and Australia for seamless international trade.</p>
+    <p class="section-subtitle jp">日本とオーストラリアの拠点から円滑な国際取引をサポート。</p>
 
-    <div class="grid">
-      <div class="card location-card">
+    <div class="locations-grid">
+      <div class="location-card">
         <h3 class="en">🇯🇵 Japan Head Office</h3>
         <h3 class="jp">🇯🇵 日本本社</h3>
         <address>
           神奈川県川崎市川崎区殿町1-13-21-8<br>
-          Kawasaki, Kanagawa<br>
+          Kawasaki, Kanagawa, Japan<br>
           <strong>PIN:</strong> 210-0821
         </address>
       </div>
 
-      <div class="card location-card">
+      <div class="location-card">
         <h3 class="en">🇦🇺 Australia Office</h3>
         <h3 class="jp">🇦🇺 オーストラリア支店</h3>
         <address>
           27/89 Northquarter Drive<br>
-          Murrumba Downs, QLD<br>
+          Murrumba Downs, QLD, Australia<br>
           <strong>PIN:</strong> 4503
         </address>
       </div>
@@ -203,79 +257,178 @@
   </div>
 </section>
 
+<!-- Contact Section -->
 <section id="contact" class="section dark-contact">
-  <div class="container contact-container">
-    <h2 class="section-title white-text en">Contact Us</h2>
-    <h2 class="section-title white-text jp">お問い合わせ</h2>
+  <div class="container">
+    <h2 class="section-title en">Contact Us</h2>
+    <h2 class="section-title jp">お問い合わせ</h2>
     
-    <p class="contact-sub en">Ready to import your next car? Get in touch today.</p>
-    <p class="contact-sub jp">お車の輸入・輸出をお考えですか？お気軽にご連絡ください。</p>
+    <p class="section-subtitle en">Ready to import your next vehicle? Get in touch directly with our team.</p>
+    <p class="section-subtitle jp">お車の輸入・輸出をお考えですか？担当者までお気軽にご連絡ください。</p>
     
-    <div class="contact-details">
-      <div class="contact-item">
-        <span class="icon">📞</span>
-        <p><strong>Phone / WhatsApp:</strong><br> +81 80-5156-0999</p>
+    <div class="contact-cards-grid">
+      <!-- Gagandeep Singh Pawar Card (Featured) -->
+      <div class="contact-card featured">
+        <div>
+          <div class="contact-card-header">
+            <div class="contact-avatar">GP</div>
+            <div>
+              <h3 class="contact-name">Gagandeep Singh Pawar</h3>
+              <p class="contact-role en">Export & Sales Director</p>
+              <p class="contact-role jp">輸出・営業統括</p>
+            </div>
+          </div>
+          
+          <div class="contact-number-block">
+            <a href="tel:+817090551302" class="phone-link">+81 70-9055-1302</a>
+          </div>
+        </div>
+
+        <div class="contact-actions">
+          <a href="tel:+817090551302" class="btn btn-contact-call">
+            <span>📞 Call</span>
+          </a>
+          <a href="https://wa.me/817090551302" class="btn btn-contact-wa" target="_blank" rel="noopener">
+            <span>💬 WhatsApp</span>
+          </a>
+        </div>
       </div>
-      <div class="contact-item">
-        <span class="icon">✉️</span>
-        <p>
-          <strong>Email:</strong><br> 
-          <span id="email-text">bptrading202510@gmail.com</span>
-          <button class="copy-btn" onclick="copyEmail()" title="Copy Email">
-            📋
+
+      <!-- General Office / Support Card -->
+      <div class="contact-card">
+        <div>
+          <div class="contact-card-header">
+            <div class="contact-avatar">BP</div>
+            <div>
+              <h3 class="contact-name">B&P Sales & Support</h3>
+              <p class="contact-role en">General Inquiries & Logistics</p>
+              <p class="contact-role jp">総合受付・通関配送</p>
+            </div>
+          </div>
+          
+          <div class="contact-number-block">
+            <a href="tel:+818051560999" class="phone-link">+81 80-5156-0999</a>
+          </div>
+        </div>
+
+        <div class="contact-actions">
+          <a href="tel:+818051560999" class="btn btn-contact-call">
+            <span>📞 Call</span>
+          </a>
+          <a href="https://wa.me/818051560999" class="btn btn-contact-wa" target="_blank" rel="noopener">
+            <span>💬 WhatsApp</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Email Card -->
+      <div class="contact-card">
+        <div>
+          <div class="contact-card-header">
+            <div class="contact-avatar">✉️</div>
+            <div>
+              <h3 class="contact-name en">Email Inquiries</h3>
+              <h3 class="contact-name jp">メール窓口</h3>
+              <p class="contact-role en">Official Export Desk</p>
+              <p class="contact-role jp">輸出お問い合わせ窓口</p>
+            </div>
+          </div>
+          
+          <div class="contact-number-block">
+            <span id="email-text" class="email-address">bptrading202510@gmail.com</span>
+          </div>
+        </div>
+
+        <div class="contact-actions">
+          <button class="btn btn-contact-copy" onclick="copyEmail()" id="copy-email-btn">
+            <span id="copy-btn-label">📋 Copy</span>
           </button>
-        </p>
+          <a href="mailto:bptrading202510@gmail.com" class="btn btn-contact-email">
+            <span>✉️ Mail Us</span>
+          </a>
+        </div>
       </div>
     </div>
-    
-    <a href="https://wa.me/818051560999" class="btn whatsapp-big" target="_blank">
-      <span style="margin-right: 10px;">💬</span> 
-      <span class="en">Chat on WhatsApp</span>
-      <span class="jp">WhatsAppでチャット</span>
-    </a>
-
-    <div style="height: 15px;"></div>
-
-    <a href="mailto:bptrading202510@gmail.com" class="btn email-big">
-      <span style="margin-right: 10px;">✉️</span> 
-      <span class="en">Mail Us</span>
-      <span class="jp">メールで問い合わせ</span>
-    </a>
   </div>
 </section>
 
+<!-- Footer -->
 <footer class="footer">
   <div class="container">
-    <p class="en">© 2026 B&P Trading. All Rights Reserved. | Japan Used Car Export</p>
-    <p class="jp">© 2026 B&P Trading. All Rights Reserved. | 日本中古車輸出</p>
+    <p class="en">© 2026 B&P Trading (Bajaj & Pawar Trading). All Rights Reserved. | Japan Used Car Export</p>
+    <p class="jp">© 2026 B&P Trading (Bajaj & Pawar Trading). All Rights Reserved. | 日本中古車輸出</p>
   </div>
 </footer>
 
+<!-- Mobile Sticky Bottom Action Bar (visible on <768px screens) -->
+<aside class="mobile-sticky-bar" aria-label="Quick contact bar">
+  <a href="https://wa.me/817090551302" class="mobile-bar-btn whatsapp" target="_blank" rel="noopener">
+    <span>💬 WhatsApp (Gagandeep)</span>
+  </a>
+  <a href="tel:+817090551302" class="mobile-bar-btn call">
+    <span>📞 Call Now</span>
+  </a>
+</aside>
+
+<!-- Scripts -->
 <script>
+  // Language Switcher Logic
   function toggleLanguage() {
     const body = document.body;
-    const btn = document.getElementById('lang-switch');
-    
-    // Toggle the 'japanese' class on the body
     body.classList.toggle('japanese');
     
-    // Update button text
-    if (body.classList.contains('japanese')) {
-      btn.innerText = "🇺🇸 English";
-    } else {
-      btn.innerText = "🇯🇵 日本語";
+    const isJp = body.classList.contains('japanese');
+    const langBtns = document.querySelectorAll('.btn-lang .lang-text');
+    langBtns.forEach(el => {
+      el.textContent = isJp ? "🇺🇸 English" : "🇯🇵 日本語";
+    });
+  }
+
+  // Mobile Navigation Drawer Toggle
+  function toggleNav() {
+    const navMenu = document.getElementById('nav-menu');
+    const navToggle = document.getElementById('nav-toggle');
+    const navBackdrop = document.getElementById('nav-backdrop');
+    const isOpen = navMenu.classList.toggle('open');
+    
+    navToggle.classList.toggle('active', isOpen);
+    navBackdrop.classList.toggle('active', isOpen);
+    navToggle.setAttribute('aria-expanded', isOpen);
+    document.body.classList.toggle('nav-open', isOpen);
+  }
+
+  function closeNav() {
+    const navMenu = document.getElementById('nav-menu');
+    const navToggle = document.getElementById('nav-toggle');
+    const navBackdrop = document.getElementById('nav-backdrop');
+    if (navMenu.classList.contains('open')) {
+      navMenu.classList.remove('open');
+      navToggle.classList.remove('active');
+      navBackdrop.classList.remove('active');
+      navToggle.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('nav-open');
     }
   }
-</script>
-<script>
-function copyEmail() {
-  const emailText = document.getElementById("email-text").innerText;
-  navigator.clipboard.writeText(emailText).then(() => {
-    alert("Email copied to clipboard!");
-  }).catch(err => {
-    console.error("Failed to copy: ", err);
-  });
-}
+
+  // Copy Email with tactile feedback
+  function copyEmail() {
+    const email = "bptrading202510@gmail.com";
+    const label = document.getElementById("copy-btn-label");
+    
+    navigator.clipboard.writeText(email).then(() => {
+      if (label) {
+        const prevText = label.textContent;
+        label.textContent = "✅ Copied!";
+        setTimeout(() => {
+          label.textContent = prevText;
+        }, 2000);
+      }
+    }).catch(err => {
+      console.error("Clipboard copy failed:", err);
+      // Fallback prompt
+      window.prompt("Copy email address:", email);
+    });
+  }
 </script>
 
 </body>
