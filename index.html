@@ -39,6 +39,12 @@
         </a>
       </li>
       <li style="--i: 2;">
+        <a href="about.html" onclick="closeNav()">
+          <span class="en">About Us</span>
+          <span class="jp">会社概要</span>
+        </a>
+      </li>
+      <li style="--i: 3;">
         <a href="#services" onclick="closeNav()">
           <span class="en">Services</span>
           <span class="jp">サービス</span>
@@ -128,6 +134,12 @@
           <a href="#home">
             <span class="en">Home</span>
             <span class="jp">ホーム</span>
+          </a>
+        </li>
+        <li>
+          <a href="about.html">
+            <span class="en">About Us</span>
+            <span class="jp">会社概要</span>
           </a>
         </li>
         <li>
@@ -671,6 +683,15 @@
   <div class="container">
     <p class="en">© 2026 B&P Trading (Bajaj & Pawar Trading). All Rights Reserved. | Japan Used Car Export</p>
     <p class="jp">© 2026 B&P Trading (Bajaj & Pawar Trading). All Rights Reserved. | 日本中古車輸出</p>
+    <div style="margin-top: 10px; display: flex; justify-content: center; gap: 16px; font-size: 0.85rem;">
+      <a href="#home" style="color: #93c5fd; text-decoration: none;">Home</a>
+      <span style="color: #475569;">•</span>
+      <a href="about.html" style="color: #94a3b8; text-decoration: none;">About Us</a>
+      <span style="color: #475569;">•</span>
+      <a href="#services" style="color: #94a3b8; text-decoration: none;">Services</a>
+      <span style="color: #475569;">•</span>
+      <a href="#contact" style="color: #94a3b8; text-decoration: none;">Contact</a>
+    </div>
   </div>
 </footer>
 
@@ -845,7 +866,7 @@
     }, { passive: true });
   }
 
-  // Language Switcher Logic
+  // Language Switcher Logic with LocalStorage Persistence
   function toggleLanguage() {
     const body = document.body;
     const html = document.documentElement;
@@ -853,12 +874,30 @@
     
     const isJp = body.classList.contains('japanese');
     html.setAttribute('lang', isJp ? 'ja' : 'en');
+    try {
+      localStorage.setItem('bp_lang', isJp ? 'ja' : 'en');
+    } catch (e) {}
     
     const langBtns = document.querySelectorAll('.btn-lang .lang-text');
     langBtns.forEach(el => {
       el.textContent = isJp ? "🇺🇸 English" : "🇯🇵 日本語";
     });
   }
+
+  // Restore preferred language on load
+  (function initLang() {
+    try {
+      const savedLang = localStorage.getItem('bp_lang');
+      if (savedLang === 'ja') {
+        document.body.classList.add('japanese');
+        document.documentElement.setAttribute('lang', 'ja');
+        const langBtns = document.querySelectorAll('.btn-lang .lang-text');
+        langBtns.forEach(el => {
+          el.textContent = "🇺🇸 English";
+        });
+      }
+    } catch (e) {}
+  })();
 
   // Mobile Navigation Drawer Toggle
   let lastFocusedElement = null;
