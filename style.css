@@ -1696,6 +1696,36 @@ h1, h2, h3, h4 {
   line-height: 1.7;
 }
 
+/* --- 18. Nuanced Reduced-Motion (Emil Kowalski Standards) --- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Retain gentle opacity & color transitions; eliminate physical translation */
+  .hero-slide,
+  .quote-modal-backdrop,
+  .quote-modal-card,
+  .nav-backdrop,
+  .nav-drawer {
+    transform: none !important;
+    transition-property: opacity, background-color, color, border-color !important;
+    transition-duration: 0.15s !important;
+  }
+
+  .drawer-menu li {
+    transform: none !important;
+    transition-delay: 0ms !important;
+  }
+
+  .skeleton-shimmer {
+    animation: none !important;
+    background: #e2e8f0 !important;
+  }
+}
+
 /* --- 19. Dedicated About Page Components (Mobile-First Architecture) --- */
 
 /* Desktop Nav & Mobile Drawer Active Link */
