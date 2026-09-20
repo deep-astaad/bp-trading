@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google-site-verification" content="OaAutCWjm0_EndOxhq3U1lWIgVWbkQNVkM3wy21FwkQ" />
+  <title>About Us | B&P Trading (Bajaj & Pawar Trading) - Japan Used Car Export</title>
+  <meta name="description" content="Learn about B&P Trading (Bajaj & Pawar Trading), established in 2025. Direct access to all Japan auto auctions, full pre-shipment inspections (JEVIC, JAAI, EAA), RoRo & container shipping with offices in Japan and Australia." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Backdrop Overlay for Mobile Drawer -->
+<div class="nav-backdrop" id="nav-backdrop" onclick="toggleNav()" aria-hidden="true"></div>
+
+<!-- Mobile Navigation Drawer -->
+<aside class="nav-drawer" id="nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu">
+  <div class="nav-drawer-top">
+    <div class="nav-drawer-header">
+      <div class="brand-link">
+        <span class="logo-main">B&P Trading</span>
+        <span class="logo-sub">Bajaj & Pawar Trading</span>
+      </div>
+      <button class="drawer-close-btn" id="drawer-close-btn" onclick="toggleNav()" aria-label="Close menu">✕</button>
+    </div>
+    <ul class="drawer-menu">
+      <li style="--i: 1;">
+        <a href="index.html#home" onclick="closeNav()">
+          <span class="en">Home</span>
+          <span class="jp">ホーム</span>
+        </a>
+      </li>
+      <li style="--i: 2;">
+        <a href="about.html" class="active" onclick="closeNav()">
+          <span class="en">About Us</span>
+          <span class="jp">会社概要</span>
+        </a>
+      </li>
+      <li style="--i: 3;">
+        <a href="index.html#services" onclick="closeNav()">
+          <span class="en">Services</span>
+          <span class="jp">サービス</span>
+        </a>
+      </li>
+      <li style="--i: 4;">
+        <a href="index.html#process" onclick="closeNav()">
+          <span class="en">Export Process</span>
+          <span class="jp">輸出の流れ</span>
+        </a>
+      </li>
+      <li style="--i: 5;">
+        <a href="index.html#brands" onclick="closeNav()">
+          <span class="en">Brands</span>
+          <span class="jp">メーカー</span>
+        </a>
+      </li>
+      <li style="--i: 6;">
+        <a href="index.html#destinations" onclick="closeNav()">
+          <span class="en">Destinations</span>
+          <span class="jp">主要輸出先</span>
+        </a>
+      </li>
+      <li style="--i: 7;">
+        <a href="index.html#offices" onclick="closeNav()">
+          <span class="en">Offices</span>
+          <span class="jp">事業所</span>
+        </a>
+      </li>
+      <li style="--i: 8;">
+        <a href="index.html#contact" onclick="closeNav()">
+          <span class="en">Contact</span>
+          <span class="jp">お問い合わせ</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="nav-drawer-footer">
+    <button class="btn btn-quote-action" onclick="openQuoteModal(); closeNav();" style="width: 100%;">
+      <span class="en">📋 Request A Quote</span>
+      <span class="jp">📋 お見積もり依頼</span>
+    </button>
+    <a href="https://wa.me/817090551302" class="btn btn-contact-wa" target="_blank" rel="noopener" style="width: 100%;">
+      💬 WhatsApp (Gagandeep)
+    </a>
+    <a href="tel:+817090551302" class="btn btn-primary" style="width: 100%;">
+      📞 +81 70-9055-1302
+    </a>
+  </div>
+</aside>
+
+<!-- Sticky Header -->
+<header class="header">
+  <div class="container nav-container">
+    <a href="index.html" class="brand-link" aria-label="B&P Trading Home">
+      <span class="logo-main">B&P Trading</span>
+      <span class="logo-sub">Bajaj & Pawar Trading</span>
+    </a>
+
+    <!-- Header Actions -->
+    <div class="header-actions">
+      <!-- Language Switcher Button -->
+      <button class="btn-lang" onclick="toggleLanguage()" aria-label="Toggle language">
+        <span class="lang-text">🇯🇵 日本語</span>
+      </button>
+
+      <!-- Desktop Request Quote Action -->
+      <button class="btn-quote-header" onclick="openQuoteModal()">
+        <span class="en">Request Quote</span>
+        <span class="jp">お見積もり</span>
+      </button>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="nav-toggle" id="nav-toggle" onclick="toggleNav()" aria-label="Open Navigation Menu" aria-expanded="false" aria-controls="nav-drawer">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <nav class="desktop-nav" aria-label="Primary Navigation">
+      <ul>
+        <li>
+          <a href="index.html#home">
+            <span class="en">Home</span>
+            <span class="jp">ホーム</span>
+          </a>
+        </li>
+        <li>
+          <a href="about.html" class="active">
+            <span class="en">About Us</span>
+            <span class="jp">会社概要</span>
+          </a>
+        </li>
+        <li>
+          <a href="index.html#services">
+            <span class="en">Services</span>
+            <span class="jp">サービス</span>
+          </a>
+        </li>
+        <li>
+          <a href="index.html#process">
+            <span class="en">Process</span>
+            <span class="jp">輸出の流れ</span>
+          </a>
+        </li>
+        <li>
+          <a href="index.html#brands">
+            <span class="en">Brands</span>
+            <span class="jp">メーカー</span>
+          </a>
+        </li>
+        <li>
+          <a href="index.html#destinations">
+            <span class="en">Destinations</span>
+            <span class="jp">主要輸出先</span>
+          </a>
+        </li>
+        <li>
+          <a href="index.html#offices">
+            <span class="en">Offices</span>
+            <span class="jp">事業所</span>
+          </a>
+        </li>
+        <li>
+          <a href="index.html#contact">
+            <span class="en">Contact</span>
+            <span class="jp">お問い合わせ</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- Page Hero Header -->
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <nav class="breadcrumbs" aria-label="Breadcrumbs">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span class="en">About Us</span>
+        <span class="jp">会社概要</span>
+      </nav>
+
+      <div class="hero-pill-badge">
+        <span>🇯🇵</span>
+        <span class="en">Est. 2025 • Tokyo / Yokohama / Kawasaki Ports & Australia</span>
+        <span class="jp">2025年設立 • 川崎・横浜・東京港拠点＆豪州ネットワーク</span>
+      </div>
+
+      <h1 class="en">About B&amp;P Trading</h1>
+      <h1 class="jp">B&amp;P Trading 会社案内・私たちについて</h1>
+
+      <p class="lead en">
+        Established in 2025, <strong>B&amp;P Trading (Bajaj &amp; Pawar Trading)</strong> is an international Japanese used vehicle export firm headquartered in Kawasaki, Kanagawa, with branch operations in Queensland, Australia. We provide commercial dealerships and individual buyers worldwide with direct access to Japan's premier auto auctions, guaranteed inspection standards, and reliable RoRo &amp; container freight logistics.
+      </p>
+      <p class="lead jp">
+        2025年設立の<strong>B&amp;P Trading（Bajaj &amp; Pawar Trading）</strong>は、神奈川県川崎市を日本本社、オーストラリア・クイーンズランド州を豪州拠点とする日本中古車輸出商社です。日本全国のオートオークション直結の仕入れネットワーク、国際基準に準拠した厳格な事前検査（JEVIC・JAAI・EAA等）、そして安全確実な海上輸送（RoRo船・コンテナ便）を通じて、世界中のお客様へ高品質な車両を安心と共にお届けします。
+      </p>
+    </div>
+  </section>
+
+  <!-- Director's Message Section -->
+  <section class="about-section">
+    <div class="about-container">
+      <div class="about-section-header">
+        <h2 class="en">Leadership Message</h2>
+        <h2 class="jp">代表挨拶</h2>
+        <p class="en">Building trust through radical transparency, rigorous vehicle condition reports, and hands-on export care.</p>
+        <p class="jp">徹底した情報開示、厳格な車両品質確認、そして誠実な輸出対応で世界のお客様と信頼を築きます。</p>
+      </div>
+
+      <div class="director-card">
+        <!-- Skeleton Photo Placeholder for Directors -->
+        <div class="director-portrait-col">
+          <div class="member-skeleton-avatar skeleton-shimmer" aria-hidden="true">
+            <svg class="member-avatar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span class="member-skeleton-badge en">Executive Photo</span>
+            <span class="member-skeleton-badge jp">役員写真 準備中</span>
+          </div>
+          <p style="font-size: 0.82rem; color: #64748b; text-align: center; margin-top: 4px;">
+            <span class="en">Official Portrait In Production</span>
+            <span class="jp">公式プロフィール写真 準備中</span>
+          </p>
+        </div>
+
+        <!-- Message Body -->
+        <div class="director-message-text">
+          <span class="director-quote-badge" aria-hidden="true">“</span>
+          
+          <div class="en">
+            <p>
+              Welcome to <strong>B&amp;P Trading (Bajaj &amp; Pawar Trading)</strong>. When we founded B&amp;P Trading in 2025, our mission was simple: eliminate the friction, opacity, and uncertainty often encountered when sourcing vehicles across international borders.
+            </p>
+            <p>
+              Sourcing a vehicle from Japan should never be a gamble. Every vehicle we bid on undergoes meticulous physical inspection and auction sheet verification. With our operational hub positioned in Kawasaki—directly adjacent to the Tokyo and Yokohama shipping ports—we maintain physical control over vehicle delivery, pre-shipment inspections (JEVIC, JAAI, EAA, QISJ), and ocean freight arrangements.
+            </p>
+            <p>
+              Whether you are an established dealership importing fleets each month or a private client acquiring a dream Japanese car, our promise is absolute integrity, transparent CIF costs, and tireless dedication to your satisfaction.
+            </p>
+          </div>
+
+          <div class="jp">
+            <p>
+              B&amp;P Trading（Bajaj &amp; Pawar Trading）の公式ページにお越しいただき、心より御礼申し上げます。当社は2025年、『国境を越えた中古車売買における不透明さと不安を解消し、安心できる国際取引を実現する』という強い志のもと設立されました。
+            </p>
+            <p>
+              日本からの中古車仕入れは、決して賭けであってはなりません。当社では出品票の精査はもちろん、日本全国の主要オークションでの実車確認、公認第三者機関（JEVIC、JAAI、EAA、QISJ等）による輸出前検査、そして東京・横浜港に近接する川崎拠点を活かした迅速な船積み手続きまで、全プロセスに責任を持って対応しております。
+            </p>
+            <p>
+              毎月定期的に複数台を仕入れられる海外法人ディーラー様から、特別な一台をお求めの個人のお客様まで、誠実かつ透明性の高い取引をお約束いたします。
+            </p>
+          </div>
+
+          <div class="director-signatures">
+            <div class="director-sig-item">
+              <span class="sig-name">Sharu Bajaj</span>
+              <span class="sig-title en">General Director</span>
+              <span class="sig-title jp">総括代表</span>
+            </div>
+            <div class="director-sig-item">
+              <span class="sig-name">Gagandeep Singh Pawar</span>
+              <span class="sig-title en">Export &amp; Sales Director</span>
+              <span class="sig-title jp">輸出・営業統括</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="about-section bg-light">
+    <div class="about-container">
+      <div class="about-section-header">
+        <h2 class="en">Why Choose B&amp;P Trading</h2>
+        <h2 class="jp">当社の強み・選ばれる理由</h2>
+        <p class="en">Four foundational pillars that make B&amp;P Trading your dependable automotive export partner.</p>
+        <p class="jp">確固たる仕入れ力、徹底した検査体制、多彩な輸送手段、そして日豪の安心サポート体制。</p>
+      </div>
+
+      <div class="why-grid">
+        <!-- Card 1: All Auctions -->
+        <div class="why-card">
+          <div class="why-icon-box">🏛️</div>
+          <h3 class="en">All Japanese Auctions</h3>
+          <h3 class="jp">全オートオークション対応</h3>
+          <p class="en">
+            Direct bidding access to 150,000+ vehicles weekly across USS, TAA, CAA, JU, ARAI, Mirive, and HAA Kobe. No middlemen markups.
+          </p>
+          <p class="jp">
+            USS、TAA、CAA、JU、ARAI、ミライブ等、日本全国の全オートオークションから毎週15万台以上の出品車両へ中間マージンなく直接応札可能です。
+          </p>
+        </div>
+
+        <!-- Card 2: All Inspections -->
+        <div class="why-card">
+          <div class="why-icon-box">🛡️</div>
+          <h3 class="en">Certified Inspections</h3>
+          <h3 class="jp">厳格な全検査基準に対応</h3>
+          <p class="en">
+            100% compliant with mandatory destination standards including JEVIC, JAAI, EAA, and QISJ, backed by strict odometer verification.
+          </p>
+          <p class="jp">
+            輸出先国の輸入規制に合わせ、JEVIC、JAAI、EAA、QISJ等の公認検査および走行距離改ざん防止確認を確実に手配・通過させます。
+          </p>
+        </div>
+
+        <!-- Card 3: RoRo & Container -->
+        <div class="why-card">
+          <div class="why-icon-box">🚢</div>
+          <h3 class="en">RoRo &amp; Container Logistics</h3>
+          <h3 class="jp">RoRo船・コンテナ便対応</h3>
+          <p class="en">
+            Flexible ocean freight options. Choose cost-efficient Roll-on/Roll-off shipping or fully strapped 20ft/40ft container solutions for added protection.
+          </p>
+          <p class="jp">
+            最もリーズナブルな自動車専用船（RoRo船）から、複数台やパーツ同梱、高級車向けの20ft/40ftコンテナ輸送まで柔軟に対応します。
+          </p>
+        </div>
+
+        <!-- Card 4: Dual Hub -->
+        <div class="why-card">
+          <div class="why-icon-box">🌏</div>
+          <h3 class="en">Dual-Hub Operational Care</h3>
+          <h3 class="jp">日豪二拠点の安心サポート</h3>
+          <p class="en">
+            Physical auction and port operations in Kawasaki, Japan, paired with dedicated English client care and administration from Australia.
+          </p>
+          <p class="jp">
+            川崎本社による日本国内の現車確認・港湾物流と、オーストラリア拠点による英語・時差対応の連携でスムーズなお取引をお約束します。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Corporate Profile Table Section -->
+  <section class="about-section">
+    <div class="about-container">
+      <div class="about-section-header">
+        <h2 class="en">Corporate Profile</h2>
+        <h2 class="jp">会社概要</h2>
+        <p class="en">Official corporate registration details and licensing information for B&amp;P Trading.</p>
+        <p class="jp">B&amp;P Trading（Bajaj &amp; Pawar Trading）の基本情報・登録情報です。</p>
+      </div>
+
+      <div class="profile-table-container">
+        <table class="profile-table" aria-label="Corporate Profile Table">
+          <tbody>
+            <tr>
+              <th scope="row">
+                <span class="en">Company Name</span>
+                <span class="jp">会社名 / 商号</span>
+              </th>
+              <td>
+                <strong>B&amp;P Trading</strong><br>
+                <span style="color: #64748b; font-size: 0.9rem;">(Bajaj &amp; Pawar Trading)</span>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <span class="en">Date of Establishment</span>
+                <span class="jp">設立年月</span>
+              </th>
+              <td>
+                <span class="en">2025 (October 2025)</span>
+                <span class="jp">2025年（2025年10月）</span>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <span class="en">Secondhand Dealer License</span>
+                <span class="jp">古物商許可証</span>
+              </th>
+              <td>
+                <div>
+                  <span class="en">Kanagawa Prefectural Public Safety Commission License (Automobile Dealer)</span>
+                  <span class="jp">神奈川県公安委員会許可（自動車商）</span>
+                </div>
+                <div class="license-pill">
+                  <span>📜</span>
+                  <span class="en">License No. [ 45XXXXXXXXXX ] (Placeholder)</span>
+                  <span class="jp">古物商許可 第XXXXXXXXXXXX号（申請中・プレースホルダー）</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <span class="en">Executive Leadership</span>
+                <span class="jp">役員・代表者</span>
+              </th>
+              <td>
+                <strong>Sharu Bajaj</strong> — <span class="en">General Director</span><span class="jp">総括代表</span><br>
+                <strong>Gagandeep Singh Pawar</strong> — <span class="en">Export &amp; Sales Director</span><span class="jp">輸出・営業統括</span>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <span class="en">Japan Head Office</span>
+                <span class="jp">日本本社所在地</span>
+              </th>
+              <td>
+                神奈川県川崎市川崎区殿町1-13-21-8<br>
+                1-13-21-8 Tonomachi, Kawasaki-ku, Kawasaki-shi, Kanagawa, Japan<br>
+                <strong>Postal Code:</strong> 210-0821
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <span class="en">Australia Branch Office</span>
+                <span class="jp">オーストラリア支店</span>
+              </th>
+              <td>
+                27/89 Northquarter Drive, Murrumba Downs, QLD, Australia<br>
+                <strong>Postal Code:</strong> 4503
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <span class="en">Scope of Business</span>
+                <span class="jp">事業内容</span>
+              </th>
+              <td>
+                <ul style="padding-left: 20px; line-height: 1.8;">
+                  <li>
+                    <span class="en">Procurement &amp; direct proxy bidding at all Japanese automotive auctions (USS, TAA, CAA, JU, ARAI, Mirive, HAA)</span>
+                    <span class="jp">日本全国の全オートオークション（USS、TAA、CAA、JU、ARAI、ミライブ、HAA等）での中古自動車仕入れ・代理応札</span>
+                  </li>
+                  <li>
+                    <span class="en">Used motor vehicles export trading (sedans, 4WD/SUVs, commercial vans, trucks, sports cars)</span>
+                    <span class="jp">中古自動車・商用車・トラック・スポーツカーの国際輸出販売</span>
+                  </li>
+                  <li>
+                    <span class="en">Arrangement of pre-shipment inspections (JEVIC, JAAI, EAA, QISJ) &amp; odometer integrity verification</span>
+                    <span class="jp">輸出前認定検査（JEVIC、JAAI、EAA、QISJ）の申請・手配および走行距離確認</span>
+                  </li>
+                  <li>
+                    <span class="en">Ocean freight forwarding &amp; space booking via Roll-on/Roll-off (RoRo) vessels and Container lines</span>
+                    <span class="jp">海上輸送手配（自動車専用船 RoRo船 および 20ft/40ftコンテナ便手配）</span>
+                  </li>
+                  <li>
+                    <span class="en">Export customs clearance documentation, de-registration certificates, and Bill of Lading (B/L) processing</span>
+                    <span class="jp">日本国内の輸出抹消仮登録証明書、税関通関、船荷証券（B/L）発行管理</span>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <span class="en">Official Contact Desk</span>
+                <span class="jp">公式お問い合わせ窓口</span>
+              </th>
+              <td>
+                <strong>Phone (JP):</strong> <a href="tel:+817090551302">+81 70-9055-1302</a> / <a href="tel:+818051560999">+81 80-5156-0999</a><br>
+                <strong>WhatsApp:</strong> <a href="https://wa.me/817090551302" target="_blank" rel="noopener">+81 70-9055-1302 (Gagandeep)</a><br>
+                <strong>Email:</strong> <a href="mailto:bptrading202510@gmail.com">bptrading202510@gmail.com</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Head Office Facility (Skeleton Showcase) -->
+  <section class="about-section bg-light">
+    <div class="about-container">
+      <div class="about-section-header">
+        <h2 class="en">Head Office &amp; Operations Hub</h2>
+        <h2 class="jp">本社拠点・オペレーション施設</h2>
+        <p class="en">Strategically located in Kawasaki, Kanagawa, within immediate reach of Tokyo &amp; Yokohama ports.</p>
+        <p class="jp">東京港・横浜港に近接する神奈川県川崎市に拠点を構え、迅速な回送・検査・船積みを可能にしています。</p>
+      </div>
+
+      <div class="office-skeleton-wrapper">
+        <!-- Skeleton Art Container -->
+        <div class="office-skeleton-art skeleton-shimmer">
+          <svg class="skeleton-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+            <line x1="9" y1="22" x2="9" y2="2"></line>
+            <line x1="8" y1="6" x2="8.01" y2="6"></line>
+            <line x1="8" y1="10" x2="8.01" y2="10"></line>
+            <line x1="8" y1="14" x2="8.01" y2="14"></line>
+            <line x1="8" y1="18" x2="8.01" y2="18"></line>
+            <line x1="15" y1="6" x2="15.01" y2="6"></line>
+            <line x1="15" y1="10" x2="15.01" y2="10"></line>
+            <line x1="15" y1="14" x2="15.01" y2="14"></line>
+            <line x1="15" y1="18" x2="15.01" y2="18"></line>
+          </svg>
+          <div class="skeleton-label-tag">
+            <span>📷</span>
+            <span class="en">Head Office &amp; Yard Photo Coming Soon</span>
+            <span class="jp">川崎本社・ヤード写真 準備中</span>
+          </div>
+        </div>
+
+        <!-- Office Details -->
+        <div class="office-skeleton-info">
+          <h3 class="en">🇯🇵 Kawasaki Head Office &amp; Port Staging</h3>
+          <h3 class="jp">🇯🇵 川崎本社・港湾ロジスティクス拠点</h3>
+          
+          <address>
+            神奈川県川崎市川崎区殿町1-13-21-8<br>
+            1-13-21-8 Tonomachi, Kawasaki-ku, Kawasaki-shi, Kanagawa, Japan<br>
+            <strong>PIN / 郵便番号:</strong> 210-0821
+          </address>
+
+          <p class="en" style="color: #475569; font-size: 0.92rem; line-height: 1.65; margin-bottom: 16px;">
+            Our Japan headquarters serves as the administrative core and vehicle logistics dispatch center. Being situated right between Tokyo Bay ports and Yokohama terminal facilities allows our inspection coordinators to perform same-day yard verification and expedite customs clearance for both RoRo vessels and container stuffing.
+          </p>
+          <p class="jp" style="color: #475569; font-size: 0.92rem; line-height: 1.65; margin-bottom: 16px;">
+            川崎本社は輸出管理の中心であり、車両回送・一時保管のハブ機能を担っています。東京港・横浜港の双方にアクセスが極めて良く、オークション落札後のヤード搬入、輸出前検査の手配、RoRo船積載およびコンテナへのバンニング作業を迅速に進めることができます。
+          </p>
+
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <a href="tel:+817090551302" class="btn btn-primary" style="padding: 8px 16px; font-size: 0.88rem;">
+              📞 Call Office
+            </a>
+            <a href="https://wa.me/817090551302" class="btn btn-contact-wa" target="_blank" rel="noopener" style="padding: 8px 16px; font-size: 0.88rem;">
+              💬 WhatsApp Desk
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Executive Leadership & Members (Skeleton Placeholders) -->
+  <section class="about-section">
+    <div class="about-container">
+      <div class="about-section-header">
+        <h2 class="en">Executive Leadership</h2>
+        <h2 class="jp">役員・経営陣紹介</h2>
+        <p class="en">Meet the experienced directors leading B&amp;P Trading's operations and global export services.</p>
+        <p class="jp">世界各国のクライアント様へ最高水準のサービスを提供するB&amp;P Tradingの経営陣です。</p>
+      </div>
+
+      <div class="team-grid">
+        <!-- Member 1: Sharu Bajaj -->
+        <div class="member-card">
+          <div class="member-skeleton-avatar skeleton-shimmer">
+            <svg class="member-avatar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span class="member-skeleton-badge en">Portrait Coming Soon</span>
+            <span class="member-skeleton-badge jp">写真準備中</span>
+          </div>
+
+          <h3 class="member-name">Sharu Bajaj</h3>
+          <p class="member-role en">General Director</p>
+          <p class="member-role jp">総括代表</p>
+
+          <p class="member-desc en">
+            Leading B&amp;P Trading's overall corporate strategy, capital management, international compliance, and institutional overseas relationships. Sharu ensures that all cross-border transactions maintain the highest standard of commercial fidelity.
+          </p>
+          <p class="member-desc jp">
+            B&amp;P Tradingの全体経営戦略、財務管理、国際法務コンプライアンスおよび海外パートナーシップ統括を担当。お客様との信頼関係を第一義とし、健全で持続的な国際貿易体制を牽引しています。
+          </p>
+
+          <div class="member-contact-actions">
+            <a href="mailto:bptrading202510@gmail.com" class="btn btn-outline" style="padding: 8px 18px; font-size: 0.88rem; width: 100%;">
+              ✉️ Contact Sharu
+            </a>
+          </div>
+        </div>
+
+        <!-- Member 2: Gagandeep Singh Pawar -->
+        <div class="member-card">
+          <div class="member-skeleton-avatar skeleton-shimmer">
+            <svg class="member-avatar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span class="member-skeleton-badge en">Portrait Coming Soon</span>
+            <span class="member-skeleton-badge jp">写真準備中</span>
+          </div>
+
+          <h3 class="member-name">Gagandeep Singh Pawar</h3>
+          <p class="member-role en">Export &amp; Sales Director</p>
+          <p class="member-role jp">輸出・営業統括</p>
+
+          <p class="member-desc en">
+            Directing active auction bidding across Japan, technical vehicle assessment, inspection compliance, port dispatch, and direct client communications. Gagandeep provides personal advisory to buyers in Australia, Africa, the UK, and the Americas.
+          </p>
+          <p class="member-desc jp">
+            日本全国のオークション応札実務、現車状態の査定、輸出前検査の適合管理、船積み通関業務およびクライアント様との商談統括を担当。オーストラリアをはじめ世界各国のお客様へきめ細やかなサポートを提供しています。
+          </p>
+
+          <div class="member-contact-actions">
+            <a href="https://wa.me/817090551302" class="btn btn-contact-wa" target="_blank" rel="noopener" style="padding: 8px 14px; font-size: 0.88rem; flex: 1;">
+              💬 WhatsApp
+            </a>
+            <a href="tel:+817090551302" class="btn btn-primary" style="padding: 8px 14px; font-size: 0.88rem; flex: 1;">
+              📞 Direct Call
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- All Auctions Coverage Showcase -->
+  <section class="about-section bg-light">
+    <div class="about-container">
+      <div class="about-section-header">
+        <h2 class="en">Complete Japan Auction Coverage</h2>
+        <h2 class="jp">全オートオークション網羅</h2>
+        <p class="en">Over 150,000 fresh vehicles cataloged every week through live digital integration.</p>
+        <p class="jp">日本国内のすべての主要オークション会場と連携し、毎週15万台超の新鮮な在庫から厳選します。</p>
+      </div>
+
+      <div class="badges-container-card">
+        <h3>
+          <span>🏛️</span>
+          <span class="en">Major Auction Networks Connected</span>
+          <span class="jp">提携・接続オークション会場一覧</span>
+        </h3>
+        <p class="en">
+          We hold direct purchasing privileges across all regional auction halls in Japan. Our buyers review official inspector condition sheets and order additional physical inspections prior to submitting bids.
+        </p>
+        <p class="jp">
+          北海道から九州まで、日本全国の会場から入札が可能です。出品票の評価点確認および専門スタッフによる下見チェックを徹底し、ご納得いただける車両のみを落札します。
+        </p>
+
+        <div class="auction-badges-grid">
+          <div class="auction-pill">
+            <span>USS Network</span>
+            <span class="sub">Tokyo • Yokohama • Osaka • Nagoya</span>
+          </div>
+          <div class="auction-pill">
+            <span>TAA (Toyota)</span>
+            <span class="sub">Kanto • Chubu • Kinki • Kyushu</span>
+          </div>
+          <div class="auction-pill">
+            <span>CAA Network</span>
+            <span class="sub">Tokyo • Chubu • Gifu • Tohoku</span>
+          </div>
+          <div class="auction-pill">
+            <span>JU Group</span>
+            <span class="sub">Nationwide Dealer Association</span>
+          </div>
+          <div class="auction-pill">
+            <span>ARAI Auctions</span>
+            <span class="sub">Oyama • Bayside • Sendai • Fukuoka</span>
+          </div>
+          <div class="auction-pill">
+            <span>Mirive Network</span>
+            <span class="sub">Saitama • Aichi • Osaka</span>
+          </div>
+          <div class="auction-pill">
+            <span>HAA Kobe</span>
+            <span class="sub">One of Western Japan's Largest</span>
+          </div>
+          <div class="auction-pill">
+            <span>BayAuc</span>
+            <span class="sub">Osaka Bay Automobile Auction</span>
+          </div>
+          <div class="auction-pill">
+            <span>SAA Network</span>
+            <span class="sub">Sapporo Auto Auction</span>
+          </div>
+          <div class="auction-pill">
+            <span>ZIP &amp; LAA</span>
+            <span class="sub">Kansai • Shikoku • Chugoku</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- All Inspections Standards Showcase -->
+  <section class="about-section">
+    <div class="about-container">
+      <div class="about-section-header">
+        <h2 class="en">Guaranteed Pre-Shipment Inspections</h2>
+        <h2 class="jp">公認輸出前検査・品質保証</h2>
+        <p class="en">We guarantee 100% compliance with destination country legalities, road safety, and emissions testing.</p>
+        <p class="jp">輸出先国の法令・バイオセキュリティ基準・走行距離認証を100%クリアする検査体制を完備しています。</p>
+      </div>
+
+      <div class="inspection-cards-grid">
+        <!-- JEVIC -->
+        <div class="inspection-tile">
+          <span class="inspection-tile-badge">JEVIC</span>
+          <h4 class="en">JEVIC Inspection</h4>
+          <h4 class="jp">JEVIC 輸出検査</h4>
+          <p class="en">
+            Mandatory biosecurity, structural integrity, and roadworthiness certification required for Kenya, Uganda, Zambia, and other regional destinations.
+          </p>
+          <p class="jp">
+            ケニア・ウガンダ・ザンビア等で義務付けられているバイオセキュリティ、構造的安全性、走行適格性検査です。
+          </p>
+        </div>
+
+        <!-- JAAI -->
+        <div class="inspection-tile">
+          <span class="inspection-tile-badge">JAAI</span>
+          <h4 class="en">JAAI Appraisal</h4>
+          <h4 class="jp">JAAI 日本自動車査定協会</h4>
+          <p class="en">
+            Government-recognized appraisal standard evaluating structural condition, original chassis stampings, mechanical components, and market valuation.
+          </p>
+          <p class="jp">
+            修復歴の有無、車台番号の真正性、外装・機関状態を厳正に審査する日本自動車査定協会の公認検査です。
+          </p>
+        </div>
+
+        <!-- EAA -->
+        <div class="inspection-tile">
+          <span class="inspection-tile-badge">EAA</span>
+          <h4 class="en">EAA Certification</h4>
+          <h4 class="jp">EAA 輸出適合検査</h4>
+          <p class="en">
+            Comprehensive pre-shipment inspection verifying radiation safety, physical roadworthiness, and clean title documentation for global ports.
+          </p>
+          <p class="jp">
+            放射能検査、車体下回りの安全性、保安基準適合を証明する国際基準の事前検査です。
+          </p>
+        </div>
+
+        <!-- QISJ & Odometer -->
+        <div class="inspection-tile">
+          <span class="inspection-tile-badge">QISJ &amp; MILEAGE</span>
+          <h4 class="en">QISJ &amp; Odometer Integrity</h4>
+          <h4 class="jp">QISJ・走行距離改ざん防止</h4>
+          <p class="en">
+            Stringent mechanical testing paired with official computerized database verification to guarantee odometer history and prevent rollback fraud.
+          </p>
+          <p class="jp">
+            公的データベースと車検証履歴の照合により、メーター巻き戻し・走行距離改ざんを確実に排除します。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RoRo & Container Ocean Freight Showcase -->
+  <section class="about-section bg-light">
+    <div class="about-container">
+      <div class="about-section-header">
+        <h2 class="en">RoRo &amp; Container Shipping Solutions</h2>
+        <h2 class="jp">RoRo船・コンテナ便による柔軟な海上輸送</h2>
+        <p class="en">Tailored marine logistics matching your budget, timeline, and vehicle volume requirements.</p>
+        <p class="jp">お客様の仕入れ台数、予算、車両特性に応じて最適な船積み手段をご提案します。</p>
+      </div>
+
+      <div class="shipping-split-grid">
+        <!-- RoRo Card -->
+        <div class="shipping-plan-card">
+          <div class="shipping-plan-header">
+            <div class="shipping-plan-icon">🚢</div>
+            <div>
+              <h3 class="en">RoRo (Roll-on / Roll-off)</h3>
+              <h3 class="jp">RoRo船（自動車専用船）</h3>
+              <span style="color: var(--primary-color); font-weight: 600; font-size: 0.88rem;">
+                <span class="en">Most Economical &amp; High Frequency</span>
+                <span class="jp">最安運賃・高頻度出港</span>
+              </span>
+            </div>
+          </div>
+
+          <p class="en" style="color: #475569; font-size: 0.94rem; line-height: 1.6;">
+            Vehicles are driven directly onto specialized multi-deck car-carrying vessels. Protected inside watertight cargo holds with frequent sailings from Yokohama, Kawasaki, and Kobe ports.
+          </p>
+          <p class="jp" style="color: #475569; font-size: 0.94rem; line-height: 1.6;">
+            車両を専用の自動車運搬船内に自走で積み込む方式です。船内密閉デッキで安全に固定され、出港便数が多く最も低コストで運べるため、一般乗用車やSUVの輸入に最適です。
+          </p>
+
+          <ul>
+            <li>
+              <span>✅</span>
+              <span class="en">Lowest CIF freight costs per individual vehicle</span>
+              <span class="jp">1台あたりの海上運賃が最もリーズナブル</span>
+            </li>
+            <li>
+              <span>✅</span>
+              <span class="en">Weekly sailings to Australia, New Zealand, UK, Africa &amp; Americas</span>
+              <span class="jp">豪州、NZ、イギリス、アフリカ、南米各港へ定期便運航</span>
+            </li>
+            <li>
+              <span>✅</span>
+              <span class="en">Rapid port turn-around and discharge times</span>
+              <span class="jp">到着港での荷揚げ・受領が迅速</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Container Card -->
+        <div class="shipping-plan-card">
+          <div class="shipping-plan-header">
+            <div class="shipping-plan-icon">📦</div>
+            <div>
+              <h3 class="en">Container Shipping (20ft / 40ft HC)</h3>
+              <h3 class="jp">コンテナ船便（20ft / 40ft HC）</h3>
+              <span style="color: var(--primary-color); font-weight: 600; font-size: 0.88rem;">
+                <span class="en">Maximum Security &amp; Parts Consolidation</span>
+                <span class="jp">完全密閉・パーツ同梱・複数台輸送</span>
+              </span>
+            </div>
+          </div>
+
+          <p class="en" style="color: #475569; font-size: 0.94rem; line-height: 1.6;">
+            Enclosed intermodal containers sealed with customs bolts. Ideal for high-value sports cars, classic restorations, multiple vehicle bundles (2–4 cars per 40ft HC), and spare parts consolidation.
+          </p>
+          <p class="jp" style="color: #475569; font-size: 0.94rem; line-height: 1.6;">
+            20フィートおよび40フィートハイキューブコンテナ内に車両を強固にラッシング・輪止め固定。外気や潮風から完全に守られるため、高級車やパーツ同梱、2〜4台のまとめ送りに適しています。
+          </p>
+
+          <ul>
+            <li>
+              <span>✅</span>
+              <span class="en">Custom wooden wheel-chocking and heavy-duty nylon lashing</span>
+              <span class="jp">専用輪止めおよび高強度ベルトによる確実な荷崩れ防止</span>
+            </li>
+            <li>
+              <span>✅</span>
+              <span class="en">Ability to ship automotive spare parts, tires, and accessories</span>
+              <span class="jp">タイヤ、純正パーツ、エンジン部品等の同梱が可能</span>
+            </li>
+            <li>
+              <span>✅</span>
+              <span class="en">Direct routing to ports where RoRo vessels do not call</span>
+              <span class="jp">RoRo船が寄港しない小規模港や内陸港にもアクセス可能</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Call To Action Card -->
+      <div class="about-cta-card">
+        <h2 class="en">Ready to Import with B&amp;P Trading?</h2>
+        <h2 class="jp">お車の輸入・仕入れはお任せください</h2>
+        <p class="en">
+          Contact our leadership desk directly. Tell us your target model, year, and destination port to receive an immediate transparent CIF quotation.
+        </p>
+        <p class="jp">
+          ご希望の車種・年式・ご予算・到着港をお知らせいただければ、直近のオークション相場と概算CIF価格を速やかにお見積もりいたします。
+        </p>
+
+        <div class="about-cta-buttons">
+          <button class="btn btn-primary" onclick="openQuoteModal()" style="font-size: 1rem; padding: 12px 28px;">
+            <span class="en">📋 Request A Vehicle Quote</span>
+            <span class="jp">📋 お見積もり依頼（無料）</span>
+          </button>
+          <a href="https://wa.me/817090551302" class="btn btn-contact-wa" target="_blank" rel="noopener" style="font-size: 1rem; padding: 12px 24px;">
+            💬 WhatsApp Gagandeep
+          </a>
+          <a href="mailto:bptrading202510@gmail.com" class="btn btn-outline" style="font-size: 1rem; padding: 12px 24px; color: #ffffff; border-color: rgba(255,255,255,0.4);">
+            ✉️ Email Inquiry
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <p class="en">© 2026 B&amp;P Trading (Bajaj &amp; Pawar Trading). All Rights Reserved. | Japan Used Car Export</p>
+    <p class="jp">© 2026 B&amp;P Trading (Bajaj &amp; Pawar Trading). All Rights Reserved. | 日本中古車輸出</p>
+    <div style="margin-top: 10px; display: flex; justify-content: center; gap: 16px; font-size: 0.85rem;">
+      <a href="index.html" style="color: #94a3b8; text-decoration: none;">Home</a>
+      <span style="color: #475569;">•</span>
+      <a href="about.html" style="color: #93c5fd; text-decoration: none;">About Us</a>
+      <span style="color: #475569;">•</span>
+      <a href="index.html#services" style="color: #94a3b8; text-decoration: none;">Services</a>
+      <span style="color: #475569;">•</span>
+      <a href="index.html#contact" style="color: #94a3b8; text-decoration: none;">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile Sticky Bottom Action Bar -->
+<aside class="mobile-sticky-bar" aria-label="Quick contact bar">
+  <a href="https://wa.me/817090551302" class="mobile-bar-btn whatsapp" target="_blank" rel="noopener">
+    <span>💬 WhatsApp</span>
+  </a>
+  <a href="tel:+817090551302" class="mobile-bar-btn call">
+    <span>📞 Call</span>
+  </a>
+  <button class="mobile-bar-btn quote" onclick="openQuoteModal()">
+    <span>📋 Quote</span>
+  </button>
+</aside>
+
+<!-- Interactive "Request a Quote" Modal -->
+<div class="quote-modal-backdrop" id="quote-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="quote-modal-title" onclick="handleModalBackdropClick(event)">
+  <div class="quote-modal-card" role="document">
+    <div class="quote-modal-header">
+      <div>
+        <h3 id="quote-modal-title" class="quote-modal-title">
+          <span class="en">Request a Vehicle Quote</span>
+          <span class="jp">お見積もり依頼 (無料)</span>
+        </h3>
+        <p class="quote-modal-subtitle">
+          <span class="en">Direct inquiry to Gagandeep Singh Pawar (Export Director)</span>
+          <span class="jp">輸出統括責任者（Gagandeep）への直通お問い合わせ</span>
+        </p>
+      </div>
+      <button class="quote-close-btn" onclick="closeQuoteModal()" aria-label="Close quote modal">✕</button>
+    </div>
+
+    <form class="quote-form" onsubmit="event.preventDefault();">
+      <div class="form-group">
+        <label for="quote-model" class="form-label">
+          <span class="en">Desired Vehicle / Model</span>
+          <span class="jp">ご希望の車種・モデル</span>
+        </label>
+        <input type="text" id="quote-model" class="form-input" placeholder="e.g. Toyota Land Cruiser Prado, HiAce, Alphard..." required />
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="quote-year" class="form-label">
+            <span class="en">Year / Budget</span>
+            <span class="jp">年式・予算目安</span>
+          </label>
+          <input type="text" id="quote-year" class="form-input" placeholder="e.g. 2018–2023 / $15,000 USD" />
+        </div>
+
+        <div class="form-group">
+          <label for="quote-destination" class="form-label">
+            <span class="en">Destination Port</span>
+            <span class="jp">到着港・国</span>
+          </label>
+          <select id="quote-destination" class="form-select">
+            <option value="Australia (Brisbane / Sydney / Melbourne)">Australia (Brisbane / Sydney / Melbourne)</option>
+            <option value="New Zealand (Auckland / Lyttelton)">New Zealand (Auckland / Lyttelton)</option>
+            <option value="South Africa (Durban)">South Africa (Durban)</option>
+            <option value="Canada (Vancouver / Halifax)">Canada (Vancouver / Halifax)</option>
+            <option value="Chile (Iquique / San Antonio)">Chile (Iquique / San Antonio)</option>
+            <option value="Philippines (Subic / Manila)">Philippines (Subic / Manila)</option>
+            <option value="United Kingdom (Southampton / Bristol)">United Kingdom (Southampton / Bristol)</option>
+            <option value="Other Destination">Other Country / Port</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="quote-shipping" class="form-label">
+          <span class="en">Preferred Shipping Method</span>
+          <span class="jp">希望輸送方法</span>
+        </label>
+        <select id="quote-shipping" class="form-select">
+          <option value="RoRo (Roll-on/Roll-off - Most Economical)">RoRo Shipping (Recommended)</option>
+          <option value="Container Shipping (Enclosed Protection)">Container Shipping</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="quote-notes" class="form-label">
+          <span class="en">Additional Preferences (Color, Mileage, Transmission)</span>
+          <span class="jp">その他ご要望（色・走行距離・ミッション等）</span>
+        </label>
+        <textarea id="quote-notes" class="form-textarea" rows="3" placeholder="e.g. White or Black exterior, under 80,000km, sun roof preferred..."></textarea>
+      </div>
+
+      <div class="quote-actions">
+        <button type="button" class="btn btn-quote-wa" onclick="sendQuoteWhatsApp()">
+          <span>💬 Send via WhatsApp</span>
+        </button>
+        <button type="button" class="btn btn-quote-mail" onclick="sendQuoteEmail()">
+          <span>✉️ Send via Email</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+  // Language Switcher Logic with LocalStorage Persistence
+  function toggleLanguage() {
+    const body = document.body;
+    const html = document.documentElement;
+    body.classList.toggle('japanese');
+    
+    const isJp = body.classList.contains('japanese');
+    html.setAttribute('lang', isJp ? 'ja' : 'en');
+    try {
+      localStorage.setItem('bp_lang', isJp ? 'ja' : 'en');
+    } catch (e) {}
+    
+    const langBtns = document.querySelectorAll('.btn-lang .lang-text');
+    langBtns.forEach(el => {
+      el.textContent = isJp ? "🇺🇸 English" : "🇯🇵 日本語";
+    });
+  }
+
+  // Restore preferred language on load
+  (function initLang() {
+    try {
+      const savedLang = localStorage.getItem('bp_lang');
+      if (savedLang === 'ja') {
+        document.body.classList.add('japanese');
+        document.documentElement.setAttribute('lang', 'ja');
+        const langBtns = document.querySelectorAll('.btn-lang .lang-text');
+        langBtns.forEach(el => {
+          el.textContent = "🇺🇸 English";
+        });
+      }
+    } catch (e) {}
+  })();
+
+  // Mobile Navigation Drawer Toggle
+  let lastFocusedElement = null;
+
+  function toggleNav() {
+    const navDrawer = document.getElementById('nav-drawer');
+    const navToggle = document.getElementById('nav-toggle');
+    const navBackdrop = document.getElementById('nav-backdrop');
+    const isOpen = navDrawer.classList.toggle('open');
+    
+    navToggle.classList.toggle('active', isOpen);
+    navBackdrop.classList.toggle('active', isOpen);
+    navToggle.setAttribute('aria-expanded', isOpen);
+    navDrawer.setAttribute('aria-hidden', !isOpen);
+    document.body.classList.toggle('nav-open', isOpen);
+
+    if (isOpen) {
+      lastFocusedElement = document.activeElement;
+      const closeBtn = document.getElementById('drawer-close-btn');
+      if (closeBtn) closeBtn.focus();
+    } else if (lastFocusedElement) {
+      lastFocusedElement.focus();
+    }
+  }
+
+  function closeNav() {
+    const navDrawer = document.getElementById('nav-drawer');
+    const navToggle = document.getElementById('nav-toggle');
+    const navBackdrop = document.getElementById('nav-backdrop');
+    if (navDrawer.classList.contains('open')) {
+      navDrawer.classList.remove('open');
+      navToggle.classList.remove('active');
+      navBackdrop.classList.remove('active');
+      navToggle.setAttribute('aria-expanded', 'false');
+      navDrawer.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('nav-open');
+      if (lastFocusedElement) lastFocusedElement.focus();
+    }
+  }
+
+  // "Request a Quote" Modal Logic
+  let modalTriggerElement = null;
+
+  function openQuoteModal() {
+    const modal = document.getElementById('quote-modal');
+    if (!modal) return;
+    modalTriggerElement = document.activeElement;
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+    
+    const input = document.getElementById('quote-model');
+    if (input) setTimeout(() => input.focus(), 100);
+  }
+
+  function closeQuoteModal() {
+    const modal = document.getElementById('quote-modal');
+    if (!modal) return;
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+    if (modalTriggerElement) modalTriggerElement.focus();
+  }
+
+  function handleModalBackdropClick(e) {
+    if (e.target.id === 'quote-modal') {
+      closeQuoteModal();
+    }
+  }
+
+  // Escape key global listener
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' || e.key === 'Esc') {
+      const modal = document.getElementById('quote-modal');
+      const drawer = document.getElementById('nav-drawer');
+      if (modal && modal.classList.contains('open')) {
+        closeQuoteModal();
+      } else if (drawer && drawer.classList.contains('open')) {
+        closeNav();
+      }
+    }
+  });
+
+  // Quote Form Submission Builders
+  function getQuoteData() {
+    const model = (document.getElementById('quote-model').value || 'Any Japanese Vehicle').trim();
+    const year = (document.getElementById('quote-year').value || 'Flexible').trim();
+    const destination = document.getElementById('quote-destination').value;
+    const shipping = document.getElementById('quote-shipping').value;
+    const notes = (document.getElementById('quote-notes').value || '').trim();
+    return { model, year, destination, shipping, notes };
+  }
+
+  function sendQuoteWhatsApp() {
+    const data = getQuoteData();
+    let text = `Hello Gagandeep (B&P Trading),\nI would like to request an export quote:\n• Vehicle: ${data.model}\n• Year/Budget: ${data.year}\n• Destination: ${data.destination}\n• Shipping: ${data.shipping}`;
+    if (data.notes) {
+      text += `\n• Notes: ${data.notes}`;
+    }
+    text += `\n\nPlease let me know availability and estimated CIF cost.`;
+
+    const encoded = encodeURIComponent(text);
+    window.open(`https://wa.me/817090551302?text=${encoded}`, '_blank', 'noopener');
+  }
+
+  function sendQuoteEmail() {
+    const data = getQuoteData();
+    const subject = encodeURIComponent(`Vehicle Quote Request: ${data.model} to ${data.destination}`);
+    let body = `Dear B&P Trading Export Team,\n\nI am requesting a quotation for importing a vehicle from Japan:\n\n- Desired Vehicle: ${data.model}\n- Target Year / Budget: ${data.year}\n- Destination Port: ${data.destination}\n- Preferred Shipping: ${data.shipping}\n`;
+    if (data.notes) {
+      body += `- Additional Specifications: ${data.notes}\n`;
+    }
+    body += `\nPlease reply with available options and CIF estimation.\n\nThank you.`;
+
+    window.location.href = `mailto:bptrading202510@gmail.com?subject=${subject}&body=${encodeURIComponent(body)}`;
+  }
+</script>
+
+</body>
+</html>
