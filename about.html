@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KPHV3GH4');</script>
+  <!-- End Google Tag Manager -->
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="OaAutCWjm0_EndOxhq3U1lWIgVWbkQNVkM3wy21FwkQ" />
@@ -14,6 +22,10 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KPHV3GH4"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <!-- Backdrop Overlay for Mobile Drawer -->
 <div class="nav-backdrop" id="nav-backdrop" onclick="toggleNav()" aria-hidden="true"></div>
@@ -1115,6 +1127,19 @@
     }
     text += `\n\nPlease let me know availability and estimated CIF cost.`;
 
+    // Track Primary Conversion in Google Tag Manager
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'whatsapp_quote_submit',
+      event_category: 'conversion',
+      conversion_type: 'primary',
+      button_location: 'quote_modal',
+      vehicle_model: data.model,
+      destination_port: data.destination,
+      shipping_method: data.shipping,
+      page_path: window.location.pathname
+    });
+
     const encoded = encodeURIComponent(text);
     window.open(`https://wa.me/817090551302?text=${encoded}`, '_blank', 'noopener');
   }
@@ -1130,6 +1155,42 @@
 
     window.location.href = `mailto:bptrading202510@gmail.com?subject=${subject}&body=${encodeURIComponent(body)}`;
   }
+
+  // Google Tag Manager - Track WhatsApp Clicks as Primary Conversion Events
+  document.addEventListener('click', function(e) {
+    const waLink = e.target.closest('a[href*="wa.me"], a[href*="whatsapp.com"]');
+    if (!waLink) return;
+
+    const href = waLink.getAttribute('href') || '';
+    const text = (waLink.innerText || waLink.getAttribute('aria-label') || '').trim();
+
+    // Determine location context for granular reporting in GA4 / Google Ads
+    let location = 'page_body';
+    if (waLink.closest('.mobile-sticky-bar')) {
+      location = 'mobile_sticky_bar';
+    } else if (waLink.closest('.nav-drawer')) {
+      location = 'mobile_drawer';
+    } else if (waLink.closest('.contact-cards-grid') || waLink.closest('#contact')) {
+      location = 'contact_section';
+    } else if (waLink.closest('.member-card')) {
+      location = 'team_member_card';
+    } else if (waLink.closest('.about-cta-card')) {
+      location = 'about_cta_card';
+    } else if (waLink.closest('.quote-modal-card')) {
+      location = 'quote_modal';
+    }
+
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'whatsapp_click',
+      event_category: 'conversion',
+      conversion_type: 'primary',
+      button_location: location,
+      button_text: text,
+      link_url: href,
+      page_path: window.location.pathname
+    });
+  }, true);
 </script>
 
 </body>

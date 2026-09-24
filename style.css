@@ -654,6 +654,110 @@ h1, h2, h3, h4 {
   }
 }
 
+/* --- Hero Above-The-Fold Trust Callouts (Mobile-First) --- */
+.hero-trust-chips {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 480px) {
+  .hero-trust-chips {
+    gap: 6px;
+    margin-top: 16px;
+  }
+}
+
+.hero-trust-chip {
+  background: rgba(15, 23, 42, 0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+  padding: 8px 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform var(--duration-ui) var(--ease-out),
+              background var(--duration-ui) var(--ease-out),
+              border-color var(--duration-ui) var(--ease-out);
+}
+
+@media (min-width: 600px) {
+  .hero-trust-chip {
+    padding: 10px 14px;
+    flex-direction: row;
+    text-align: left;
+    gap: 10px;
+    align-items: center;
+  }
+}
+
+.hero-trust-chip:hover {
+  background: rgba(29, 78, 216, 0.45);
+  border-color: rgba(147, 197, 253, 0.5);
+  transform: translateY(-2px);
+}
+
+.chip-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+  margin-bottom: 4px;
+  flex-shrink: 0;
+}
+
+@media (min-width: 600px) {
+  .chip-icon {
+    font-size: 1.45rem;
+    margin-bottom: 0;
+  }
+}
+
+.chip-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.chip-title {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.25;
+}
+
+@media (min-width: 600px) {
+  .chip-title {
+    font-size: 0.84rem;
+  }
+}
+
+.chip-sub {
+  font-size: 0.64rem;
+  color: #94a3b8;
+  line-height: 1.2;
+  margin-top: 2px;
+}
+
+@media (max-width: 420px) {
+  .chip-sub {
+    display: none; /* Keep ultra-compact on narrow mobile so badges remain above the fold */
+  }
+}
+
+@media (min-width: 600px) {
+  .chip-sub {
+    font-size: 0.72rem;
+    color: #cbd5e1;
+  }
+}
+
 /* Hero Carousel Navigation Controls */
 .carousel-control {
   position: absolute;
