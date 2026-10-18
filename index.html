@@ -98,19 +98,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 
   <div class="nav-drawer-footer">
-    <button class="btn btn-quote-action" onclick="openQuoteModal(); closeNav();" style="width: 100%; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+    <button class="btn btn-quote-action" onclick="openQuoteModal(); closeNav();">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
       <span class="en">Request A Quote</span>
       <span class="jp">お見積もり依頼</span>
     </button>
-    <a href="https://wa.me/817090551302" class="btn btn-contact-wa" target="_blank" rel="noopener" style="width: 100%; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.979-.275-.1-.476-.15-.677.15-.201.3-.778.979-.954 1.179-.175.201-.351.226-.652.075-.301-.15-1.271-.469-2.42-1.494-.894-.798-1.498-1.784-1.674-2.085-.176-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.15-.175.201-.3.301-.501.101-.2.051-.376-.025-.526-.076-.15-.678-1.635-.93-2.24-.244-.588-.493-.508-.677-.517-.175-.009-.376-.009-.577-.009-.201 0-.527.075-.803.376s-1.054 1.03-1.054 2.512 1.079 2.914 1.23 3.115c.15.201 2.124 3.243 5.145 4.548.718.31 1.279.496 1.716.634.722.23 1.379.198 1.9.12.58-.088 1.78-.727 2.03-1.43.251-.703.251-1.305.176-1.43-.075-.126-.276-.201-.577-.351zM12.04 2C6.52 2 2.03 6.49 2.03 12.01c0 1.98.58 3.86 1.63 5.46L2 22l4.67-1.63c1.55.97 3.35 1.51 5.37 1.51 5.52 0 10.01-4.49 10.01-10.01C22.05 6.49 17.56 2 12.04 2z"/></svg>
-      <span>WhatsApp (Gagandeep)</span>
-    </a>
-    <a href="tel:+817090551302" class="btn btn-primary" style="width: 100%; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-      <span>+81 70-9055-1302</span>
-    </a>
+    <div class="drawer-contact-grid">
+      <a href="https://wa.me/817090551302" class="btn btn-contact-wa" target="_blank" rel="noopener" aria-label="WhatsApp with Export Director">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.979-.275-.1-.476-.15-.677.15-.201.3-.778.979-.954 1.179-.175.201-.351.226-.652.075-.301-.15-1.271-.469-2.42-1.494-.894-.798-1.498-1.784-1.674-2.085-.176-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.15-.175.201-.3.301-.501.101-.2.051-.376-.025-.526-.076-.15-.678-1.635-.93-2.24-.244-.588-.493-.508-.677-.517-.175-.009-.376-.009-.577-.009-.201 0-.527.075-.803.376s-1.054 1.03-1.054 2.512 1.079 2.914 1.23 3.115c.15.201 2.124 3.243 5.145 4.548.718.31 1.279.496 1.716.634.722.23 1.379.198 1.9.12.58-.088 1.78-.727 2.03-1.43.251-.703.251-1.305.176-1.43-.075-.126-.276-.201-.577-.351zM12.04 2C6.52 2 2.03 6.49 2.03 12.01c0 1.98.58 3.86 1.63 5.46L2 22l4.67-1.63c1.55.97 3.35 1.51 5.37 1.51 5.52 0 10.01-4.49 10.01-10.01C22.05 6.49 17.56 2 12.04 2z"/></svg>
+        <span>WhatsApp</span>
+      </a>
+      <a href="tel:+817090551302" class="btn btn-drawer-call" aria-label="Direct Phone Call">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        <span class="en">Call Us</span>
+        <span class="jp">電話</span>
+      </a>
+    </div>
   </div>
 </aside>
 
