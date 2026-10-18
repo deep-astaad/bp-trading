@@ -41,7 +41,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span class="logo-main">B&P Trading</span>
         <span class="logo-sub">Bajaj & Pawar Trading</span>
       </div>
-      <button class="drawer-close-btn" id="drawer-close-btn" onclick="toggleNav()" aria-label="Close menu">✕</button>
+      <button class="drawer-close-btn" id="drawer-close-btn" onclick="toggleNav()" aria-label="Close menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
     </div>
     <ul class="drawer-menu">
       <li style="--i: 1;">
@@ -82,8 +84,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </li>
       <li style="--i: 7;">
         <a href="#offices" onclick="closeNav()">
-          <span class="en">Offices</span>
-          <span class="jp">事業所</span>
+          <span class="en">Head Office</span>
+          <span class="jp">本社案内</span>
         </a>
       </li>
       <li style="--i: 8;">
@@ -96,15 +98,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 
   <div class="nav-drawer-footer">
-    <button class="btn btn-quote-action" onclick="openQuoteModal(); closeNav();" style="width: 100%;">
-      <span class="en">📋 Request A Quote</span>
-      <span class="jp">📋 お見積もり依頼</span>
+    <button class="btn btn-quote-action" onclick="openQuoteModal(); closeNav();" style="width: 100%; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+      <span class="en">Request A Quote</span>
+      <span class="jp">お見積もり依頼</span>
     </button>
-    <a href="https://wa.me/817090551302" class="btn btn-contact-wa" target="_blank" rel="noopener" style="width: 100%;">
-      💬 WhatsApp (Gagandeep)
+    <a href="https://wa.me/817090551302" class="btn btn-contact-wa" target="_blank" rel="noopener" style="width: 100%; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.979-.275-.1-.476-.15-.677.15-.201.3-.778.979-.954 1.179-.175.201-.351.226-.652.075-.301-.15-1.271-.469-2.42-1.494-.894-.798-1.498-1.784-1.674-2.085-.176-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.15-.175.201-.3.301-.501.101-.2.051-.376-.025-.526-.076-.15-.678-1.635-.93-2.24-.244-.588-.493-.508-.677-.517-.175-.009-.376-.009-.577-.009-.201 0-.527.075-.803.376s-1.054 1.03-1.054 2.512 1.079 2.914 1.23 3.115c.15.201 2.124 3.243 5.145 4.548.718.31 1.279.496 1.716.634.722.23 1.379.198 1.9.12.58-.088 1.78-.727 2.03-1.43.251-.703.251-1.305.176-1.43-.075-.126-.276-.201-.577-.351zM12.04 2C6.52 2 2.03 6.49 2.03 12.01c0 1.98.58 3.86 1.63 5.46L2 22l4.67-1.63c1.55.97 3.35 1.51 5.37 1.51 5.52 0 10.01-4.49 10.01-10.01C22.05 6.49 17.56 2 12.04 2z"/></svg>
+      <span>WhatsApp (Gagandeep)</span>
     </a>
-    <a href="tel:+817090551302" class="btn btn-primary" style="width: 100%;">
-      📞 +81 70-9055-1302
+    <a href="tel:+817090551302" class="btn btn-primary" style="width: 100%; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+      <span>+81 70-9055-1302</span>
     </a>
   </div>
 </aside>
@@ -122,7 +127,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="header-actions">
       <!-- Quick Language Switcher Button -->
       <button class="btn-lang" onclick="toggleLanguage()" aria-label="Toggle language">
-        <span class="lang-text">🇯🇵 日本語</span>
+        <span class="lang-text">
+          <svg class="flag-icon-svg" width="16" height="11" viewBox="0 0 20 14" fill="none" aria-hidden="true" style="margin-right: 6px;"><rect width="20" height="14" fill="#ffffff"/><circle cx="10" cy="7" r="4.2" fill="#bc002d"/></svg>日本語
+        </span>
       </button>
 
       <!-- Desktop Request Quote Action -->
@@ -180,8 +187,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </li>
         <li>
           <a href="#offices">
-            <span class="en">Offices</span>
-            <span class="jp">事業所</span>
+            <span class="en">Head Office</span>
+            <span class="jp">本社案内</span>
           </a>
         </li>
         <li>
@@ -203,8 +210,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="overlay">
         <div class="container hero-content">
           <div class="hero-badge">
-            <span class="en">🇯🇵 Registered Japan Vehicle Exporter</span>
-            <span class="jp">🇯🇵 日本公式登録中古車輸出事業者</span>
+            <span class="en"><svg class="flag-icon-svg" width="16" height="11" viewBox="0 0 20 14" fill="none" aria-hidden="true" style="margin-right: 6px;"><rect width="20" height="14" fill="#ffffff"/><circle cx="10" cy="7" r="4.2" fill="#bc002d"/></svg>Registered Japan Vehicle Exporter</span>
+            <span class="jp"><svg class="flag-icon-svg" width="16" height="11" viewBox="0 0 20 14" fill="none" aria-hidden="true" style="margin-right: 6px;"><rect width="20" height="14" fill="#ffffff"/><circle cx="10" cy="7" r="4.2" fill="#bc002d"/></svg>日本公式登録中古車輸出事業者</span>
           </div>
           <h1 class="en">Trusted Japan Used Car Exporters</h1>
           <h1 class="jp">信頼できる日本中古車輸出パートナー</h1>
@@ -226,7 +233,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <!-- Mobile Above-The-Fold Trust Callout Badges -->
           <div class="hero-trust-chips" aria-label="Key export guarantees">
             <div class="hero-trust-chip">
-              <span class="chip-icon">🛡️</span>
+              <span class="chip-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+              </span>
               <div class="chip-text">
                 <span class="chip-title en">JEVIC / EAA Inspected</span>
                 <span class="chip-title jp">JEVIC / EAA 検査対応</span>
@@ -235,7 +244,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
             </div>
             <div class="hero-trust-chip">
-              <span class="chip-icon">☢️</span>
+              <span class="chip-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="m4.93 4.93 4.24 4.24"></path><path d="m14.83 9.17 4.24-4.24"></path><path d="M12 12v9"></path><circle cx="12" cy="12" r="2"></circle></svg>
+              </span>
               <div class="chip-text">
                 <span class="chip-title en">Radiation Cleared</span>
                 <span class="chip-title jp">放射線量 検査済</span>
@@ -244,7 +255,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
             </div>
             <div class="hero-trust-chip">
-              <span class="chip-icon">🚢</span>
+              <span class="chip-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1 .6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path><path d="M19.38 20A11.6 11.6 0 0 0 21 14l-9-4-9 4c0 2.9.94 5.34 2.81 7.76"></path><path d="M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6"></path><path d="M12 10V4"></path></svg>
+              </span>
               <div class="chip-text">
                 <span class="chip-title en">Live B/L Tracking</span>
                 <span class="chip-title jp">船荷証券(B/L) 追跡</span>
@@ -262,8 +275,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="overlay">
         <div class="container hero-content">
           <div class="hero-badge">
-            <span class="en">🚢 Global Port Shipping Network</span>
-            <span class="jp">🚢 主要港湾輸出ネットワーク</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-right: 4px; display: inline-block; vertical-align: -2px;"><path d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1 .6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path><path d="M19.38 20A11.6 11.6 0 0 0 21 14l-9-4-9 4c0 2.9.94 5.34 2.81 7.76"></path><path d="M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6"></path><path d="M12 10V4"></path></svg>
+            <span class="en">Global Port Shipping Network</span>
+            <span class="jp">主要港湾輸出ネットワーク</span>
           </div>
           <h2 class="en">Global Car Export Network</h2>
           <h2 class="jp">グローバルな中古車輸出ネットワーク</h2>
@@ -285,7 +299,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <!-- Mobile Above-The-Fold Trust Callout Badges -->
           <div class="hero-trust-chips" aria-label="Key export guarantees">
             <div class="hero-trust-chip">
-              <span class="chip-icon">🛡️</span>
+              <span class="chip-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+              </span>
               <div class="chip-text">
                 <span class="chip-title en">JEVIC / EAA Inspected</span>
                 <span class="chip-title jp">JEVIC / EAA 検査対応</span>
@@ -294,7 +310,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
             </div>
             <div class="hero-trust-chip">
-              <span class="chip-icon">☢️</span>
+              <span class="chip-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="m4.93 4.93 4.24 4.24"></path><path d="m14.83 9.17 4.24-4.24"></path><path d="M12 12v9"></path><circle cx="12" cy="12" r="2"></circle></svg>
+              </span>
               <div class="chip-text">
                 <span class="chip-title en">Radiation Cleared</span>
                 <span class="chip-title jp">放射線量 検査済</span>
@@ -303,7 +321,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
             </div>
             <div class="hero-trust-chip">
-              <span class="chip-icon">🚢</span>
+              <span class="chip-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1 .6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path><path d="M19.38 20A11.6 11.6 0 0 0 21 14l-9-4-9 4c0 2.9.94 5.34 2.81 7.76"></path><path d="M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6"></path><path d="M12 10V4"></path></svg>
+              </span>
               <div class="chip-text">
                 <span class="chip-title en">Live B/L Tracking</span>
                 <span class="chip-title jp">船荷証券(B/L) 追跡</span>
@@ -321,8 +341,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="overlay">
         <div class="container hero-content">
           <div class="hero-badge">
-            <span class="en">⭐ Premium Hand-Inspected Quality</span>
-            <span class="jp">⭐ 厳選された高品質な日本車</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="margin-right: 4px; display: inline-block; vertical-align: -1px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <span class="en">Premium Hand-Inspected Quality</span>
+            <span class="jp">厳選された高品質な日本車</span>
           </div>
           <h2 class="en">High Quality Japanese Cars</h2>
           <h2 class="jp">高品質な日本の中古車</h2>
@@ -344,7 +365,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <!-- Mobile Above-The-Fold Trust Callout Badges -->
           <div class="hero-trust-chips" aria-label="Key export guarantees">
             <div class="hero-trust-chip">
-              <span class="chip-icon">🛡️</span>
+              <span class="chip-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+              </span>
               <div class="chip-text">
                 <span class="chip-title en">JEVIC / EAA Inspected</span>
                 <span class="chip-title jp">JEVIC / EAA 検査対応</span>
@@ -353,7 +376,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
             </div>
             <div class="hero-trust-chip">
-              <span class="chip-icon">☢️</span>
+              <span class="chip-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="m4.93 4.93 4.24 4.24"></path><path d="m14.83 9.17 4.24-4.24"></path><path d="M12 12v9"></path><circle cx="12" cy="12" r="2"></circle></svg>
+              </span>
               <div class="chip-text">
                 <span class="chip-title en">Radiation Cleared</span>
                 <span class="chip-title jp">放射線量 検査済</span>
@@ -362,7 +387,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
             </div>
             <div class="hero-trust-chip">
-              <span class="chip-icon">🚢</span>
+              <span class="chip-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1 .6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path><path d="M19.38 20A11.6 11.6 0 0 0 21 14l-9-4-9 4c0 2.9.94 5.34 2.81 7.76"></path><path d="M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6"></path><path d="M12 10V4"></path></svg>
+              </span>
               <div class="chip-text">
                 <span class="chip-title en">Live B/L Tracking</span>
                 <span class="chip-title jp">船荷証券(B/L) 追跡</span>
@@ -391,7 +418,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="trust-bar" aria-label="Trust and Certification">
   <div class="container trust-container">
     <div class="trust-item">
-      <span class="trust-icon">🛡️</span>
+      <span class="trust-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+      </span>
       <div class="trust-text">
         <strong class="en">JUMVEA Standards</strong>
         <strong class="jp">JUMVEA 輸出基準</strong>
@@ -400,7 +429,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
     <div class="trust-item">
-      <span class="trust-icon">🔍</span>
+      <span class="trust-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      </span>
       <div class="trust-text">
         <strong class="en">JEVIC / EAA Inspected</strong>
         <strong class="jp">公認事前検査対応</strong>
@@ -409,7 +440,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
     <div class="trust-item">
-      <span class="trust-icon">☢️</span>
+      <span class="trust-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="m4.93 4.93 4.24 4.24"></path><path d="m14.83 9.17 4.24-4.24"></path><path d="M12 12v9"></path><circle cx="12" cy="12" r="2"></circle></svg>
+      </span>
       <div class="trust-text">
         <strong class="en">100% Radiation Tested</strong>
         <strong class="jp">全車放射線量検査済</strong>
@@ -418,7 +451,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
     <div class="trust-item">
-      <span class="trust-icon">⚡</span>
+      <span class="trust-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+      </span>
       <div class="trust-text">
         <strong class="en">Express B/L Dispatch</strong>
         <strong class="jp">船荷証券迅速発送</strong>
@@ -493,7 +528,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- Step 1 -->
       <div class="process-card">
         <div class="process-number">01</div>
-        <div class="process-icon">🎯</div>
+        <div class="process-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+        </div>
         <h3 class="en">Vehicle Sourcing & Bidding</h3>
         <h3 class="jp">車両選定・オークション落札</h3>
         <p class="en">Direct live bidding across 100+ Japanese auctions (USS, TAA, CAA, JU) inspecting over 100,000 vehicles weekly based on your exact budget and specifications.</p>
@@ -503,7 +540,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- Step 2 -->
       <div class="process-card">
         <div class="process-number">02</div>
-        <div class="process-icon">🔍</div>
+        <div class="process-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </div>
         <h3 class="en">Inspection & Verification</h3>
         <h3 class="jp">車両検査・コンディション確認</h3>
         <p class="en">Comprehensive mechanical checks, auction sheet translation, body verification, and pre-shipment radiation screening to guarantee vehicle integrity.</p>
@@ -513,7 +552,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- Step 3 -->
       <div class="process-card">
         <div class="process-number">03</div>
-        <div class="process-icon">📄</div>
+        <div class="process-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+        </div>
         <h3 class="en">Deregistration & Customs</h3>
         <h3 class="jp">抹消登録・通関手続き</h3>
         <p class="en">In-house processing of official Japan Export Certificates, police clearance, road transport Bureau paperwork, and customs export declaration.</p>
@@ -523,7 +564,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- Step 4 -->
       <div class="process-card">
         <div class="process-number">04</div>
-        <div class="process-icon">🚢</div>
+        <div class="process-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1 .6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path><path d="M19.38 20A11.6 11.6 0 0 0 21 14l-9-4-9 4c0 2.9.94 5.34 2.81 7.76"></path><path d="M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6"></path><path d="M12 10V4"></path></svg>
+        </div>
         <h3 class="en">Ocean Shipping & B/L Delivery</h3>
         <h3 class="jp">海上輸送・船荷証券交付</h3>
         <p class="en">Securing priority vessel space on trusted RoRo or container carriers, followed by fast express courier delivery (DHL/FedEx) of your original Bill of Lading.</p>
@@ -581,6 +624,537 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
+<!-- Featured Premium Vehicles -->
+<section id="premium-cars" class="section light">
+  <div class="container">
+    <div style="text-align: center; max-width: 720px; margin: 0 auto 36px auto;">
+      <h2 class="section-title en">Featured Premium Vehicles</h2>
+      <h2 class="section-title jp">厳選プレミアム車両</h2>
+      <p class="section-subtitle en">Hand-picked luxury SUVs, executive vans, and high-performance vehicles ready for immediate export from Japan.</p>
+      <p class="section-subtitle jp">日本全国のオークションおよび独自仕入れルートより厳選した、即時輸出可能なハイエンドプレミアム車両をご紹介します。</p>
+    </div>
+
+    <div class="vehicle-grid">
+      <!-- 1. Toyota Land Cruiser 300 ZX -->
+      <div class="vehicle-card">
+        <div class="vehicle-image-wrap">
+          <img src="assets/photos/land-cruiser-300.jpg" alt="Toyota Land Cruiser 300 ZX" width="400" height="238" loading="lazy" decoding="async">
+          <span class="vehicle-badge-status">Export Ready</span>
+          <span class="vehicle-badge-grade">Auction Grade 5 / S</span>
+        </div>
+        <div class="vehicle-body">
+          <div class="vehicle-header">
+            <h3 class="vehicle-title en">Toyota Land Cruiser 300 ZX</h3>
+            <h3 class="vehicle-title jp">トヨタ ランドクルーザー300 ZX</h3>
+            <p class="vehicle-subtitle en">Flagship Luxury 4WD • Direct Japan Spec</p>
+            <p class="vehicle-subtitle jp">最高峰フラッグシップSUV • 日本仕様</p>
+          </div>
+
+          <div class="vehicle-price-box">
+            <div class="price-top-meta">
+              <span>FOB Japan Reference</span>
+              <span>USD / JPY</span>
+            </div>
+            <div class="price-values">
+              <span class="price-usd">From $68,000 <small>USD</small></span>
+              <span class="price-divider">/</span>
+              <span class="price-jpy">¥10,200,000 <small>JPY</small></span>
+            </div>
+          </div>
+
+          <div class="vehicle-specs-grid">
+            <div class="spec-pill">
+              <span class="spec-pill-label">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
+                Model Year
+              </span>
+              <span class="spec-pill-val">2022–2024</span>
+            </div>
+            <div class="spec-pill">
+              <span class="spec-pill-label">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                Powertrain
+              </span>
+              <span class="spec-pill-val">3.5L Twin-Turbo V6</span>
+            </div>
+            <div class="spec-pill">
+              <span class="spec-pill-label">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+                Output
+              </span>
+              <span class="spec-pill-val">415 HP / 650 Nm</span>
+            </div>
+            <div class="spec-pill">
+              <span class="spec-pill-label">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line></svg>
+                Drivetrain
+              </span>
+              <span class="spec-pill-val">10-Speed • Full-Time 4WD</span>
+            </div>
+          </div>
+
+          <div class="vehicle-features-list">
+            <span class="feature-tag"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg> JBL 14-Speaker Audio</span>
+            <span class="feature-tag"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg> Multi-Terrain Select</span>
+            <span class="feature-tag"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg> Full Leather Interior</span>
+            <span class="feature-tag"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg> Sunroof &amp; Cool Box</span>
+          </div>
+
+          <div class="vehicle-colors-row">
+            <span>Colors:</span>
+            <span><span class="color-dot-indicator" style="background: #ffffff; border: 1px solid #cbd5e1;"></span> Pearl White</span>
+            <span><span class="color-dot-indicator" style="background: #0f172a;"></span> Attitude Black</span>
+            <span><span class="color-dot-indicator" style="background: #78716c;"></span> Bronze Metallic</span>
+          </div>
+
+          <div class="vehicle-action-row">
+            <button class="btn-vehicle-inquire" onclick="openQuoteModal('Toyota Land Cruiser 300 ZX')">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+              <span class="en">Inquire on This Model</span>
+              <span class="jp">この車両で見積もり依頼</span>
+            </button>
+            <a href="https://wa.me/818051560999?text=Hello%20B%26P%20Trading%2C%20I%20am%20inquiring%20about%20Toyota%20Land%20Cruiser%20300%20ZX" class="btn-vehicle-wa" target="_blank" rel="noopener" aria-label="WhatsApp inquiry for Toyota Land Cruiser 300 ZX">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.979-.275-.1-.476-.15-.677.15-.201.3-.778.979-.954 1.179-.175.201-.351.226-.652.075-.301-.15-1.271-.469-2.42-1.494-.894-.798-1.498-1.784-1.674-2.085-.176-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.15-.175.201-.3.301-.501.101-.2.051-.376-.025-.526-.076-.15-.678-1.635-.93-2.24-.244-.588-.493-.508-.677-.517-.175-.009-.376-.009-.577-.009-.201 0-.527.075-.803.376s-1.054 1.03-1.054 2.512 1.079 2.914 1.23 3.115c.15.201 2.124 3.243 5.145 4.548.718.31 1.279.496 1.716.634.722.23 1.379.198 1.9.12.58-.088 1.78-.727 2.03-1.43.251-.703.251-1.305.176-1.43-.075-.126-.276-.201-.577-.351zM12.04 2C6.52 2 2.03 6.49 2.03 12.01c0 1.98.58 3.86 1.63 5.46L2 22l4.67-1.63c1.55.97 3.35 1.51 5.37 1.51 5.52 0 10.01-4.49 10.01-10.01C22.05 6.49 17.56 2 12.04 2z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Mercedes-Benz G63 AMG -->
+      <div class="vehicle-card">
+        <div class="vehicle-image-wrap">
+          <img src="assets/photos/g63-amg.jpg" alt="Mercedes-Benz G63 AMG" width="400" height="238" loading="lazy" decoding="async">
+          <span class="vehicle-badge-status">Export Ready</span>
+          <span class="vehicle-badge-grade">Auction Grade 5 / Pristine</span>
+        </div>
+        <div class="vehicle-body">
+          <div class="vehicle-header">
+            <h3 class="vehicle-title en">Mercedes-Benz G63 AMG</h3>
+            <h3 class="vehicle-title jp">メルセデス・ベンツ G63 AMG</h3>
+            <p class="vehicle-subtitle en">Handcrafted AMG V8 • Triple Diff Locks</p>
+            <p class="vehicle-subtitle jp">熟練マイスター手組みV8 • 3重デフロック</p>
+          </div>
+
+          <div class="vehicle-price-box">
+            <div class="price-top-meta">
+              <span>FOB Japan Reference</span>
+              <span>USD / JPY</span>
+            </div>
+            <div class="price-values">
+              <span class="price-usd">From $125,000 <small>USD</small></span>
+              <span class="price-divider">/</span>
+              <span class="price-jpy">¥18,750,000 <small>JPY</small></span>
+            </div>
+          </div>
+
+          <div class="vehicle-specs-grid">
+            <div class="spec-pill">
+              <span class="spec-pill-label">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
+                Model Year
+              </span>
+              <span class="spec-pill-val">2021–2024</span>
+            </div>
+            <div class="spec-pill">
+              <span class="spec-pill-label">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                Powertrain
+              </span>
+              <span class="spec-pill-val">4.0L Bi-Turbo V8</span>
+            </div>
+            <div class="spec-pill">
+              <span class="spec-pill-label">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+                Output
+              </span>
+              <span class="spec-pill-val">585 HP / 850 Nm</span>
+            </div>
+            <div class="spec-pill">
+              <span class="spec-pill-label">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line></svg>
+                Drivetrain
+              </span>
+              <span class="spec-pill-val">SPEEDSHIFT 9G • 4MATIC</span>
+            </div>
+          </div>
+
+          <div class="vehicle-features-list">
+            <span class="feature-tag"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg> AMG Performance Exhaust</span>
+            <span class="feature-tag"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg> Burmester Surround Sound</span>
+            <span class="feature-tag"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg> Nappa Diamond Leather</span>
+            <span class="feature-tag"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg> 22" AMG Forged Wheels</span>
+          </div>
+
+          <div class="vehicle-colors-row">
+            <span>Colors:</span>
+            <span><span class="color-dot-indicator" style="background: #0f172a;"></span> Obsidian Black</span>
+            <span><span class="color-dot-indicator" style="background: #ffffff; border: 1px solid #cbd5e1;"></span> Polar White</span>
+            <span><span class="color-dot-indicator" style="background: #334155;"></span> Magno Night Black</span>
+          </div>
+
+          <div class="vehicle-action-row">
+            <button class="btn-vehicle-inquire" onclick="openQuoteModal('Mercedes-Benz G63 AMG')">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+              <span class="en">Inquire on This Model</span>
+              <span class="jp">この車両で見積もり依頼</span>
+            </button>
+            <a href="https://wa.me/818051560999?text=Hello%20B%26P%20Trading%2C%20I%20am%20inquiring%20about%20Mercedes-Benz%20G63%20AMG" class="btn-vehicle-wa" target="_blank" rel="noopener" aria-label="WhatsApp inquiry for Mercedes-Benz G63 AMG">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.979-.275-.1-.476-.15-.677.15-.201.3-.778.979-.954 1.179-.175.201-.351.226-.652.075-.301-.15-1.271-.469-2.42-1.494-.894-.798-1.498-1.784-1.674-2.085-.176-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.15-.175.201-.3.301-.501.101-.2.051-.376-.025-.526-.076-.15-.678-1.635-.93-2.24-.244-.588-.493-.508-.677-.517-.175-.009-.376-.009-.577-.009-.201 0-.527.075-.803.376s-1.054 1.03-1.054 2.512 1.079 2.914 1.23 3.115c.15.201 2.124 3.243 5.145 4.548.718.31 1.279.496 1.716.634.722.23 1.379.198 1.9.12.58-.088 1.78-.727 2.03-1.43.251-.703.251-1.305.176-1.43-.075-.126-.276-.201-.577-.351zM12.04 2C6.52 2 2.03 6.49 2.03 12.01c0 1.98.58 3.86 1.63 5.46L2 22l4.67-1.63c1.55.97 3.35 1.51 5.37 1.51 5.52 0 10.01-4.49 10.01-10.01C22.05 6.49 17.56 2 12.04 2z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. BMW X5 M Competition -->
+      <div class="vehicle-card">
+        <div class="vehicle-image-wrap">
+          <img src="assets/photos/bmw-x5m.jpg" alt="BMW X5 M Competition" width="400" height="238" loading="lazy" decoding="async">
+          <span class="vehicle-badge-status">Export Ready</span>
+          <span class="vehicle-badge-grade">Auction Grade 5 / Low KM</span>
+        </div>
+        <div class="vehicle-body">
+          <div class="vehicle-header">
+            <h3 class="vehicle-title en">BMW X5 M Competition</h3>
+            <h3 class="vehicle-title jp">BMW X5 M コンペティション</h3>
+            <p class="vehicle-subtitle en">M TwinPower Turbo • M xDrive Track Dynamics</p>
+            <p class="vehicle-subtitle jp">MハイパフォーマンスSUV • サーキットスペック</p>
+          </div>
+
+          <div class="vehicle-price-box">
+            <div class="price-top-meta">
+              <span>FOB Japan Reference</span>
+              <span>USD / JPY</span>
+            </div>
+            <div class="price-values">
+              <span class="price-usd">From $78,000 <small>USD</small></span>
+              <span class="price-divider">/</span>
+              <span class="price-jpy">¥11,700,000 <small>JPY</small></span>
+            </div>
+          </div>
+
+          <div class="vehicle-specs-grid">
+            <div class="spec-pill">
+              <span class="spec-pill-label">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
+                Model Year
+              </span>
+              <span class="spec-pill-val">2022–2024</span>
+            </div>
+            <div class="spec-pill">
+              <span class="spec-pill-label">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                Powertrain
+              </span>
+              <span class="spec-pill-val">4.4L TwinPower V8</span>
+            </div>
+            <div class="spec-pill">
+              <span class="spec-pill-label">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+                Output
+              </span>
+              <span class="spec-pill-val">617 HP / 750 Nm</span>
+            </div>
+            <div class="spec-pill">
+              <span class="spec-pill-label">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line></svg>
+                Drivetrain
+              </span>
+              <span class="spec-pill-val">8-Speed M Steptronic • M xDrive</span>
+            </div>
+          </div>
+
+          <div class="vehicle-features-list">
+            <span class="feature-tag"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg> M Sport Exhaust System</span>
+            <span class="feature-tag"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg> Bowers &amp; Wilkins Diamond</span>
+            <span class="feature-tag"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg> Merino Full Leather</span>
+            <span class="feature-tag"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg> Sky Lounge Panoramic Roof</span>
+          </div>
+
+          <div class="vehicle-colors-row">
+            <span>Colors:</span>
+            <span><span class="color-dot-indicator" style="background: #0f172a;"></span> Carbon Black</span>
+            <span><span class="color-dot-indicator" style="background: #1d4ed8;"></span> Marina Bay Blue</span>
+            <span><span class="color-dot-indicator" style="background: #ffffff; border: 1px solid #cbd5e1;"></span> Alpine White</span>
+          </div>
+
+          <div class="vehicle-action-row">
+            <button class="btn-vehicle-inquire" onclick="openQuoteModal('BMW X5 M Competition')">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+              <span class="en">Inquire on This Model</span>
+              <span class="jp">この車両で見積もり依頼</span>
+            </button>
+            <a href="https://wa.me/818051560999?text=Hello%20B%26P%20Trading%2C%20I%20am%20inquiring%20about%20BMW%20X5%20M%20Competition" class="btn-vehicle-wa" target="_blank" rel="noopener" aria-label="WhatsApp inquiry for BMW X5 M Competition">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.979-.275-.1-.476-.15-.677.15-.201.3-.778.979-.954 1.179-.175.201-.351.226-.652.075-.301-.15-1.271-.469-2.42-1.494-.894-.798-1.498-1.784-1.674-2.085-.176-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.15-.175.201-.3.301-.501.101-.2.051-.376-.025-.526-.076-.15-.678-1.635-.93-2.24-.244-.588-.493-.508-.677-.517-.175-.009-.376-.009-.577-.009-.201 0-.527.075-.803.376s-1.054 1.03-1.054 2.512 1.079 2.914 1.23 3.115c.15.201 2.124 3.243 5.145 4.548.718.31 1.279.496 1.716.634.722.23 1.379.198 1.9.12.58-.088 1.78-.727 2.03-1.43.251-.703.251-1.305.176-1.43-.075-.126-.276-.201-.577-.351zM12.04 2C6.52 2 2.03 6.49 2.03 12.01c0 1.98.58 3.86 1.63 5.46L2 22l4.67-1.63c1.55.97 3.35 1.51 5.37 1.51 5.52 0 10.01-4.49 10.01-10.01C22.05 6.49 17.56 2 12.04 2z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Lexus LX 600 Executive -->
+      <div class="vehicle-card">
+        <div class="vehicle-image-wrap">
+          <img src="assets/photos/lexus-lx600.jpg" alt="Lexus LX 600 Executive" width="400" height="238" loading="lazy" decoding="async">
+          <span class="vehicle-badge-status">Export Ready</span>
+          <span class="vehicle-badge-grade">Auction Grade 5 / Showroom</span>
+        </div>
+        <div class="vehicle-body">
+          <div class="vehicle-header">
+            <h3 class="vehicle-title en">Lexus LX 600 Executive</h3>
+            <h3 class="vehicle-title jp">レクサス LX 600 エグゼクティブ</h3>
+            <p class="vehicle-subtitle en">Ultra-Luxury VIP 4-Seat • AHC Air Suspension</p>
+            <p class="vehicle-subtitle jp">極上4座独立キャビン • 車高調整式AHCサスペンション</p>
+          </div>
+
+          <div class="vehicle-price-box">
+            <div class="price-top-meta">
+              <span>FOB Japan Reference</span>
+              <span>USD / JPY</span>
+            </div>
+            <div class="price-values">
+              <span class="price-usd">From $82,000 <small>USD</small></span>
+              <span class="price-divider">/</span>
+              <span class="price-jpy">¥12,300,000 <small>JPY</small></span>
+            </div>
+          </div>
+
+          <div class="vehicle-specs-grid">
+            <div class="spec-pill">
+              <span class="spec-pill-label">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
+                Model Year
+              </span>
+              <span class="spec-pill-val">2022–2024</span>
+            </div>
+            <div class="spec-pill">
+              <span class="spec-pill-label">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                Powertrain
+              </span>
+              <span class="spec-pill-val">3.5L Twin-Turbo V6</span>
+            </div>
+            <div class="spec-pill">
+              <span class="spec-pill-label">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+                Output
+              </span>
+              <span class="spec-pill-val">409 HP / 650 Nm</span>
+            </div>
+            <div class="spec-pill">
+              <span class="spec-pill-label">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line></svg>
+                Drivetrain
+              </span>
+              <span class="spec-pill-val">10-Speed • Full-Time 4WD</span>
+            </div>
+          </div>
+
+          <div class="vehicle-features-list">
+            <span class="feature-tag"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg> 4-Seat VIP Ottoman Lounge</span>
+            <span class="feature-tag"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg> Mark Levinson 25-Speaker</span>
+            <span class="feature-tag"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg> Adaptive Variable Suspension</span>
+            <span class="feature-tag"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg> Rear Dual Touch Displays</span>
+          </div>
+
+          <div class="vehicle-colors-row">
+            <span>Colors:</span>
+            <span><span class="color-dot-indicator" style="background: #ffffff; border: 1px solid #cbd5e1;"></span> Sonic Quartz</span>
+            <span><span class="color-dot-indicator" style="background: #94a3b8;"></span> Sonic Titanium</span>
+            <span><span class="color-dot-indicator" style="background: #0f172a;"></span> Black</span>
+          </div>
+
+          <div class="vehicle-action-row">
+            <button class="btn-vehicle-inquire" onclick="openQuoteModal('Lexus LX 600 Executive')">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+              <span class="en">Inquire on This Model</span>
+              <span class="jp">この車両で見積もり依頼</span>
+            </button>
+            <a href="https://wa.me/818051560999?text=Hello%20B%26P%20Trading%2C%20I%20am%20inquiring%20about%20Lexus%20LX%20600%20Executive" class="btn-vehicle-wa" target="_blank" rel="noopener" aria-label="WhatsApp inquiry for Lexus LX 600 Executive">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.979-.275-.1-.476-.15-.677.15-.201.3-.778.979-.954 1.179-.175.201-.351.226-.652.075-.301-.15-1.271-.469-2.42-1.494-.894-.798-1.498-1.784-1.674-2.085-.176-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.15-.175.201-.3.301-.501.101-.2.051-.376-.025-.526-.076-.15-.678-1.635-.93-2.24-.244-.588-.493-.508-.677-.517-.175-.009-.376-.009-.577-.009-.201 0-.527.075-.803.376s-1.054 1.03-1.054 2.512 1.079 2.914 1.23 3.115c.15.201 2.124 3.243 5.145 4.548.718.31 1.279.496 1.716.634.722.23 1.379.198 1.9.12.58-.088 1.78-.727 2.03-1.43.251-.703.251-1.305.176-1.43-.075-.126-.276-.201-.577-.351zM12.04 2C6.52 2 2.03 6.49 2.03 12.01c0 1.98.58 3.86 1.63 5.46L2 22l4.67-1.63c1.55.97 3.35 1.51 5.37 1.51 5.52 0 10.01-4.49 10.01-10.01C22.05 6.49 17.56 2 12.04 2z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Porsche Cayenne Turbo GT -->
+      <div class="vehicle-card">
+        <div class="vehicle-image-wrap">
+          <img src="assets/photos/cayenne-turbo-gt.jpg" alt="Porsche Cayenne Turbo GT" width="400" height="238" loading="lazy" decoding="async">
+          <span class="vehicle-badge-status">Export Ready</span>
+          <span class="vehicle-badge-grade">Auction Grade 5 / Collector</span>
+        </div>
+        <div class="vehicle-body">
+          <div class="vehicle-header">
+            <h3 class="vehicle-title en">Porsche Cayenne Turbo GT</h3>
+            <h3 class="vehicle-title jp">ポルシェ カイエン ターボ GT</h3>
+            <p class="vehicle-subtitle en">Track Performance SUV • Titanium Exhaust &amp; PCCB</p>
+            <p class="vehicle-subtitle jp">ニュルブルクリンク最速SUV • チタンマフラー＆カーボンブレーキ</p>
+          </div>
+
+          <div class="vehicle-price-box">
+            <div class="price-top-meta">
+              <span>FOB Japan Reference</span>
+              <span>USD / JPY</span>
+            </div>
+            <div class="price-values">
+              <span class="price-usd">From $145,000 <small>USD</small></span>
+              <span class="price-divider">/</span>
+              <span class="price-jpy">¥21,750,000 <small>JPY</small></span>
+            </div>
+          </div>
+
+          <div class="vehicle-specs-grid">
+            <div class="spec-pill">
+              <span class="spec-pill-label">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
+                Model Year
+              </span>
+              <span class="spec-pill-val">2022–2024</span>
+            </div>
+            <div class="spec-pill">
+              <span class="spec-pill-label">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                Powertrain
+              </span>
+              <span class="spec-pill-val">4.0L Twin-Turbo V8</span>
+            </div>
+            <div class="spec-pill">
+              <span class="spec-pill-label">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+                Output
+              </span>
+              <span class="spec-pill-val">631 HP / 850 Nm</span>
+            </div>
+            <div class="spec-pill">
+              <span class="spec-pill-label">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line></svg>
+                Drivetrain
+              </span>
+              <span class="spec-pill-val">8-Speed Tiptronic S • AWD</span>
+            </div>
+          </div>
+
+          <div class="vehicle-features-list">
+            <span class="feature-tag"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg> Titanium Center Exhaust</span>
+            <span class="feature-tag"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg> Carbon Ceramic Brakes (PCCB)</span>
+            <span class="feature-tag"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg> Carbon Contoured Roof</span>
+            <span class="feature-tag"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg> Sport Chrono Package</span>
+          </div>
+
+          <div class="vehicle-colors-row">
+            <span>Colors:</span>
+            <span><span class="color-dot-indicator" style="background: #cbd5e1;"></span> GT Silver</span>
+            <span><span class="color-dot-indicator" style="background: #0f172a;"></span> Jet Black</span>
+            <span><span class="color-dot-indicator" style="background: #64748b;"></span> Arctic Grey</span>
+          </div>
+
+          <div class="vehicle-action-row">
+            <button class="btn-vehicle-inquire" onclick="openQuoteModal('Porsche Cayenne Turbo GT')">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+              <span class="en">Inquire on This Model</span>
+              <span class="jp">この車両で見積もり依頼</span>
+            </button>
+            <a href="https://wa.me/818051560999?text=Hello%20B%26P%20Trading%2C%20I%20am%20inquiring%20about%20Porsche%20Cayenne%20Turbo%20GT" class="btn-vehicle-wa" target="_blank" rel="noopener" aria-label="WhatsApp inquiry for Porsche Cayenne Turbo GT">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.979-.275-.1-.476-.15-.677.15-.201.3-.778.979-.954 1.179-.175.201-.351.226-.652.075-.301-.15-1.271-.469-2.42-1.494-.894-.798-1.498-1.784-1.674-2.085-.176-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.15-.175.201-.3.301-.501.101-.2.051-.376-.025-.526-.076-.15-.678-1.635-.93-2.24-.244-.588-.493-.508-.677-.517-.175-.009-.376-.009-.577-.009-.201 0-.527.075-.803.376s-1.054 1.03-1.054 2.512 1.079 2.914 1.23 3.115c.15.201 2.124 3.243 5.145 4.548.718.31 1.279.496 1.716.634.722.23 1.379.198 1.9.12.58-.088 1.78-.727 2.03-1.43.251-.703.251-1.305.176-1.43-.075-.126-.276-.201-.577-.351zM12.04 2C6.52 2 2.03 6.49 2.03 12.01c0 1.98.58 3.86 1.63 5.46L2 22l4.67-1.63c1.55.97 3.35 1.51 5.37 1.51 5.52 0 10.01-4.49 10.01-10.01C22.05 6.49 17.56 2 12.04 2z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. Toyota Alphard Executive Lounge -->
+      <div class="vehicle-card">
+        <div class="vehicle-image-wrap">
+          <img src="assets/photos/alphard.jpg" alt="Toyota Alphard Executive Lounge" width="400" height="238" loading="lazy" decoding="async">
+          <span class="vehicle-badge-status">Export Ready</span>
+          <span class="vehicle-badge-grade">Auction Grade 6 / Fresh Delivery</span>
+        </div>
+        <div class="vehicle-body">
+          <div class="vehicle-header">
+            <h3 class="vehicle-title en">Toyota Alphard Executive Lounge</h3>
+            <h3 class="vehicle-title jp">トヨタ アルファード エグゼクティブラウンジ</h3>
+            <p class="vehicle-subtitle en">First-Class VIP MPV • E-Four Hybrid Efficiency</p>
+            <p class="vehicle-subtitle jp">最高峰ファーストクラスミニバン • E-Four ハイブリッド</p>
+          </div>
+
+          <div class="vehicle-price-box">
+            <div class="price-top-meta">
+              <span>FOB Japan Reference</span>
+              <span>USD / JPY</span>
+            </div>
+            <div class="price-values">
+              <span class="price-usd">From $55,000 <small>USD</small></span>
+              <span class="price-divider">/</span>
+              <span class="price-jpy">¥8,250,000 <small>JPY</small></span>
+            </div>
+          </div>
+
+          <div class="vehicle-specs-grid">
+            <div class="spec-pill">
+              <span class="spec-pill-label">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
+                Model Year
+              </span>
+              <span class="spec-pill-val">2023–2024</span>
+            </div>
+            <div class="spec-pill">
+              <span class="spec-pill-label">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                Powertrain
+              </span>
+              <span class="spec-pill-val">2.5L Hybrid (HEV)</span>
+            </div>
+            <div class="spec-pill">
+              <span class="spec-pill-label">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+                Output
+              </span>
+              <span class="spec-pill-val">250 HP Combined</span>
+            </div>
+            <div class="spec-pill">
+              <span class="spec-pill-label">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line></svg>
+                Drivetrain
+              </span>
+              <span class="spec-pill-val">e-CVT • E-Four AWD</span>
+            </div>
+          </div>
+
+          <div class="vehicle-features-list">
+            <span class="feature-tag"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg> VIP Ottoman Massage Seats</span>
+            <span class="feature-tag"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg> JBL 17-Speaker Audio</span>
+            <span class="feature-tag"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg> Dual Independent Moonroof</span>
+            <span class="feature-tag"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg> Digital Rearview Mirror</span>
+          </div>
+
+          <div class="vehicle-colors-row">
+            <span>Colors:</span>
+            <span><span class="color-dot-indicator" style="background: #ffffff; border: 1px solid #cbd5e1;"></span> Platinum White Pearl</span>
+            <span><span class="color-dot-indicator" style="background: #0f172a;"></span> Black</span>
+          </div>
+
+          <div class="vehicle-action-row">
+            <button class="btn-vehicle-inquire" onclick="openQuoteModal('Toyota Alphard Executive Lounge')">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+              <span class="en">Inquire on This Model</span>
+              <span class="jp">この車両で見積もり依頼</span>
+            </button>
+            <a href="https://wa.me/818051560999?text=Hello%20B%26P%20Trading%2C%20I%20am%20inquiring%20about%20Toyota%20Alphard%20Executive%20Lounge" class="btn-vehicle-wa" target="_blank" rel="noopener" aria-label="WhatsApp inquiry for Toyota Alphard Executive Lounge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.979-.275-.1-.476-.15-.677.15-.201.3-.778.979-.954 1.179-.175.201-.351.226-.652.075-.301-.15-1.271-.469-2.42-1.494-.894-.798-1.498-1.784-1.674-2.085-.176-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.15-.175.201-.3.301-.501.101-.2.051-.376-.025-.526-.076-.15-.678-1.635-.93-2.24-.244-.588-.493-.508-.677-.517-.175-.009-.376-.009-.577-.009-.201 0-.527.075-.803.376s-1.054 1.03-1.054 2.512 1.079 2.914 1.23 3.115c.15.201 2.124 3.243 5.145 4.548.718.31 1.279.496 1.716.634.722.23 1.379.198 1.9.12.58-.088 1.78-.727 2.03-1.43.251-.703.251-1.305.176-1.43-.075-.126-.276-.201-.577-.351zM12.04 2C6.52 2 2.03 6.49 2.03 12.01c0 1.98.58 3.86 1.63 5.46L2 22l4.67-1.63c1.55.97 3.35 1.51 5.37 1.51 5.52 0 10.01-4.49 10.01-10.01C22.05 6.49 17.56 2 12.04 2z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 36px;">
+      <button class="btn btn-primary" onclick="openQuoteModal()" style="font-size: 1rem; padding: 14px 32px; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+        <span class="en">Request Quote for Any Auction Vehicle</span>
+        <span class="jp">全オートオークション車両のお見積もり</span>
+      </button>
+    </div>
+  </div>
+</section>
+
 <!-- Destination Flags Section -->
 <section id="destinations" class="section light">
   <div class="container">
@@ -595,7 +1169,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <img src="assets/flags/australia.png" alt="Australia" width="44" height="44" loading="lazy" decoding="async">
         <p class="flag-country en">Australia</p>
         <p class="flag-country jp">オーストラリア</p>
-        <span class="transit-badge">⏱️ 12–16 Days</span>
+        <span class="transit-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          12–16 Days
+        </span>
         <span class="port-tag">Brisbane • Sydney • Melbourne</span>
       </div>
 
@@ -604,7 +1181,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <img src="assets/flags/new.png" alt="New Zealand" width="44" height="44" loading="lazy" decoding="async">
         <p class="flag-country en">New Zealand</p>
         <p class="flag-country jp">ニュージーランド</p>
-        <span class="transit-badge">⏱️ 14–18 Days</span>
+        <span class="transit-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          14–18 Days
+        </span>
         <span class="port-tag">Auckland • Lyttelton</span>
       </div>
 
@@ -613,7 +1193,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <img src="assets/flags/canada.png" alt="Canada" width="44" height="44" loading="lazy" decoding="async">
         <p class="flag-country en">Canada</p>
         <p class="flag-country jp">カナダ</p>
-        <span class="transit-badge">⏱️ 16–20 Days</span>
+        <span class="transit-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          16–20 Days
+        </span>
         <span class="port-tag">Vancouver • Halifax</span>
       </div>
 
@@ -622,7 +1205,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <img src="assets/flags/chile.png" alt="Chile" width="44" height="44" loading="lazy" decoding="async">
         <p class="flag-country en">Chile</p>
         <p class="flag-country jp">チリ</p>
-        <span class="transit-badge">⏱️ 28–34 Days</span>
+        <span class="transit-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          28–34 Days
+        </span>
         <span class="port-tag">Iquique • San Antonio</span>
       </div>
 
@@ -631,7 +1217,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <img src="assets/flags/philippines.png" alt="Philippines" width="44" height="44" loading="lazy" decoding="async">
         <p class="flag-country en">Philippines</p>
         <p class="flag-country jp">フィリピン</p>
-        <span class="transit-badge">⏱️ 7–10 Days</span>
+        <span class="transit-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          7–10 Days
+        </span>
         <span class="port-tag">Subic • Manila</span>
       </div>
 
@@ -640,7 +1229,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <img src="assets/flags/united-kingdom.png" alt="United Kingdom" width="44" height="44" loading="lazy" decoding="async">
         <p class="flag-country en">United Kingdom</p>
         <p class="flag-country jp">イギリス</p>
-        <span class="transit-badge">⏱️ 28–35 Days</span>
+        <span class="transit-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          28–35 Days
+        </span>
         <span class="port-tag">Southampton • Bristol</span>
       </div>
 
@@ -649,7 +1241,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <img src="assets/flags/south-africa.png" alt="South Africa" width="44" height="44" loading="lazy" decoding="async">
         <p class="flag-country en">South Africa</p>
         <p class="flag-country jp">南アフリカ</p>
-        <span class="transit-badge">⏱️ 25–30 Days</span>
+        <span class="transit-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          25–30 Days
+        </span>
         <span class="port-tag">Durban</span>
       </div>
     </div>
@@ -659,125 +1254,252 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- Offices -->
 <section id="offices" class="section">
   <div class="container">
-    <h2 class="section-title en">Our Offices</h2>
-    <h2 class="section-title jp">事業所一覧</h2>
-    <p class="section-subtitle en">Operating across Japan and Australia for seamless international trade and client care.</p>
-    <p class="section-subtitle jp">日本とオーストラリアの二拠点から、円滑な国際取引と迅速なお客様対応をサポートします。</p>
+    <h2 class="section-title en">Our Head Office</h2>
+    <h2 class="section-title jp">日本本社のご案内</h2>
+    <p class="section-subtitle en">Our Japan headquarters serves as the central hub for vehicle sourcing, pre-shipment inspections, and worldwide export shipping.</p>
+    <p class="section-subtitle jp">日本本社を拠点として、車両の仕入れ・事前検査・世界各国への輸出船積業務を一括管理しています。</p>
 
     <div class="locations-grid">
       <div class="location-card">
-        <h3 class="en">🇯🇵 Japan Head Office</h3>
-        <h3 class="jp">🇯🇵 日本本社</h3>
-        <address>
-          神奈川県川崎市川崎区殿町1-13-21-8<br>
-          Kawasaki, Kanagawa, Japan<br>
-          <strong>PIN:</strong> 210-0821
-        </address>
-      </div>
+        <div class="location-header">
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;">
+            <span style="display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; background: rgba(30, 58, 138, 0.08); color: var(--primary-color); border-radius: 999px; font-size: 0.82rem; font-weight: 600;">
+              <svg class="flag-icon-svg" width="16" height="11" viewBox="0 0 20 14" fill="none" aria-hidden="true"><rect width="20" height="14" fill="#ffffff"/><circle cx="10" cy="7" r="4.2" fill="#bc002d"/></svg>
+              <span class="en">Headquarters &amp; Export Dispatch Hub</span>
+              <span class="jp">本社・輸出配送統括拠点</span>
+            </span>
+            <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 0.82rem; color: #16a34a; font-weight: 600;">
+              <span class="status-live-dot" aria-hidden="true"></span>
+              <span class="en">Mon – Sat: 09:00 – 18:00 JST</span>
+              <span class="jp">月〜土 9:00〜18:00 営業</span>
+            </span>
+          </div>
 
-      <div class="location-card">
-        <h3 class="en">🇦🇺 Australia Office</h3>
-        <h3 class="jp">🇦🇺 オーストラリア支店</h3>
-        <address>
-          27/89 Northquarter Drive<br>
-          Murrumba Downs, QLD, Australia<br>
-          <strong>PIN:</strong> 4503
-        </address>
+          <h3 class="en">B&P Trading Japan Head Office</h3>
+          <h3 class="jp">B&P Trading 日本本社（川崎）</h3>
+
+          <address>
+            <strong><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: -2px; margin-right: 4px; color: var(--primary-color);" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>Address:</strong> 神奈川県川崎市川崎区殿町1-13-21-8<br>
+            <span style="color: #64748b; font-size: 0.9rem;">1-13-21-8 Tonomachi, Kawasaki-ku, Kawasaki-shi, Kanagawa, Japan</span><br>
+            <strong>Postal Code / PIN:</strong> 210-0821
+          </address>
+        </div>
+
+        <div class="location-details-grid">
+          <div class="location-detail-item">
+            <span class="location-detail-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1 .6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path><path d="M19.38 20A11.6 11.6 0 0 0 21 14l-9-4-9 4c0 2.9.94 5.34 2.81 7.76"></path><path d="M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6"></path><path d="M12 10V4"></path></svg>
+            </span>
+            <div class="location-detail-text">
+              <h4 class="en">Port Terminal Proximity</h4>
+              <h4 class="jp">主要港湾へのアクセス</h4>
+              <p class="en">Yokohama Port (15 min) • Tokyo Port (20 min) • Expedited RoRo and container staging.</p>
+              <p class="jp">横浜港（15分）・東京港（20分）直結で、迅速なヤード回送と船積通関を実現。</p>
+            </div>
+          </div>
+
+          <div class="location-detail-item">
+            <span class="location-detail-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+            </span>
+            <div class="location-detail-text">
+              <h4 class="en">Direct Operations Desk</h4>
+              <h4 class="jp">直通オペレーション窓口</h4>
+              <p class="en">Direct phone & WhatsApp contact with executive leadership for rapid inquiries and updates.</p>
+              <p class="jp">役員直通の通話およびWhatsAppにより、迅速な回答・お見積もりをお届けします。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="location-actions">
+          <a href="https://maps.google.com/?q=1-13-21-8+Tonomachi+Kawasaki-ku+Kawasaki-shi+Kanagawa+Japan" target="_blank" rel="noopener" class="btn btn-outline-map" style="padding: 8px 18px; font-size: 0.88rem; display: inline-flex; align-items: center; gap: 7px;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <span>Google Maps</span>
+          </a>
+          <a href="tel:+818051560999" class="btn btn-primary" style="padding: 8px 18px; font-size: 0.88rem; display: inline-flex; align-items: center; gap: 7px;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>Call Desk</span>
+          </a>
+          <a href="https://wa.me/818051560999" class="btn btn-contact-wa" target="_blank" rel="noopener" style="padding: 8px 18px; font-size: 0.88rem; display: inline-flex; align-items: center; gap: 7px;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.979-.275-.1-.476-.15-.677.15-.201.3-.778.979-.954 1.179-.175.201-.351.226-.652.075-.301-.15-1.271-.469-2.42-1.494-.894-.798-1.498-1.784-1.674-2.085-.176-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.15-.175.201-.3.301-.501.101-.2.051-.376-.025-.526-.076-.15-.678-1.635-.93-2.24-.244-.588-.493-.508-.677-.517-.175-.009-.376-.009-.577-.009-.201 0-.527.075-.803.376s-1.054 1.03-1.054 2.512 1.079 2.914 1.23 3.115c.15.201 2.124 3.243 5.145 4.548.718.31 1.279.496 1.716.634.722.23 1.379.198 1.9.12.58-.088 1.78-.727 2.03-1.43.251-.703.251-1.305.176-1.43-.075-.126-.276-.201-.577-.351zM12.04 2C6.52 2 2.03 6.49 2.03 12.01c0 1.98.58 3.86 1.63 5.46L2 22l4.67-1.63c1.55.97 3.35 1.51 5.37 1.51 5.52 0 10.01-4.49 10.01-10.01C22.05 6.49 17.56 2 12.04 2z"/></svg>
+            <span>WhatsApp</span>
+          </a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Contact Section -->
-<section id="contact" class="section dark-contact">
+<!-- Contact Section (Executive Corporate Suite) -->
+<section id="contact" class="section contact-section">
   <div class="container">
-    <h2 class="section-title en">Contact Us</h2>
-    <h2 class="section-title jp">お問い合わせ</h2>
-    
-    <p class="section-subtitle en">Ready to import your next vehicle? Get in touch directly with our leadership team.</p>
-    <p class="section-subtitle jp">お車の輸入・輸出をお考えですか？担当責任者までお気軽にご連絡ください。</p>
+    <div style="text-align: center; max-width: 720px; margin: 0 auto 36px auto;">
+      <div class="contact-badge-header">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        <span class="en">Direct Commercial Inquiries</span>
+        <span class="jp">直接お問い合わせ窓口</span>
+      </div>
+      <h2 class="section-title en">Contact Our Leadership Team</h2>
+      <h2 class="section-title jp">役員・輸出統括 直通窓口</h2>
+      <p class="section-subtitle en">Ready to import your next vehicle? Get in touch directly with our directors for live auction bidding access, certified inspection reports, and worldwide CIF freight rates.</p>
+      <p class="section-subtitle jp">お車の輸入・輸出をお考えですか？担当役員が直接迅速にご案内いたします。オークション相場確認から概算CIF価格まで速やかにご案内いたします。</p>
+    </div>
     
     <div class="contact-cards-grid">
-      <!-- Gagandeep Singh Pawar Card (Featured) -->
+      <!-- 1. Sharu Bajaj Card (Featured Director) -->
       <div class="contact-card featured">
         <div>
+          <div class="contact-badge">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+            Director Priority Desk
+          </div>
           <div class="contact-card-header">
-            <div class="contact-avatar">GP</div>
+            <div class="contact-avatar">
+              <img src="assets/photos/ceo.jpg" alt="Sharu Bajaj" width="56" height="56" loading="lazy">
+            </div>
+            <div>
+              <h3 class="contact-name">Sharu Bajaj</h3>
+              <p class="contact-role en">CEO / Managing Director</p>
+              <p class="contact-role jp">代表取締役 / CEO</p>
+              <p class="contact-desc en">Corporate Strategy &amp; Institutional Clients</p>
+              <p class="contact-desc jp">経営戦略・海外法人取引統括</p>
+            </div>
+          </div>
+          
+          <div class="contact-number-block">
+            <span class="contact-number-label">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              Direct Line &amp; WhatsApp (Japan)
+            </span>
+            <a href="tel:+818051560999" class="phone-link">+81 80-5156-0999</a>
+            <div class="contact-status-meta">
+              <span class="status-live-dot" style="width: 7px; height: 7px;"></span>
+              <span>Available Mon – Sat • Rapid Response</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-actions">
+          <a href="tel:+818051560999" class="btn-contact-call">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>Call</span>
+          </a>
+          <a href="https://wa.me/818051560999?text=Hello%20Mr.%20Sharu%20Bajaj%2C%20I%20am%20contacting%20you%20from%20the%20B%26P%20Trading%20website" class="btn-contact-wa" target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.979-.275-.1-.476-.15-.677.15-.201.3-.778.979-.954 1.179-.175.201-.351.226-.652.075-.301-.15-1.271-.469-2.42-1.494-.894-.798-1.498-1.784-1.674-2.085-.176-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.15-.175.201-.3.301-.501.101-.2.051-.376-.025-.526-.076-.15-.678-1.635-.93-2.24-.244-.588-.493-.508-.677-.517-.175-.009-.376-.009-.577-.009-.201 0-.527.075-.803.376s-1.054 1.03-1.054 2.512 1.079 2.914 1.23 3.115c.15.201 2.124 3.243 5.145 4.548.718.31 1.279.496 1.716.634.722.23 1.379.198 1.9.12.58-.088 1.78-.727 2.03-1.43.251-.703.251-1.305.176-1.43-.075-.126-.276-.201-.577-.351zM12.04 2C6.52 2 2.03 6.49 2.03 12.01c0 1.98.58 3.86 1.63 5.46L2 22l4.67-1.63c1.55.97 3.35 1.51 5.37 1.51 5.52 0 10.01-4.49 10.01-10.01C22.05 6.49 17.56 2 12.04 2z"/></svg>
+            <span>WhatsApp</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 2. Gagandeep Singh Pawar Card -->
+      <div class="contact-card card-sales">
+        <div>
+          <div class="contact-badge badge-sales">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            Export &amp; Sales Desk
+          </div>
+          <div class="contact-card-header">
+            <div class="contact-avatar" style="background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%); color: #ffffff;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
             <div>
               <h3 class="contact-name">Gagandeep Singh Pawar</h3>
-              <p class="contact-role en">Export & Sales Director</p>
+              <p class="contact-role en">Export &amp; Sales Director</p>
               <p class="contact-role jp">輸出・営業統括</p>
+              <p class="contact-desc en">Auction Sourcing &amp; Worldwide Shipping</p>
+              <p class="contact-desc jp">オークション落札・配船手配</p>
             </div>
           </div>
           
           <div class="contact-number-block">
+            <span class="contact-number-label">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              Direct Line &amp; WhatsApp (Japan)
+            </span>
             <a href="tel:+817090551302" class="phone-link">+81 70-9055-1302</a>
-          </div>
-        </div>
-
-        <div class="contact-actions">
-          <a href="tel:+817090551302" class="btn btn-contact-call">
-            <span>📞 Call</span>
-          </a>
-          <a href="https://wa.me/817090551302" class="btn btn-contact-wa" target="_blank" rel="noopener">
-            <span>💬 WhatsApp</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- General Office / Support Card -->
-      <div class="contact-card">
-        <div>
-          <div class="contact-card-header">
-            <div class="contact-avatar">BP</div>
-            <div>
-              <h3 class="contact-name">B&P Sales & Support</h3>
-              <p class="contact-role en">General Inquiries & Logistics</p>
-              <p class="contact-role jp">総合受付・通関配送</p>
+            <div class="contact-status-meta">
+              <span class="status-live-dot" style="width: 7px; height: 7px;"></span>
+              <span>Active Auction Hours • Direct Advisory</span>
             </div>
           </div>
-          
-          <div class="contact-number-block">
-            <a href="tel:+818051560999" class="phone-link">+81 80-5156-0999</a>
-          </div>
         </div>
 
         <div class="contact-actions">
-          <a href="tel:+818051560999" class="btn btn-contact-call">
-            <span>📞 Call</span>
+          <a href="tel:+817090551302" class="btn-contact-call">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>Call</span>
           </a>
-          <a href="https://wa.me/818051560999" class="btn btn-contact-wa" target="_blank" rel="noopener">
-            <span>💬 WhatsApp</span>
+          <a href="https://wa.me/817090551302?text=Hello%20Mr.%20Gagandeep%2C%20I%20am%20inquiring%20about%20vehicle%20export%20from%20Japan" class="btn-contact-wa" target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.979-.275-.1-.476-.15-.677.15-.201.3-.778.979-.954 1.179-.175.201-.351.226-.652.075-.301-.15-1.271-.469-2.42-1.494-.894-.798-1.498-1.784-1.674-2.085-.176-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.15-.175.201-.3.301-.501.101-.2.051-.376-.025-.526-.076-.15-.678-1.635-.93-2.24-.244-.588-.493-.508-.677-.517-.175-.009-.376-.009-.577-.009-.201 0-.527.075-.803.376s-1.054 1.03-1.054 2.512 1.079 2.914 1.23 3.115c.15.201 2.124 3.243 5.145 4.548.718.31 1.279.496 1.716.634.722.23 1.379.198 1.9.12.58-.088 1.78-.727 2.03-1.43.251-.703.251-1.305.176-1.43-.075-.126-.276-.201-.577-.351zM12.04 2C6.52 2 2.03 6.49 2.03 12.01c0 1.98.58 3.86 1.63 5.46L2 22l4.67-1.63c1.55.97 3.35 1.51 5.37 1.51 5.52 0 10.01-4.49 10.01-10.01C22.05 6.49 17.56 2 12.04 2z"/></svg>
+            <span>WhatsApp</span>
           </a>
         </div>
       </div>
 
-      <!-- Email Card -->
-      <div class="contact-card">
+      <!-- 3. Official Email Card -->
+      <div class="contact-card card-corporate">
         <div>
+          <div class="contact-badge badge-corporate">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+            Official Export Desk
+          </div>
           <div class="contact-card-header">
-            <div class="contact-avatar">✉️</div>
+            <div class="contact-avatar" style="background: linear-gradient(135deg, #0f172a 0%, #334155 100%); color: #ffffff;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+            </div>
             <div>
               <h3 class="contact-name en">Email Inquiries</h3>
               <h3 class="contact-name jp">メール窓口</h3>
-              <p class="contact-role en">Official Export Desk</p>
+              <p class="contact-role en">Export Inquiries &amp; Paperwork</p>
               <p class="contact-role jp">輸出お問い合わせ窓口</p>
+              <p class="contact-desc en">Official Documentation &amp; Billing</p>
+              <p class="contact-desc jp">通関書類・請求書・各種手続き</p>
             </div>
           </div>
           
           <div class="contact-number-block">
-            <span id="email-text" class="email-address">bptrading202510@gmail.com</span>
+            <span class="contact-number-label">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+              Corporate Export Desk
+            </span>
+            <span id="email-text" class="email-address">bptrading@bpexport.com</span>
+            <div class="contact-status-meta">
+              <span class="status-live-dot" style="width: 7px; height: 7px;"></span>
+              <span>24/7 Monitored • Reply within 24 Hours</span>
+            </div>
           </div>
         </div>
 
         <div class="contact-actions">
-          <button class="btn btn-contact-copy" onclick="copyEmail()" id="copy-email-btn" aria-label="Copy email address">
-            <span id="copy-btn-label">📋 Copy</span>
+          <button class="btn-contact-copy" onclick="copyEmail()" id="copy-email-btn" aria-label="Copy email address">
+            <svg id="copy-btn-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
+            <span id="copy-btn-label">Copy</span>
           </button>
-          <a href="mailto:bptrading202510@gmail.com" class="btn btn-contact-email">
-            <span>✉️ Mail Us</span>
+          <a href="mailto:bptrading@bpexport.com" class="btn-contact-email">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+            <span>Mail Us</span>
           </a>
         </div>
+      </div>
+    </div>
+
+    <!-- Fast Direct Inquiry Strip -->
+    <div class="contact-fast-strip">
+      <div class="fast-strip-content">
+        <h4 class="en">Need a Custom Vehicle Search or Port Estimate?</h4>
+        <h4 class="jp">ご希望車両のお探し・港湾概算お見積もり</h4>
+        <p class="en">Tell our dispatch team your target car make, model year, and destination port. We provide complete FOB/CIF cost breakdowns with zero obligation.</p>
+        <p class="jp">車種、年式、仕向け港をお知らせいただければ、オークション落札相場から海上運賃・検査費用まで含めた概算見積もりを無料で迅速に作成します。</p>
+      </div>
+      <div class="fast-strip-actions">
+        <button class="btn btn-primary" onclick="openQuoteModal()" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; font-size: 0.95rem;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+          <span class="en">Open Quote Form</span>
+          <span class="jp">お見積もりフォームを開く</span>
+        </button>
       </div>
     </div>
   </div>
@@ -803,13 +1525,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- Mobile Sticky Bottom Action Bar -->
 <aside class="mobile-sticky-bar" aria-label="Quick contact bar">
   <a href="https://wa.me/817090551302" class="mobile-bar-btn whatsapp" target="_blank" rel="noopener">
-    <span>💬 WhatsApp</span>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="margin-bottom: 2px;"><path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.979-.275-.1-.476-.15-.677.15-.201.3-.778.979-.954 1.179-.175.201-.351.226-.652.075-.301-.15-1.271-.469-2.42-1.494-.894-.798-1.498-1.784-1.674-2.085-.176-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.15-.175.201-.3.301-.501.101-.2.051-.376-.025-.526-.076-.15-.678-1.635-.93-2.24-.244-.588-.493-.508-.677-.517-.175-.009-.376-.009-.577-.009-.201 0-.527.075-.803.376s-1.054 1.03-1.054 2.512 1.079 2.914 1.23 3.115c.15.201 2.124 3.243 5.145 4.548.718.31 1.279.496 1.716.634.722.23 1.379.198 1.9.12.58-.088 1.78-.727 2.03-1.43.251-.703.251-1.305.176-1.43-.075-.126-.276-.201-.577-.351zM12.04 2C6.52 2 2.03 6.49 2.03 12.01c0 1.98.58 3.86 1.63 5.46L2 22l4.67-1.63c1.55.97 3.35 1.51 5.37 1.51 5.52 0 10.01-4.49 10.01-10.01C22.05 6.49 17.56 2 12.04 2z"/></svg>
+    <span>WhatsApp</span>
   </a>
   <a href="tel:+817090551302" class="mobile-bar-btn call">
-    <span>📞 Call</span>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-bottom: 2px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+    <span>Call</span>
   </a>
   <button class="mobile-bar-btn quote" onclick="openQuoteModal()">
-    <span>📋 Quote</span>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-bottom: 2px;"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+    <span>Quote</span>
   </button>
 </aside>
 
@@ -818,82 +1543,130 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="quote-modal-card" role="document">
     <div class="quote-modal-header">
       <div>
+        <div class="modal-pre-pill">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span class="en">Export Quotation Desk</span>
+          <span class="jp">即時見積もりデスク</span>
+        </div>
         <h3 id="quote-modal-title" class="quote-modal-title">
           <span class="en">Request a Vehicle Quote</span>
           <span class="jp">お見積もり依頼 (無料)</span>
         </h3>
         <p class="quote-modal-subtitle">
-          <span class="en">Direct inquiry to Gagandeep Singh Pawar (Export Director)</span>
-          <span class="jp">輸出統括責任者（Gagandeep）への直通お問い合わせ</span>
+          <span class="en">Direct Japan FOB & CIF pricing from Sharu Bajaj & Gagandeep Singh Pawar</span>
+          <span class="jp">専任の輸出担当者より2時間以内に詳細なお見積もりをご案内します</span>
         </p>
       </div>
-      <button class="quote-close-btn" onclick="closeQuoteModal()" aria-label="Close quote modal">✕</button>
+      <button class="quote-close-btn" onclick="closeQuoteModal()" aria-label="Close quote modal">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
     </div>
 
-    <form class="quote-form" onsubmit="event.preventDefault();">
-      <div class="form-group">
-        <label for="quote-model" class="form-label">
-          <span class="en">Desired Vehicle / Model</span>
-          <span class="jp">ご希望の車種・モデル</span>
-        </label>
-        <input type="text" id="quote-model" class="form-input" placeholder="e.g. Toyota Land Cruiser Prado, HiAce, Alphard..." required />
-      </div>
-
-      <div class="form-row">
+    <div class="quote-modal-body">
+      <form class="quote-form" onsubmit="event.preventDefault();">
         <div class="form-group">
-          <label for="quote-year" class="form-label">
-            <span class="en">Year / Budget</span>
-            <span class="jp">年式・予算目安</span>
+          <label for="quote-model" class="form-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.5 2.8C2.1 10.9 2 11.2 2 11.5V16c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
+            <span class="en">Desired Vehicle / Model</span>
+            <span class="jp">ご希望の車種・モデル</span>
           </label>
-          <input type="text" id="quote-year" class="form-input" placeholder="e.g. 2018–2023 / $15,000 USD" />
+          <input type="text" id="quote-model" class="form-input" placeholder="e.g. Toyota Land Cruiser 300 ZX, Alphard, G63 AMG..." required />
+          <div class="quick-chips-row">
+            <span class="chip-hint">
+              <span class="en">Quick select:</span>
+              <span class="jp">人気車種:</span>
+            </span>
+            <button type="button" class="quick-chip" onclick="setQuoteVehicle('Toyota Land Cruiser 300 ZX')">LC 300 ZX</button>
+            <button type="button" class="quick-chip" onclick="setQuoteVehicle('Toyota Land Cruiser Prado')">LC Prado</button>
+            <button type="button" class="quick-chip" onclick="setQuoteVehicle('Toyota Alphard Executive Lounge')">Alphard Lounge</button>
+            <button type="button" class="quick-chip" onclick="setQuoteVehicle('Mercedes-Benz G63 AMG')">G63 AMG</button>
+            <button type="button" class="quick-chip" onclick="setQuoteVehicle('Lexus LX600')">LX600</button>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="quote-year" class="form-label">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <span class="en">Year / Budget Range</span>
+              <span class="jp">年式・予算目安</span>
+            </label>
+            <input type="text" id="quote-year" class="form-input" placeholder="e.g. 2021-2024 / $50,000 USD" />
+          </div>
+
+          <div class="form-group">
+            <label for="quote-destination" class="form-label">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span class="en">Destination Port / Country</span>
+              <span class="jp">到着港・国</span>
+            </label>
+            <select id="quote-destination" class="form-select">
+              <option value="Australia (Brisbane / Sydney / Melbourne)">Australia (Brisbane / Sydney / Melbourne)</option>
+              <option value="New Zealand (Auckland / Lyttelton)">New Zealand (Auckland / Lyttelton)</option>
+              <option value="South Africa (Durban)">South Africa (Durban)</option>
+              <option value="Canada (Vancouver / Halifax)">Canada (Vancouver / Halifax)</option>
+              <option value="Chile (Iquique / San Antonio)">Chile (Iquique / San Antonio)</option>
+              <option value="Philippines (Subic / Manila)">Philippines (Subic / Manila)</option>
+              <option value="United Kingdom (Southampton / Bristol)">United Kingdom (Southampton / Bristol)</option>
+              <option value="United Arab Emirates (Dubai / Jebel Ali)">United Arab Emirates (Dubai / Jebel Ali)</option>
+              <option value="Other Destination">Other Country / Port</option>
+            </select>
+          </div>
         </div>
 
         <div class="form-group">
-          <label for="quote-destination" class="form-label">
-            <span class="en">Destination Port</span>
-            <span class="jp">到着港・国</span>
+          <label for="quote-shipping" class="form-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1 .6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M19.38 20A11.6 11.6 0 0 0 21 14l-9-4-9 4c0 2.9.94 5.34 2.81 7.76"/><path d="M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6"/><line x1="12" y1="1" x2="12" y2="5"/></svg>
+            <span class="en">Preferred Shipping Method</span>
+            <span class="jp">希望輸送方法</span>
           </label>
-          <select id="quote-destination" class="form-select">
-            <option value="Australia (Brisbane / Sydney / Melbourne)">Australia (Brisbane / Sydney / Melbourne)</option>
-            <option value="New Zealand (Auckland / Lyttelton)">New Zealand (Auckland / Lyttelton)</option>
-            <option value="South Africa (Durban)">South Africa (Durban)</option>
-            <option value="Canada (Vancouver / Halifax)">Canada (Vancouver / Halifax)</option>
-            <option value="Chile (Iquique / San Antonio)">Chile (Iquique / San Antonio)</option>
-            <option value="Philippines (Subic / Manila)">Philippines (Subic / Manila)</option>
-            <option value="United Kingdom (Southampton / Bristol)">United Kingdom (Southampton / Bristol)</option>
-            <option value="Other Destination">Other Country / Port</option>
+          <select id="quote-shipping" class="form-select">
+            <option value="RoRo (Roll-on/Roll-off - Most Economical)">RoRo Shipping (Roll-on/Roll-off - Most Economical)</option>
+            <option value="Container Shipping (Enclosed Protection)">Container Shipping (Enclosed 20ft / 40ft High Cube)</option>
           </select>
         </div>
-      </div>
 
-      <div class="form-group">
-        <label for="quote-shipping" class="form-label">
-          <span class="en">Preferred Shipping Method</span>
-          <span class="jp">希望輸送方法</span>
-        </label>
-        <select id="quote-shipping" class="form-select">
-          <option value="RoRo (Roll-on/Roll-off - Most Economical)">RoRo Shipping (Recommended)</option>
-          <option value="Container Shipping (Enclosed Protection)">Container Shipping</option>
-        </select>
-      </div>
+        <div class="form-group">
+          <label for="quote-notes" class="form-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            <span class="en">Additional Preferences (Color, Mileage, Grade)</span>
+            <span class="jp">特記事項・条件 (色、走行距離、オークション評価点など)</span>
+          </label>
+          <textarea id="quote-notes" class="form-textarea" rows="2" placeholder="e.g. Grade 4.5+, Pearl White or Black, Sunroof, Leather seats..."></textarea>
+        </div>
 
-      <div class="form-group">
-        <label for="quote-notes" class="form-label">
-          <span class="en">Additional Requirements (Optional)</span>
-          <span class="jp">特記事項・条件 (任意)</span>
-        </label>
-        <textarea id="quote-notes" class="form-textarea" rows="2" placeholder="e.g. Grade 4+, under 80,000 km, white or black color..."></textarea>
-      </div>
+        <div class="quote-trust-strip">
+          <div class="quote-trust-item">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span class="en">USS/TAA Auction Access</span>
+            <span class="jp">USS/TAA等オークション直通</span>
+          </div>
+          <div class="quote-trust-item">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span class="en">JEVIC / Radiation Check</span>
+            <span class="jp">JEVIC・放射能検査対応</span>
+          </div>
+          <div class="quote-trust-item">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span class="en">Free CIF Quotation</span>
+            <span class="jp">CIF見積もり無料</span>
+          </div>
+        </div>
 
-      <div class="quote-modal-actions">
-        <button type="button" class="btn btn-quote-wa" onclick="sendQuoteWhatsApp()">
-          <span>💬 Send via WhatsApp (Instant)</span>
-        </button>
-        <button type="button" class="btn btn-quote-mail" onclick="sendQuoteEmail()">
-          <span>✉️ Send via Email</span>
-        </button>
-      </div>
-    </form>
+        <div class="quote-modal-actions">
+          <button type="button" class="btn btn-quote-wa" onclick="sendQuoteWhatsApp()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.979-.275-.1-.476-.15-.677.15-.201.3-.778.979-.954 1.179-.175.201-.351.226-.652.075-.301-.15-1.271-.469-2.42-1.494-.894-.798-1.498-1.784-1.674-2.085-.176-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.15-.175.201-.3.301-.501.101-.2.051-.376-.025-.526-.076-.15-.678-1.635-.93-2.24-.244-.588-.493-.508-.677-.517-.175-.009-.376-.009-.577-.009-.201 0-.527.075-.803.376s-1.054 1.03-1.054 2.512 1.079 2.914 1.23 3.115c.15.201 2.124 3.243 5.145 4.548.718.31 1.279.496 1.716.634.722.23 1.379.198 1.9.12.58-.088 1.78-.727 2.03-1.43.251-.703.251-1.305.176-1.43-.075-.126-.276-.201-.577-.351zM12.04 2C6.52 2 2.03 6.49 2.03 12.01c0 1.98.58 3.86 1.63 5.46L2 22l4.67-1.63c1.55.97 3.35 1.51 5.37 1.51 5.52 0 10.01-4.49 10.01-10.01C22.05 6.49 17.56 2 12.04 2z"/></svg>
+            <span class="en">Send via WhatsApp (Instant)</span>
+            <span class="jp">WhatsAppで送信 (即時)</span>
+          </button>
+          <button type="button" class="btn btn-quote-mail" onclick="sendQuoteEmail()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+            <span class="en">Send via Email</span>
+            <span class="jp">メールで送信</span>
+          </button>
+        </div>
+      </form>
+    </div>
   </div>
 </div>
 
@@ -973,6 +1746,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   // Language Switcher Logic with LocalStorage Persistence
   function toggleLanguage() {
+    const FLAG_JP_SVG = `<svg class="flag-icon-svg" width="16" height="11" viewBox="0 0 20 14" fill="none" aria-hidden="true" style="margin-right: 6px;"><rect width="20" height="14" fill="#ffffff"/><circle cx="10" cy="7" r="4.2" fill="#bc002d"/></svg>`;
+    const FLAG_US_SVG = `<svg class="flag-icon-svg" width="16" height="11" viewBox="0 0 20 14" fill="none" aria-hidden="true" style="margin-right: 6px;"><rect width="20" height="14" fill="#b22234"/><line x1="0" y1="2" x2="20" y2="2" stroke="#ffffff" stroke-width="1.1"/><line x1="0" y1="4.2" x2="20" y2="4.2" stroke="#ffffff" stroke-width="1.1"/><line x1="0" y1="6.4" x2="20" y2="6.4" stroke="#ffffff" stroke-width="1.1"/><line x1="0" y1="8.6" x2="20" y2="8.6" stroke="#ffffff" stroke-width="1.1"/><line x1="0" y1="10.8" x2="20" y2="10.8" stroke="#ffffff" stroke-width="1.1"/><line x1="0" y1="13" x2="20" y2="13" stroke="#ffffff" stroke-width="1.1"/><rect width="8" height="7.5" fill="#3c3b6e"/><circle cx="4" cy="3.75" r="1.5" fill="#ffffff"/></svg>`;
+
     const body = document.body;
     const html = document.documentElement;
     body.classList.toggle('japanese');
@@ -985,20 +1761,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
     const langBtns = document.querySelectorAll('.btn-lang .lang-text');
     langBtns.forEach(el => {
-      el.textContent = isJp ? "🇺🇸 English" : "🇯🇵 日本語";
+      el.innerHTML = isJp ? (FLAG_US_SVG + "English") : (FLAG_JP_SVG + "日本語");
     });
   }
 
   // Restore preferred language on load
   (function initLang() {
     try {
+      const FLAG_US_SVG = `<svg class="flag-icon-svg" width="16" height="11" viewBox="0 0 20 14" fill="none" aria-hidden="true" style="margin-right: 6px;"><rect width="20" height="14" fill="#b22234"/><line x1="0" y1="2" x2="20" y2="2" stroke="#ffffff" stroke-width="1.1"/><line x1="0" y1="4.2" x2="20" y2="4.2" stroke="#ffffff" stroke-width="1.1"/><line x1="0" y1="6.4" x2="20" y2="6.4" stroke="#ffffff" stroke-width="1.1"/><line x1="0" y1="8.6" x2="20" y2="8.6" stroke="#ffffff" stroke-width="1.1"/><line x1="0" y1="10.8" x2="20" y2="10.8" stroke="#ffffff" stroke-width="1.1"/><line x1="0" y1="13" x2="20" y2="13" stroke="#ffffff" stroke-width="1.1"/><rect width="8" height="7.5" fill="#3c3b6e"/><circle cx="4" cy="3.75" r="1.5" fill="#ffffff"/></svg>`;
       const savedLang = localStorage.getItem('bp_lang');
       if (savedLang === 'ja') {
         document.body.classList.add('japanese');
         document.documentElement.setAttribute('lang', 'ja');
         const langBtns = document.querySelectorAll('.btn-lang .lang-text');
         langBtns.forEach(el => {
-          el.textContent = "🇺🇸 English";
+          el.innerHTML = FLAG_US_SVG + "English";
         });
       }
     } catch (e) {}
@@ -1046,7 +1823,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   // "Request a Quote" Modal Logic
   let modalTriggerElement = null;
 
-  function openQuoteModal() {
+  function openQuoteModal(vehicleName) {
     const modal = document.getElementById('quote-modal');
     if (!modal) return;
     modalTriggerElement = document.activeElement;
@@ -1054,9 +1831,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     modal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('modal-open');
     
-    // Focus first input
+    // Focus first input and populate vehicle if specified
     const input = document.getElementById('quote-model');
-    if (input) setTimeout(() => input.focus(), 100);
+    if (input) {
+      if (typeof vehicleName === 'string' && vehicleName.trim()) {
+        input.value = vehicleName.trim();
+      }
+      setTimeout(() => input.focus(), 100);
+    }
+  }
+
+  function setQuoteVehicle(name) {
+    const input = document.getElementById('quote-model');
+    if (input) {
+      input.value = name;
+      input.focus();
+    }
   }
 
   function closeQuoteModal() {
@@ -1131,20 +1921,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
     body += `\nPlease reply with available options and CIF estimation.\n\nThank you.`;
 
-    window.location.href = `mailto:bptrading202510@gmail.com?subject=${subject}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:bptrading@bpexport.com?subject=${subject}&body=${encodeURIComponent(body)}`;
   }
 
   // Copy Email with tactile feedback
   function copyEmail() {
-    const email = "bptrading202510@gmail.com";
+    const email = "bptrading@bpexport.com";
     const label = document.getElementById("copy-btn-label");
+    const icon = document.getElementById("copy-btn-icon");
     
     navigator.clipboard.writeText(email).then(() => {
       if (label) {
-        const prevText = label.textContent;
-        label.textContent = "✅ Copied!";
+        label.textContent = "Copied!";
+        if (icon) {
+          icon.innerHTML = '<polyline points="20 6 9 17 4 12"></polyline>';
+        }
         setTimeout(() => {
-          label.textContent = prevText;
+          label.textContent = "Copy";
+          if (icon) {
+            icon.innerHTML = '<rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>';
+          }
         }, 2000);
       }
     }).catch(err => {
